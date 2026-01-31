@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
 
@@ -86,7 +88,7 @@ export default function Home() {
           </div>
         </Link>
 
-        {/* Card 3: Practice Tools (Updated Link to Anchor) */}
+        {/* Card 3: Practice Tools (Scrolls to #toolkit) */}
         <Link href="#toolkit" className="block h-full group">
           <div className="card-container flex flex-col items-center text-center space-y-4 justify-center min-h-[180px] md:min-h-[200px] h-full hover:-translate-y-2 hover:shadow-md transition-all duration-500 cursor-pointer bg-white border border-[#8da399]/20">
             <div className="text-[#8da399]">
@@ -114,10 +116,9 @@ export default function Home() {
         </Link>
       </div>
 
-      {/* --- TOOLKIT SECTION --- */}
-      {/* Added ID for anchor link */}
-      <div id="toolkit" className="w-full max-w-5xl z-10 mb-20 scroll-mt-24">
-        <div className="text-center mb-8 md:mb-12 space-y-2">
+      {/* --- TOOLKIT SECTION (Strict 2x2 Grid) --- */}
+      <div id="toolkit" className="w-full max-w-4xl z-10 mb-20 scroll-mt-24">
+        <div className="text-center mb-10 space-y-2">
           <h2 className="font-serif text-3xl md:text-4xl text-[var(--text-primary)]">
             Your Toolkit
           </h2>
@@ -126,19 +127,20 @@ export default function Home() {
           </p>
         </div>
 
-        {/* MOBILE GRID UPDATE: 
-            Changed from 'grid-cols-1' to 'grid-cols-2'. 
-            This creates a 2x2 "App Grid" on mobile, which is much more scannable.
+        {/* GRID UPDATE: 
+            grid-cols-2 -> Mobile (2 items per row)
+            md:grid-cols-2 -> Desktop (Strictly 2 items per row) 
+            This creates a perfect 2x2 box layout.
         */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6">
           {/* 1. Wired & Tense */}
           <Link href="/tools/pmr" className="block h-full">
-            <div className="card-container p-5 md:p-8 flex flex-col items-start text-left space-y-3 cursor-pointer h-full min-h-[160px] md:min-h-[220px] hover:-translate-y-2 hover:shadow-md transition-all duration-500">
-              <div className="text-[#8da399] mb-1">
+            <div className="card-container p-5 md:p-8 flex flex-col items-start justify-between text-left h-full min-h-[160px] md:min-h-[200px] hover:-translate-y-1 hover:shadow-md transition-all duration-500">
+              <div className="text-[#8da399] mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="28"
+                  height="28"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -151,25 +153,25 @@ export default function Home() {
                   <path d="M9 10h6" />
                 </svg>
               </div>
-              <h3 className="font-serif text-base md:text-xl text-[var(--text-primary)] leading-tight">
-                Wired & Tense
-              </h3>
-              {/* Hidden on very small screens to save space, or kept small */}
-              <p className="text-[10px] md:text-sm text-[var(--text-secondary)] leading-relaxed">
-                <span className="font-bold block mb-1">Use PMR</span>
-                Release physical tension.
-              </p>
+              <div>
+                <h3 className="font-serif text-base md:text-xl text-[var(--text-primary)] leading-tight mb-2">
+                  Wired & Tense
+                </h3>
+                <p className="text-[10px] md:text-sm text-[var(--text-secondary)] leading-tight opacity-80">
+                  Release physical tension with PMR.
+                </p>
+              </div>
             </div>
           </Link>
 
           {/* 2. Foggy & Depleted */}
           <Link href="/tools/recharge" className="block h-full">
-            <div className="card-container p-5 md:p-8 flex flex-col items-start text-left space-y-3 cursor-pointer h-full min-h-[160px] md:min-h-[220px] hover:-translate-y-2 hover:shadow-md transition-all duration-500">
-              <div className="text-[#8da399] mb-1">
+            <div className="card-container p-5 md:p-8 flex flex-col items-start justify-between text-left h-full min-h-[160px] md:min-h-[200px] hover:-translate-y-1 hover:shadow-md transition-all duration-500">
+              <div className="text-[#8da399] mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="28"
+                  height="28"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -182,24 +184,25 @@ export default function Home() {
                   <path d="M17.5 19h-11" />
                 </svg>
               </div>
-              <h3 className="font-serif text-base md:text-xl text-[var(--text-primary)] leading-tight">
-                Foggy & Depleted
-              </h3>
-              <p className="text-[10px] md:text-sm text-[var(--text-secondary)] leading-relaxed">
-                <span className="font-bold block mb-1">Use NSDR</span>
-                10-min deep rest.
-              </p>
+              <div>
+                <h3 className="font-serif text-base md:text-xl text-[var(--text-primary)] leading-tight mb-2">
+                  Foggy & Depleted
+                </h3>
+                <p className="text-[10px] md:text-sm text-[var(--text-secondary)] leading-tight opacity-80">
+                  A 10-minute NSDR recharge.
+                </p>
+              </div>
             </div>
           </Link>
 
           {/* 3. Track Progress */}
           <Link href="/tools/calculator" className="block h-full">
-            <div className="card-container p-5 md:p-8 flex flex-col items-start text-left space-y-3 cursor-pointer h-full min-h-[160px] md:min-h-[220px] hover:-translate-y-2 hover:shadow-md transition-all duration-500">
-              <div className="text-[#8da399] mb-1">
+            <div className="card-container p-5 md:p-8 flex flex-col items-start justify-between text-left h-full min-h-[160px] md:min-h-[200px] hover:-translate-y-1 hover:shadow-md transition-all duration-500">
+              <div className="text-[#8da399] mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="28"
+                  height="28"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -219,24 +222,25 @@ export default function Home() {
                   <path d="M8 18h.01" />
                 </svg>
               </div>
-              <h3 className="font-serif text-base md:text-xl text-[var(--text-primary)] leading-tight">
-                Track Progress
-              </h3>
-              <p className="text-[10px] md:text-sm text-[var(--text-secondary)] leading-relaxed">
-                <span className="font-bold block mb-1">Efficiency Calc</span>
-                Check your data.
-              </p>
+              <div>
+                <h3 className="font-serif text-base md:text-xl text-[var(--text-primary)] leading-tight mb-2">
+                  Track Progress
+                </h3>
+                <p className="text-[10px] md:text-sm text-[var(--text-secondary)] leading-tight opacity-80">
+                  Calculate your weekly Sleep Efficiency.
+                </p>
+              </div>
             </div>
           </Link>
 
           {/* 4. Racing Thoughts */}
           <Link href="/tools/worry-dump" className="block h-full">
-            <div className="card-container p-5 md:p-8 flex flex-col items-start text-left space-y-3 cursor-pointer h-full min-h-[160px] md:min-h-[220px] hover:-translate-y-2 hover:shadow-md transition-all duration-500">
-              <div className="text-[#8da399] mb-1">
+            <div className="card-container p-5 md:p-8 flex flex-col items-start justify-between text-left h-full min-h-[160px] md:min-h-[200px] hover:-translate-y-1 hover:shadow-md transition-all duration-500">
+              <div className="text-[#8da399] mb-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
+                  width="28"
+                  height="28"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -249,13 +253,14 @@ export default function Home() {
                   <path d="M12 8v.01" />
                 </svg>
               </div>
-              <h3 className="font-serif text-base md:text-xl text-[var(--text-primary)] leading-tight">
-                Racing Thoughts
-              </h3>
-              <p className="text-[10px] md:text-sm text-[var(--text-secondary)] leading-relaxed">
-                <span className="font-bold block mb-1">Worry Dump</span>
-                Park your mind.
-              </p>
+              <div>
+                <h3 className="font-serif text-base md:text-xl text-[var(--text-primary)] leading-tight mb-2">
+                  Racing Thoughts
+                </h3>
+                <p className="text-[10px] md:text-sm text-[var(--text-secondary)] leading-tight opacity-80">
+                  Park your worries and let go.
+                </p>
+              </div>
             </div>
           </Link>
         </div>

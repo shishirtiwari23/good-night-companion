@@ -4,216 +4,341 @@ import React, { useState } from "react";
 import Link from "next/link";
 
 export default function CalculatorPage() {
-  const [bedTime, setBedTime] = useState("23:00");
-  const [wakeTime, setWakeTime] = useState("07:00");
-  const [sleepHours, setSleepHours] = useState(6.5);
+  const [days, setDays] = useState(
+    Array.from({ length: 8 }, () => ({ tib: "", tst: "" })),
+  );
+
   const [result, setResult] = useState<{
+    daysLogged: number;
+    avgTib: string;
+    avgTst: string;
     score: number;
+    title: string;
     feedback: string;
+    isError?: boolean;
+    hasSafetyWarning?: boolean;
   } | null>(null);
 
-  // --- Helper: Pure function to calculate duration between two times ---
-  const calculateDuration = (start: string, end: string) => {
-    const [startH, startM] = start.split(":").map(Number);
-    const [endH, endM] = end.split(":").map(Number);
-
-    const startDate = new Date();
-    startDate.setHours(startH, startM, 0);
-
-    const endDate = new Date();
-    endDate.setHours(endH, endM, 0);
-
-    // If end time is earlier than start time, assume it's the next day
-    if (endDate < startDate) {
-      endDate.setDate(endDate.getDate() + 1);
-    }
-
-    const diffMs = endDate.getTime() - startDate.getTime();
-    return diffMs / (1000 * 60 * 60); // Return hours
+  const hasError = (tibStr: string, tstStr: string) => {
+    if (!tibStr || !tstStr) return false;
+    const tib = parseFloat(tibStr);
+    const tst = parseFloat(tstStr);
+    return !isNaN(tib) && !isNaN(tst) && tst > tib;
   };
 
-  // Calculate current max window for display/slider limit
-  const timeInBed = calculateDuration(bedTime, wakeTime);
-
-  // --- Handlers: Update State & Clamp immediately ---
-
-  const handleBedTimeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newBedTime = e.target.value;
-    setBedTime(newBedTime);
-
-    // Check if we need to clamp sleepHours immediately
-    const newMax = calculateDuration(newBedTime, wakeTime);
-    if (sleepHours > newMax) {
-      setSleepHours(newMax);
-    }
-  };
-
-  const handleWakeTimeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newWakeTime = e.target.value;
-    setWakeTime(newWakeTime);
-
-    // Check if we need to clamp sleepHours immediately
-    const newMax = calculateDuration(bedTime, newWakeTime);
-    if (sleepHours > newMax) {
-      setSleepHours(newMax);
-    }
+  const handleInputChange = (
+    index: number,
+    field: "tib" | "tst",
+    value: string,
+  ) => {
+    const newDays = [...days];
+    newDays[index][field] = value;
+    setDays(newDays);
+    setResult(null);
   };
 
   const calculateEfficiency = () => {
-    // Prevent division by zero
-    const efficiency =
-      timeInBed > 0 ? Math.round((sleepHours / timeInBed) * 100) : 0;
+    let totalTib = 0;
+    let totalTst = 0;
+    let validDays = 0;
+    let hasValidationError = false;
+    let shortWindowCount = 0;
 
-    let feedback = "";
-    if (efficiency >= 90) {
-      feedback =
-        "Excellent. You are spending your time in bed actually sleeping. You may consider expanding your sleep window by 15 minutes.";
-    } else if (efficiency >= 85) {
-      feedback =
-        "Good work. Your sleep is consolidated. Maintain this window until you consistently hit 90%.";
-    } else {
-      feedback =
-        "Your sleep is fragmented. In CBT-I, we recommend restricting your time in bed to match your actual sleep time to build 'sleep pressure'.";
+    days.forEach((day) => {
+      if (hasError(day.tib, day.tst)) {
+        hasValidationError = true;
+      }
+
+      const tib = parseFloat(day.tib);
+      const tst = parseFloat(day.tst);
+
+      if (!isNaN(tib) && !isNaN(tst) && tib > 0) {
+        totalTib += tib;
+        totalTst += tst;
+        validDays++;
+
+        if (tib < 5.5) {
+          shortWindowCount++;
+        }
+      }
+    });
+
+    if (hasValidationError) {
+      alert(
+        "Please correct the highlighted fields. Total Sleep Time cannot be greater than Time in Bed.",
+      );
+      return;
     }
 
-    setResult({ score: efficiency, feedback });
+    if (validDays < 3) {
+      setResult({
+        daysLogged: validDays,
+        avgTib: validDays > 0 ? (totalTib / validDays).toFixed(1) : "-",
+        avgTst: validDays > 0 ? (totalTst / validDays).toFixed(1) : "-",
+        score: 0,
+        title: "More Data Needed",
+        feedback:
+          "You have logged fewer than 3 days. A true sleep pattern usually emerges over a full week. Please continue logging to get a more accurate action plan.",
+        isError: true,
+      });
+      return;
+    }
+
+    const efficiency = Math.round((totalTst / totalTib) * 100);
+    const avgTib = (totalTib / validDays).toFixed(1);
+    const avgTst = (totalTst / validDays).toFixed(1);
+
+    let title = "";
+    let feedback = "";
+
+    if (efficiency >= 90) {
+      title = "Highly Consolidated";
+      feedback =
+        "Your sleep efficiency is excellent (>90%). You are utilizing your time in bed well. In CBT-I, this is the signal to potentially expand your sleep window by 15 minutes next week.";
+    } else if (efficiency >= 85) {
+      title = "Balanced & Stable";
+      feedback =
+        "Good work (85-89%). Your sleep is stabilizing. Maintain this current window for another week. Once you consistently hit 90%, you can begin to extend your time in bed.";
+    } else {
+      title = "Room for Improvement";
+      feedback = `Your efficiency is ${efficiency}%. In CBT-I, we aim for >85%. We recommend restricting your Time in Bed closer to your average sleep duration (${avgTst}h) to build higher sleep pressure.`;
+    }
+
+    setResult({
+      daysLogged: validDays,
+      avgTib: `${avgTib}h`,
+      avgTst: `${avgTst}h`,
+      score: efficiency,
+      title,
+      feedback,
+      isError: false,
+      hasSafetyWarning: shortWindowCount > 0,
+    });
+
+    setTimeout(() => {
+      document
+        .getElementById("result-card")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-6 relative">
-      <div className="card-container w-full max-w-lg relative">
-        {/* Navigation */}
-        <div className="absolute top-8 right-8 z-50">
-          <Link
-            href="/"
-            aria-label="Return to Home"
-            title="Return to Home"
-            className="text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors block p-2"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+    <main className="min-h-screen flex items-center justify-center p-4 md:p-8 relative bg-[var(--background)]">
+      <div className="card-container w-full max-w-2xl relative p-6 md:p-12">
+        {/* Navigation & Header */}
+        <div className="relative mb-8">
+          {/* FIX: Added z-50 to ensure clickability */}
+          <div className="absolute -top-2 right-0 z-50">
+            <Link
+              href="/"
+              aria-label="Return to Home"
+              className="text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors p-2 block"
             >
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-          </Link>
-        </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
+            </Link>
+          </div>
 
-        {/* Header */}
-        <div className="text-center space-y-2 mb-10 mt-4">
-          <p className="overline-text opacity-60">The Good Night Companion</p>
+          <p className="overline-text opacity-60 mb-2">
+            The Good Night Companion
+          </p>
           <h1 className="text-3xl md:text-4xl font-serif text-[var(--text-primary)]">
             Sleep Efficiency
           </h1>
-          <p className="text-[10px] font-bold tracking-widest uppercase text-[var(--text-secondary)] mt-2">
-            Weekly Tracker
+        </div>
+
+        {/* --- INFO BOX --- */}
+        <div className="bg-[#EBE9E1] rounded-xl p-6 mb-8 text-sm text-[var(--text-secondary)] space-y-2">
+          <p>
+            <strong className="text-[var(--text-primary)]">
+              TIB (Time in Bed)
+            </strong>{" "}
+            = Wake Time – Bed Time
+          </p>
+          <p>
+            <strong className="text-[var(--text-primary)]">
+              TST (Total Sleep Time)
+            </strong>{" "}
+            = TIB – (Time awake)
           </p>
         </div>
 
-        {/* The Form */}
-        <div className="space-y-6">
-          {/* Input: Bed Time */}
-          <div className="space-y-2">
-            <label
-              htmlFor="bedTime"
-              className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)]"
-            >
-              What time did you get into bed?
-            </label>
-            <input
-              id="bedTime"
-              type="time"
-              aria-label="Bed time"
-              value={bedTime}
-              onChange={handleBedTimeChange}
-              className="w-full p-4 bg-[#F8F6F2] rounded-xl border border-transparent focus:border-[var(--primary)] focus:outline-none text-lg text-[var(--text-primary)] font-serif"
-            />
-          </div>
-
-          {/* Input: Wake Time */}
-          <div className="space-y-2">
-            <label
-              htmlFor="wakeTime"
-              className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)]"
-            >
-              What time did you get out of bed?
-            </label>
-            <input
-              id="wakeTime"
-              type="time"
-              aria-label="Wake time"
-              value={wakeTime}
-              onChange={handleWakeTimeChange}
-              className="w-full p-4 bg-[#F8F6F2] rounded-xl border border-transparent focus:border-[var(--primary)] focus:outline-none text-lg text-[var(--text-primary)] font-serif"
-            />
-          </div>
-
-          {/* Input: Hours Asleep (Dynamic Max Limit) */}
-          <div className="space-y-2">
-            <div className="flex justify-between items-baseline">
-              <label
-                htmlFor="sleepHours"
-                className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)]"
-              >
-                Approximate hours actually asleep?
-              </label>
-              <span className="text-[10px] text-[var(--text-secondary)] opacity-60">
-                Max: {timeInBed.toFixed(1)}h
-              </span>
-            </div>
-
-            <div className="flex items-center gap-4">
-              <input
-                id="sleepHours"
-                type="range"
-                min="0"
-                max={timeInBed}
-                step="0.25"
-                value={sleepHours}
-                aria-label="Sleep hours slider"
-                title="Sleep hours"
-                onChange={(e) => setSleepHours(parseFloat(e.target.value))}
-                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[var(--primary)]"
-              />
-              <span className="text-xl font-serif text-[var(--text-primary)] w-16 text-right">
-                {sleepHours}h
-              </span>
-            </div>
-          </div>
-
-          {/* Calculate Button */}
-          <button
-            type="button"
-            onClick={calculateEfficiency}
-            className="btn-primary mt-4"
-          >
-            Calculate Score
-          </button>
+        <div className="text-center space-y-1 mb-8">
+          <p className="text-sm text-[var(--text-secondary)]">
+            Round to nearest half hour (e.g., 7.5).
+          </p>
+          <p className="text-sm text-[var(--text-secondary)]">
+            Leave &quot;Planned Deviation&quot; nights blank.
+          </p>
         </div>
 
-        {/* Results Card (Animated) */}
-        {result && (
-          <div className="mt-10 p-6 bg-[#F8F6F2] rounded-2xl border border-[var(--primary)]/20 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <div className="flex justify-between items-end mb-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)]">
-                Your Efficiency Score
-              </span>
-              <span className="text-5xl font-serif text-[var(--primary)]">
-                {result.score}%
-              </span>
+        {/* --- INPUT GRID --- */}
+        <div className="space-y-3">
+          <div className="grid grid-cols-12 gap-4 text-[10px] font-bold tracking-widest uppercase text-[var(--text-secondary)] opacity-60 mb-2 px-1">
+            <div className="col-span-2 md:col-span-2 pt-2">Day</div>
+            <div className="col-span-5 md:col-span-5 text-center">
+              TIB (Hrs)
             </div>
-            <div className="h-px w-full bg-gray-200 mb-4"></div>
-            <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-              {result.feedback}
-            </p>
+            <div className="col-span-5 md:col-span-5 text-center">
+              TST (Hrs)
+            </div>
+          </div>
+
+          {days.map((day, index) => {
+            const isInvalid = hasError(day.tib, day.tst);
+
+            return (
+              <div key={index} className="grid grid-cols-12 gap-4 items-center">
+                <div className="col-span-2 text-sm md:text-base font-medium text-[var(--text-secondary)]">
+                  Day {index + 1}
+                </div>
+
+                <div className="col-span-5">
+                  <input
+                    type="number"
+                    step="0.5"
+                    placeholder="8.0"
+                    className="w-full text-center p-3 bg-white border border-gray-100 rounded-lg focus:outline-none focus:border-[var(--primary)] text-[var(--text-primary)] font-serif text-lg shadow-sm placeholder:text-gray-300"
+                    value={day.tib}
+                    onChange={(e) =>
+                      handleInputChange(index, "tib", e.target.value)
+                    }
+                  />
+                </div>
+
+                <div className="col-span-5 relative">
+                  <input
+                    type="number"
+                    step="0.5"
+                    placeholder="7.5"
+                    className={`w-full text-center p-3 bg-white border rounded-lg focus:outline-none focus:border-[var(--primary)] text-[var(--text-primary)] font-serif text-lg shadow-sm placeholder:text-gray-300 ${
+                      isInvalid
+                        ? "border-red-400 text-red-600 bg-red-50"
+                        : "border-gray-100"
+                    }`}
+                    value={day.tst}
+                    onChange={(e) =>
+                      handleInputChange(index, "tst", e.target.value)
+                    }
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="text-center mt-8 mb-8">
+          <p className="text-xs text-[var(--text-secondary)] opacity-60">
+            Shift Workers: Calculate Day/Night separately.
+          </p>
+        </div>
+
+        <button
+          onClick={calculateEfficiency}
+          className="w-full py-4 bg-[#94A396] hover:bg-[#829285] text-white rounded-full font-bold uppercase tracking-widest text-sm shadow-md transition-all active:scale-99 cursor-pointer"
+        >
+          Calculate Score
+        </button>
+
+        {/* --- RESULT SECTION --- */}
+        {result && (
+          <div
+            id="result-card"
+            className="mt-12 space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700"
+          >
+            <div className="grid grid-cols-3 gap-4">
+              <div className="bg-[#F0EEE6] rounded-xl p-4 text-center flex flex-col justify-center min-h-[90px]">
+                <span className="font-serif text-2xl text-[var(--text-primary)]">
+                  {result.daysLogged}
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--text-secondary)] opacity-70 leading-tight mt-1">
+                  Days
+                  <br />
+                  Logged
+                </span>
+              </div>
+              <div className="bg-[#F0EEE6] rounded-xl p-4 text-center flex flex-col justify-center min-h-[90px]">
+                <span className="font-serif text-2xl text-[var(--text-primary)]">
+                  {result.avgTib}
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--text-secondary)] opacity-70 leading-tight mt-1">
+                  Avg
+                  <br />
+                  TIB
+                </span>
+              </div>
+              <div className="bg-[#F0EEE6] rounded-xl p-4 text-center flex flex-col justify-center min-h-[90px]">
+                <span className="font-serif text-2xl text-[var(--text-primary)]">
+                  {result.avgTst}
+                </span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[var(--text-secondary)] opacity-70 leading-tight mt-1">
+                  Avg
+                  <br />
+                  TST
+                </span>
+              </div>
+            </div>
+
+            {!result.isError && (
+              <div className="text-center py-4">
+                <p className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)] mb-2 opacity-60">
+                  Sleep Efficiency (SE)
+                </p>
+                <div className="text-7xl font-serif text-[#9CA39B] tracking-tight">
+                  {result.score}
+                  <span className="text-4xl align-top opacity-60">%</span>
+                </div>
+                <div className="w-full h-2 bg-gray-200 rounded-full mt-6 overflow-hidden">
+                  <div
+                    className="h-full bg-[#9CA39B] rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${result.score}%` }}
+                  ></div>
+                </div>
+              </div>
+            )}
+
+            <div className="mt-8">
+              <p className="text-lg text-[var(--text-secondary)] mb-4 font-sans">
+                Insights
+              </p>
+              <div
+                className={`bg-white rounded-2xl p-8 border-l-4 shadow-sm ${result.isError ? "border-l-[#D4B483]" : "border-l-[#8da399]"}`}
+              >
+                <h3 className="font-serif text-2xl text-[var(--text-primary)] mb-3">
+                  {result.title}
+                </h3>
+                <p className="text-sm md:text-base text-[var(--text-secondary)] leading-relaxed">
+                  {result.feedback}
+                </p>
+
+                {result.hasSafetyWarning && (
+                  <div className="mt-6 pt-4 border-t border-red-100">
+                    <p className="text-xs font-bold uppercase tracking-widest text-red-500 mb-1">
+                      Safety Warning
+                    </p>
+                    <p className="text-sm text-[var(--text-secondary)]">
+                      You logged nights with{" "}
+                      <span className="font-bold">less than 5.5 hours</span> in
+                      bed. Unless supervised by a clinician, we strongly
+                      recommend never restricting your TIB below 5.5 hours to
+                      avoid excessive sleep deprivation.
+                    </p>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         )}
       </div>

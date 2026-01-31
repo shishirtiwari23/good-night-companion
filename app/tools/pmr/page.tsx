@@ -1,99 +1,111 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
-// The sequence of muscle groups for a 5-minute session
-const STEPS = [
-  { id: 1, label: "Hands & Wrists", instruction: "Clench your fists tight." },
-  {
-    id: 2,
-    label: "Arms & Shoulders",
-    instruction: "Pull shoulders up to ears.",
-  },
-  { id: 3, label: "Face & Jaw", instruction: "Scrunch face, clench jaw." },
-  { id: 4, label: "Stomach & Chest", instruction: "Squeeze abs, hold breath." },
-  { id: 5, label: "Legs & Feet", instruction: "Curl toes, flex thighs." },
-  { id: 6, label: "Full Body", instruction: "Tense everything at once." },
-];
-
 export default function PMRPage() {
-  const [isActive, setIsActive] = useState(false);
-  const [currentStepIndex, setCurrentStepIndex] = useState(0);
-  const [phase, setPhase] = useState<"prepare" | "tense" | "release">(
-    "prepare",
-  );
-  const [timer, setTimer] = useState(0);
+  // --- STATE ---
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
-  // Configuration (in seconds)
-  const TENSE_DURATION = 5;
-  const RELEASE_DURATION = 10;
-  const PREPARE_DURATION = 3;
+  const audioRef = useRef<HTMLAudioElement>(null);
 
+  // --- INITIALIZATION EFFECT ---
   useEffect(() => {
-    let interval: NodeJS.Timeout;
-
-    if (isActive) {
-      interval = setInterval(() => {
-        setTimer((prev) => {
-          if (prev > 1) return prev - 1;
-
-          // Timer hit 0, switch phases
-          handlePhaseSwitch();
-          return 0; // Reset will happen in handlePhaseSwitch
-        });
-      }, 1000);
+    const audio = audioRef.current;
+    if (audio) {
+      if (audio.readyState >= 1) {
+        if (!isNaN(audio.duration) && audio.duration !== Infinity) {
+          setDuration(audio.duration);
+        }
+      }
     }
+  }, []);
 
-    return () => clearInterval(interval);
-  }, [isActive, phase, timer]);
+  // --- AUDIO HANDLERS ---
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
 
-  const handlePhaseSwitch = () => {
-    if (phase === "prepare") {
-      setPhase("tense");
-      setTimer(TENSE_DURATION);
-    } else if (phase === "tense") {
-      setPhase("release");
-      setTimer(RELEASE_DURATION);
-    } else if (phase === "release") {
-      // Move to next step or finish
-      if (currentStepIndex < STEPS.length - 1) {
-        setCurrentStepIndex((prev) => prev + 1);
-        setPhase("prepare");
-        setTimer(PREPARE_DURATION);
-      } else {
-        setIsActive(false); // Done
-        setPhase("prepare"); // Reset for next time
-        setCurrentStepIndex(0);
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setCurrentTime(audioRef.current.currentTime);
+    }
+  };
+
+  const handleDurationChange = () => {
+    if (audioRef.current) {
+      const seconds = audioRef.current.duration;
+      if (!isNaN(seconds) && seconds !== Infinity) {
+        setDuration(seconds);
       }
     }
   };
 
-  const startSession = () => {
-    setIsActive(true);
-    setCurrentStepIndex(0);
-    setPhase("prepare");
-    setTimer(PREPARE_DURATION);
+  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newTime = parseFloat(e.target.value);
+    if (audioRef.current) {
+      audioRef.current.currentTime = newTime;
+      setCurrentTime(newTime);
+    }
   };
 
-  const stopSession = () => {
-    setIsActive(false);
-    setPhase("prepare");
-    setTimer(0);
+  const jump = (seconds: number) => {
+    if (audioRef.current && duration > 0) {
+      const newTime = audioRef.current.currentTime + seconds;
+      const safeTime = Math.min(Math.max(newTime, 0), duration);
+      audioRef.current.currentTime = safeTime;
+      setCurrentTime(safeTime);
+    }
   };
 
-  const currentStep = STEPS[currentStepIndex];
+  // NEW: Restart Function
+  const restart = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      setCurrentTime(0);
+      if (!isPlaying) {
+        audioRef.current.play();
+        setIsPlaying(true);
+      }
+    }
+  };
+
+  const formatTime = (time: number) => {
+    if (!time || isNaN(time) || time === Infinity) return "0:00";
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+  };
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-6 relative">
-      <div className="card-container w-full max-w-lg text-center relative min-h-[500px] flex flex-col justify-center">
-        {/* Navigation */}
-        <div className="absolute top-8 right-8 z-50">
+    <main className="min-h-screen flex items-center justify-center p-6 bg-[var(--background)]">
+      <audio
+        ref={audioRef}
+        src="/audio/pmr-session.mp3"
+        preload="metadata"
+        onTimeUpdate={handleTimeUpdate}
+        onDurationChange={handleDurationChange}
+        onLoadedMetadata={handleDurationChange}
+        onEnded={() => setIsPlaying(false)}
+      />
+
+      <div className="card-container w-full max-w-md text-center relative flex flex-col min-h-[550px]">
+        {/* Header */}
+        <div className="flex justify-between items-start mb-6">
+          <div className="text-left"></div>
           <Link
             href="/"
             aria-label="Return to Home"
-            title="Return to Home"
-            className="text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors block p-2"
+            className="text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors p-2 -mr-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -112,78 +124,138 @@ export default function PMRPage() {
           </Link>
         </div>
 
-        {!isActive ? (
-          // --- IDLE STATE ---
-          <div className="space-y-8 animate-in fade-in duration-500">
-            <div className="space-y-2">
-              <p className="overline-text opacity-60">
-                The Good Night Companion
-              </p>
-              <h1 className="text-3xl md:text-4xl font-serif text-[var(--text-primary)]">
-                Unwind Your Body
-              </h1>
-              <p className="text-[10px] font-bold tracking-widest uppercase text-[var(--text-secondary)] mt-2">
-                Progressive Muscle Relaxation
-              </p>
-            </div>
+        {/* Content - Reduced Spacing (mb-6) */}
+        <div className="space-y-4 mb-6 flex-grow flex flex-col justify-center">
+          <p className="overline-text opacity-60">The Good Night Companion</p>
+          <h1 className="text-3xl md:text-4xl font-serif text-[var(--text-primary)]">
+            Unwind Your Body
+          </h1>
+          <p className="text-[10px] font-bold tracking-widest uppercase text-[var(--text-secondary)] mt-2">
+            Progressive Muscle Relaxation
+          </p>
 
-            <p className="text-[var(--text-secondary)] mb-8 font-sans text-sm md:text-base max-w-sm mx-auto">
-              We will tense specific muscle groups for 5 seconds, then release
-              for 10. This signals your nervous system to drop into &quot;rest
-              and digest&quot; mode.
-            </p>
-
-            <button
-              onClick={startSession}
-              className="btn-primary max-w-xs mx-auto"
+          <div className="py-6 text-[#8da399] flex justify-center opacity-80">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64"
+              height="64"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
-              Start Session
-            </button>
+              <circle cx="12" cy="5" r="1" />
+              <path d="M9 20l-1-6 2-4h4l2 4-1 6" />
+              <path d="M9 10h6" />
+            </svg>
           </div>
-        ) : (
-          // --- ACTIVE SESSION STATE ---
-          <div className="space-y-10 animate-in zoom-in-95 duration-500">
-            {/* Phase Indicator */}
-            <div className="uppercase tracking-[0.2em] text-xs font-bold text-[var(--primary)]">
-              {phase === "prepare" && "Get Ready"}
-              {phase === "tense" && "TENSE"}
-              {phase === "release" && "RELEASE & RELAX"}
-            </div>
+        </div>
 
-            {/* Main Instruction */}
-            <div className="space-y-4">
-              <h2 className="text-4xl md:text-5xl font-serif text-[var(--text-primary)] transition-all duration-300">
-                {phase === "release" ? "Let it go." : currentStep.label}
-              </h2>
-              <p
-                className={`text-lg text-[var(--text-secondary)] transition-opacity duration-300 ${phase === "release" ? "opacity-0" : "opacity-100"}`}
+        {/* Player Controls */}
+        <div className="bg-[#F8F6F2] rounded-2xl p-6 border border-[#8da399]/10">
+          {/* Progress Bar */}
+          <div className="mb-4">
+            <input
+              type="range"
+              min={0}
+              max={duration > 0 ? duration : 0}
+              value={currentTime}
+              onChange={handleSeek}
+              disabled={duration === 0}
+              className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[var(--primary)] disabled:opacity-50"
+              aria-label="Audio Progress"
+            />
+            <div className="flex justify-between text-[10px] font-bold text-[var(--text-secondary)] mt-2 tracking-wider">
+              <span>{formatTime(currentTime)}</span>
+              <span>{formatTime(duration)}</span>
+            </div>
+          </div>
+
+          {/* Buttons */}
+          <div className="flex items-center justify-center gap-6 md:gap-8">
+            {/* Rewind 10s */}
+            <button
+              onClick={() => jump(-10)}
+              disabled={duration === 0}
+              className="p-3 text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors disabled:opacity-30"
+              aria-label="Rewind 10 seconds"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                {currentStep.instruction}
-              </p>
-            </div>
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                <path d="M3 3v5h5" />
+                <path d="M9 12h6" />
+                <path d="M12 9v6" />
+              </svg>
+            </button>
 
-            {/* Timer Visual */}
-            <div className="relative w-32 h-32 mx-auto flex items-center justify-center">
-              {/* Outer Ring */}
-              <div className="absolute inset-0 border-4 border-[#F2F0E9] rounded-full"></div>
-              {/* Timer Text */}
-              <span className="text-4xl font-serif text-[var(--text-primary)] relative z-10">
-                {timer}
-              </span>
-              {/* Animated Ring (Optional simple CSS scale for heartbeat effect during TENSE) */}
-              {phase === "tense" && (
-                <div className="absolute inset-0 bg-[#8da399]/10 rounded-full animate-ping"></div>
-              )}
-            </div>
-
+            {/* Play/Pause */}
             <button
-              onClick={stopSession}
-              className="text-xs uppercase tracking-widest text-[var(--text-secondary)] hover:text-red-400 transition-colors mt-8"
+              onClick={togglePlay}
+              className="w-16 h-16 md:w-20 md:h-20 bg-[var(--primary)] rounded-full flex items-center justify-center text-white shadow-lg hover:bg-[#7a8f86] hover:scale-105 active:scale-95 transition-all"
+              aria-label={isPlaying ? "Pause" : "Play"}
             >
-              End Session
+              {isPlaying ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  stroke="none"
+                >
+                  <rect x="6" y="4" width="4" height="16" rx="1" />
+                  <rect x="14" y="4" width="4" height="16" rx="1" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  stroke="none"
+                >
+                  <path d="M5 3l14 9-14 9V3z" />
+                </svg>
+              )}
+            </button>
+
+            {/* Restart (Was Forward) */}
+            <button
+              onClick={restart}
+              disabled={duration === 0}
+              className="p-3 text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors disabled:opacity-30"
+              aria-label="Restart Session"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.99 6.74 2.74L21 8" />
+                <path d="M21 3v5h-5" />
+              </svg>
             </button>
           </div>
-        )}
+        </div>
       </div>
     </main>
   );

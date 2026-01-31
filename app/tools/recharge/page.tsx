@@ -1,41 +1,96 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
 export default function RechargePage() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const duration = 600; // 10 minutes in seconds
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
 
-  // Simple timer effect for demonstration
+  const audioRef = useRef<HTMLAudioElement>(null);
+
   useEffect(() => {
-    let interval: NodeJS.Timeout;
-    if (isPlaying && progress < duration) {
-      interval = setInterval(() => {
-        setProgress((prev) => prev + 1);
-      }, 1000);
+    const audio = audioRef.current;
+    if (audio) {
+      if (audio.readyState >= 1) {
+        if (!isNaN(audio.duration) && audio.duration !== Infinity) {
+          setDuration(audio.duration);
+        }
+      }
     }
-    return () => clearInterval(interval);
-  }, [isPlaying, progress]);
+  }, []);
 
-  // Format seconds into MM:SS
-  const formatTime = (seconds: number) => {
-    const mins = Math.floor(seconds / 60);
-    const secs = seconds % 60;
-    return `${mins}:${secs.toString().padStart(2, "0")}`;
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setCurrentTime(audioRef.current.currentTime);
+    }
+  };
+
+  const handleDurationChange = () => {
+    if (audioRef.current) {
+      const seconds = audioRef.current.duration;
+      if (!isNaN(seconds) && seconds !== Infinity) {
+        setDuration(seconds);
+      }
+    }
+  };
+
+  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newTime = parseFloat(e.target.value);
+    if (audioRef.current) {
+      audioRef.current.currentTime = newTime;
+      setCurrentTime(newTime);
+    }
+  };
+
+  const jump = (seconds: number) => {
+    if (audioRef.current && duration > 0) {
+      const newTime = audioRef.current.currentTime + seconds;
+      const safeTime = Math.min(Math.max(newTime, 0), duration);
+      audioRef.current.currentTime = safeTime;
+      setCurrentTime(safeTime);
+    }
+  };
+
+  const formatTime = (time: number) => {
+    if (!time || isNaN(time) || time === Infinity) return "0:00";
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-6">
-      <div className="card-container w-full max-w-lg text-center relative">
-        {/* Top Navigation / Home Icon */}
-        <div className="absolute top-8 right-8 z-50">
+    <main className="min-h-screen flex items-center justify-center p-6 bg-[var(--background)]">
+      <audio
+        ref={audioRef}
+        src="/audio/nsdr-session.mp3"
+        preload="metadata"
+        onTimeUpdate={handleTimeUpdate}
+        onDurationChange={handleDurationChange}
+        onLoadedMetadata={handleDurationChange}
+        onEnded={() => setIsPlaying(false)}
+      />
+
+      <div className="card-container w-full max-w-md text-center relative flex flex-col min-h-[550px]">
+        {/* Header */}
+        <div className="flex justify-between items-start mb-6">
+          <div className="text-left"></div>
           <Link
             href="/"
             aria-label="Return to Home"
-            title="Return to Home"
-            className="text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors block p-2"
+            className="text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors p-2 -mr-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,8 +109,8 @@ export default function RechargePage() {
           </Link>
         </div>
 
-        {/* Header Content */}
-        <div className="space-y-2 mb-10 mt-4">
+        {/* Content - Reduced Spacing (mb-6) */}
+        <div className="space-y-4 mb-6 flex-grow flex flex-col justify-center">
           <p className="overline-text opacity-60">The Good Night Companion</p>
           <h1 className="text-3xl md:text-4xl font-serif text-[var(--text-primary)]">
             A 10-Minute Recharge
@@ -63,120 +118,139 @@ export default function RechargePage() {
           <p className="text-[10px] font-bold tracking-widest uppercase text-[var(--text-secondary)] mt-2">
             Non Sleep Deep Rest
           </p>
-        </div>
 
-        {/* Description */}
-        <p className="text-[var(--text-secondary)] mb-12 font-sans text-sm md:text-base">
-          Rest your body. Clear your mind. <br />
-          Save your sleep.
-        </p>
+          <p className="text-[var(--text-secondary)] font-sans text-sm md:text-base max-w-xs mx-auto">
+            Rest your body. Clear your mind. <br />
+            Save your sleep.
+          </p>
 
-        {/* Progress Bar */}
-        <div className="mb-4 group cursor-pointer">
-          <div className="h-1.5 w-full bg-gray-100 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-[var(--primary)] transition-all duration-1000 ease-linear"
-              style={{ width: `${(progress / duration) * 100}%` }}
-            />
+          <div className="py-6 text-[#8da399] flex justify-center opacity-80">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="64"
+              height="64"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M17.5 19c0-1.7-1.3-3-3-3h-5c-1.7 0-3 1.3-3 3" />
+              <path d="M19 16c0-1.7-1.3-3-3-3h-5c-1.7 0-3 1.3-3 3" />
+              <path d="M17.5 19h-11" />
+            </svg>
           </div>
         </div>
 
-        {/* Time Labels */}
-        <div className="flex justify-between text-xs font-bold text-[var(--text-secondary)] mb-10 tracking-wider">
-          <span>{formatTime(progress)}</span>
-          <span>10:00</span>
-        </div>
-
         {/* Player Controls */}
-        <div className="flex items-center justify-center gap-8 mb-8">
-          {/* Rewind 30s */}
-          <button
-            type="button"
-            onClick={() => setProgress((p) => Math.max(0, p - 30))}
-            aria-label="Rewind 30 seconds"
-            title="Rewind 30 seconds"
-            className="p-3 rounded-full hover:bg-gray-50 text-[var(--text-secondary)] transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
-              <path d="M3 3v5h5" />
-              <path d="M9 12h6" />
-              <path d="M12 9v6" />
-            </svg>
-          </button>
+        <div className="bg-[#F8F6F2] rounded-2xl p-6 border border-[#8da399]/10">
+          {/* Progress Bar */}
+          <div className="mb-4">
+            <input
+              type="range"
+              min={0}
+              max={duration > 0 ? duration : 0}
+              value={currentTime}
+              onChange={handleSeek}
+              disabled={duration === 0}
+              className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[var(--primary)] disabled:opacity-50"
+              aria-label="Audio Progress"
+            />
+            <div className="flex justify-between text-[10px] font-bold text-[var(--text-secondary)] mt-2 tracking-wider">
+              <span>{formatTime(currentTime)}</span>
+              <span>{formatTime(duration)}</span>
+            </div>
+          </div>
 
-          {/* Play/Pause Button - Big & Green */}
-          <button
-            onClick={() => setIsPlaying(!isPlaying)}
-            className="w-20 h-20 bg-[#8da399] rounded-full flex items-center justify-center text-white shadow-lg hover:bg-[#7a8f86] hover:scale-105 active:scale-95 transition-all"
-          >
-            {isPlaying ? (
-              // Pause Icon
+          {/* Buttons */}
+          <div className="flex items-center justify-center gap-6 md:gap-8">
+            {/* Rewind 30s */}
+            <button
+              onClick={() => jump(-30)}
+              disabled={duration === 0}
+              className="p-3 text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors disabled:opacity-30"
+              aria-label="Rewind 30 seconds"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
-                fill="currentColor"
-                stroke="none"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                <rect x="6" y="4" width="4" height="16" rx="1" />
-                <rect x="14" y="4" width="4" height="16" rx="1" />
+                <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                <path d="M3 3v5h5" />
+                <path d="M9 12h6" />
+                <path d="M12 9v6" />
               </svg>
-            ) : (
-              // Play Icon (Triangle)
+            </button>
+
+            {/* Play/Pause */}
+            <button
+              onClick={togglePlay}
+              className="w-16 h-16 md:w-20 md:h-20 bg-[var(--primary)] rounded-full flex items-center justify-center text-white shadow-lg hover:bg-[#7a8f86] hover:scale-105 active:scale-95 transition-all"
+              aria-label={isPlaying ? "Pause" : "Play"}
+            >
+              {isPlaying ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  stroke="none"
+                >
+                  <rect x="6" y="4" width="4" height="16" rx="1" />
+                  <rect x="14" y="4" width="4" height="16" rx="1" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  stroke="none"
+                >
+                  <path d="M5 3l14 9-14 9V3z" />
+                </svg>
+              )}
+            </button>
+
+            {/* Restart */}
+            <button
+              onClick={() => {
+                if (audioRef.current) {
+                  audioRef.current.currentTime = 0;
+                  setCurrentTime(0);
+                }
+              }}
+              disabled={duration === 0}
+              className="p-3 text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors disabled:opacity-30"
+              aria-label="Reset Session"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
+                width="24"
+                height="24"
                 viewBox="0 0 24 24"
-                fill="currentColor"
-                stroke="none"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
-                <path d="M5 3l14 9-14 9V3z" />
+                <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.99 6.74 2.74L21 8" />
+                <path d="M21 3v5h-5" />
               </svg>
-            )}
-          </button>
-
-          {/* Forward 15s (Restart in screenshot, but skip is standard. We can swap icon easily) */}
-          <button
-            type="button"
-            onClick={() => setProgress(0)}
-            aria-label="Reset session"
-            title="Reset session" // Reset for now to match screenshot "Replay" icon often used there
-            className="p-3 rounded-full hover:bg-gray-50 text-[var(--text-secondary)] transition-colors"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.99 6.74 2.74L21 8" />
-              <path d="M21 3v5h-5" />
-            </svg>
-          </button>
+            </button>
+          </div>
         </div>
-
-        {/* Footer Status */}
-        <p className="text-xs text-[var(--text-secondary)]">
-          {isPlaying ? "Session in progress..." : "10:00 remaining"}
-        </p>
       </div>
     </main>
   );
