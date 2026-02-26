@@ -115,7 +115,7 @@ export default function RechargePage() {
           <h1 className="text-3xl md:text-4xl font-serif text-[var(--text-primary)]">
             A 10-Minute Recharge
           </h1>
-          <p className="text-[10px] font-bold tracking-widest uppercase text-[var(--text-secondary)] mt-2">
+          <p className="text-xs md:text-sm font-bold tracking-[0.15em] uppercase text-[var(--text-secondary)] mt-4">
             Non Sleep Deep Rest
           </p>
 
@@ -132,13 +132,15 @@ export default function RechargePage() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="1"
+              strokeWidth="1.2"
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-              <path d="M17.5 19c0-1.7-1.3-3-3-3h-5c-1.7 0-3 1.3-3 3" />
-              <path d="M19 16c0-1.7-1.3-3-3-3h-5c-1.7 0-3 1.3-3 3" />
-              <path d="M17.5 19h-11" />
+              <circle cx="12" cy="7" r="3" />
+              <path d="M7 21s2-5 5-5 5 5 5 5" />
+              <path d="M9 13.5l1.5-1.5" />
+              <path d="M15 13.5l-1.5-1.5" />
+              <path d="M12 10v6" />
             </svg>
           </div>
         </div>

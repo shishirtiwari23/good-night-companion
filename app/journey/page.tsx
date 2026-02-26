@@ -98,6 +98,38 @@ export default function JourneyPage() {
           </div>
         </header>
 
+        {/* --- MEDICAL DISCLAIMER SECTION --- */}
+        <div className="w-full max-w-2xl mx-auto z-10 pt-12 pb-8 px-4 md:px-0">
+          <div className="bg-[#EBE9E1]/50 border border-[#8da399]/20 rounded-2xl p-6 md:p-8 text-xs text-[var(--text-secondary)] space-y-4 text-left">
+            <p className="font-bold text-[var(--text-primary)] uppercase tracking-widest text-[11px] mb-4 pb-3 border-b border-[#8da399]/20">
+              Medical Disclaimer & Safety Warning
+            </p>
+
+            <div>
+              <span className="font-bold text-[var(--text-primary)]">Educational Purposes Only:</span> This program is grounded in the evidence-based principles of Cognitive Behavioral Therapy for Insomnia (CBT-I). This book is intended as a supportive educational resource and does not constitute medical advice, diagnosis, or clinical therapy. It is not a substitute for the personalized care of a healthcare professional.
+            </div>
+
+            <div>
+              <span className="font-bold text-[var(--text-primary)] block mb-1">Sleep Restriction Therapy Safety Warning:</span>
+              This program utilizes Sleep Restriction Therapy (SRT). This technique is NOT recommended for individuals with:
+              <ul className="list-disc pl-5 mt-1 space-y-1">
+                <li>Bipolar Disorder (may trigger manic/hypomanic episodes).</li>
+                <li>Seizure Disorders / Epilepsy (sleep deprivation lowers the seizure threshold).</li>
+                <li>Untreated Sleep Apnea or other respiratory conditions.</li>
+                <li>Recent surgery or major physical illness.</li>
+              </ul>
+            </div>
+
+            <div>
+              <span className="font-bold text-[var(--text-primary)]">Occupational & Physical Safety:</span> SRT causes temporary daytime sleepiness. Use extreme caution when driving or operating heavy machinery during the first three weeks of this program. This program may not be appropriate for individuals in safety-sensitive occupations, such as transportation, construction, or healthcare.
+            </div>
+
+            <div className="pt-3 border-t border-[#8da399]/20 font-medium italic">
+              If you are navigating severe mental health challenges or suspect an underlying sleep disorder, consult a qualified healthcare provider before beginning. By using this journal, you assume all risks associated with the behavioral changes described herein.
+            </div>
+          </div>
+        </div>
+
         {/* --- ROADMAP (COMMENTED OUT FOR NOW) ---
           
         <div className="h-px w-full bg-gradient-to-r from-transparent via-[var(--primary)]/20 to-transparent"></div>

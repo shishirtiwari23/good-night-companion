@@ -30,8 +30,8 @@ export default function Home() {
         </p>
       </div>
 
-      {/* --- MAIN PATHWAYS (3 Cards) --- */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 w-full max-w-5xl mb-24 md:mb-32 z-10">
+      {/* --- MAIN PATHWAYS (4 Cards in 2x2 Grid) --- */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full max-w-4xl mb-24 md:mb-32 z-10">
         {/* Card 1: Understand */}
         <Link href="/understand" className="block h-full group">
           <div className="card-container flex flex-col items-center text-center space-y-4 justify-center min-h-[180px] md:min-h-[200px] hover:-translate-y-2 hover:shadow-md transition-all duration-500 cursor-pointer h-full">
@@ -51,10 +51,10 @@ export default function Home() {
                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
               </svg>
             </div>
-            <h3 className="font-serif text-lg font-medium text-[var(--text-primary)]">
+            <h3 className="font-serif text-xl md:text-2xl font-medium text-[var(--text-primary)]">
               Understand the Science
             </h3>
-            <p className="text-xs text-[var(--text-secondary)]">
+            <p className="text-sm text-[var(--text-secondary)]">
               Why this works when others failed.
             </p>
           </div>
@@ -79,16 +79,43 @@ export default function Home() {
                 <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
               </svg>
             </div>
-            <h3 className="font-serif text-lg font-medium text-[var(--text-primary)]">
+            <h3 className="font-serif text-xl md:text-2xl font-medium text-[var(--text-primary)]">
               Join the Journey
             </h3>
-            <p className="text-xs text-[var(--text-secondary)]">
+            <p className="text-sm text-[var(--text-secondary)]">
               Get the full 90-day journal.
             </p>
           </div>
         </Link>
 
-        {/* Card 3: Practice Tools (Scrolls to #toolkit) */}
+        {/* Card 3: Articles */}
+        <Link href="/articles" className="block h-full group">
+          <div className="card-container flex flex-col items-center text-center space-y-4 justify-center min-h-[180px] md:min-h-[200px] hover:-translate-y-2 hover:shadow-md transition-all duration-500 cursor-pointer h-full">
+            <div className="text-[#8da399]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+              </svg>
+            </div>
+            <h3 className="font-serif text-xl md:text-2xl font-medium text-[var(--text-primary)]">
+              Articles
+            </h3>
+            <p className="text-sm text-[var(--text-secondary)]">
+              Science-backed insights.
+            </p>
+          </div>
+        </Link>
+
+        {/* Card 4: Practice Tools (Scrolls to #toolkit) */}
         <Link href="#toolkit" className="block h-full group">
           <div className="card-container flex flex-col items-center text-center space-y-4 justify-center min-h-[180px] md:min-h-[200px] h-full hover:-translate-y-2 hover:shadow-md transition-all duration-500 cursor-pointer bg-white border border-[#8da399]/20">
             <div className="text-[#8da399]">
@@ -106,10 +133,10 @@ export default function Home() {
                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
               </svg>
             </div>
-            <h3 className="font-serif text-lg font-medium text-[var(--text-primary)]">
+            <h3 className="font-serif text-xl md:text-2xl font-medium text-[var(--text-primary)]">
               Practice Tools
             </h3>
-            <p className="text-xs text-[var(--text-secondary)]">
+            <p className="text-sm text-[var(--text-secondary)]">
               Access your digital toolkit.
             </p>
           </div>
@@ -263,6 +290,38 @@ export default function Home() {
               </div>
             </div>
           </Link>
+        </div>
+      </div>
+
+      {/* --- MEDICAL DISCLAIMER SECTION --- */}
+      <div className="w-full max-w-4xl z-10 mb-20 px-6">
+        <div className="bg-[#EBE9E1]/50 border border-[#8da399]/20 rounded-2xl p-6 md:p-8 text-xs md:text-sm text-[var(--text-secondary)] space-y-4">
+          <p className="font-bold text-[var(--text-primary)] uppercase tracking-widest text-xs mb-6 pb-4 border-b border-[#8da399]/20">
+            Medical Disclaimer & Safety Warning
+          </p>
+
+          <div>
+            <span className="font-bold text-[var(--text-primary)]">Educational Purposes Only:</span> This program is grounded in the evidence-based principles of Cognitive Behavioral Therapy for Insomnia (CBT-I). This book is intended as a supportive educational resource and does not constitute medical advice, diagnosis, or clinical therapy. It is not a substitute for the personalized care of a healthcare professional.
+          </div>
+
+          <div>
+            <span className="font-bold text-[var(--text-primary)] block mb-1">Sleep Restriction Therapy Safety Warning:</span>
+            This program utilizes Sleep Restriction Therapy (SRT). This technique is NOT recommended for individuals with:
+            <ul className="list-disc pl-5 mt-2 space-y-1">
+              <li>Bipolar Disorder (may trigger manic/hypomanic episodes).</li>
+              <li>Seizure Disorders / Epilepsy (sleep deprivation lowers the seizure threshold).</li>
+              <li>Untreated Sleep Apnea or other respiratory conditions.</li>
+              <li>Recent surgery or major physical illness.</li>
+            </ul>
+          </div>
+
+          <div>
+            <span className="font-bold text-[var(--text-primary)]">Occupational & Physical Safety:</span> SRT causes temporary daytime sleepiness. Use extreme caution when driving or operating heavy machinery during the first three weeks of this program. This program may not be appropriate for individuals in safety-sensitive occupations, such as transportation, construction, or healthcare.
+          </div>
+
+          <div className="pt-4 border-t border-[#8da399]/20 font-medium italic">
+            If you are navigating severe mental health challenges or suspect an underlying sleep disorder, consult a qualified healthcare provider before beginning. By using this journal, you assume all risks associated with the behavioral changes described herein.
+          </div>
         </div>
       </div>
 

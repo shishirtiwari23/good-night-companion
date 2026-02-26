@@ -12,7 +12,7 @@ export default function CalculatorPage() {
     daysLogged: number;
     avgTib: string;
     avgTst: string;
-    score: number;
+    score: number | null;
     title: string;
     feedback: string;
     isError?: boolean;
@@ -37,7 +37,7 @@ export default function CalculatorPage() {
     setResult(null);
   };
 
-  const calculateEfficiency = () => {
+  const calculate = (showScore: boolean) => {
     let totalTib = 0;
     let totalTst = 0;
     let validDays = 0;
@@ -75,45 +75,45 @@ export default function CalculatorPage() {
         daysLogged: validDays,
         avgTib: validDays > 0 ? (totalTib / validDays).toFixed(1) : "-",
         avgTst: validDays > 0 ? (totalTst / validDays).toFixed(1) : "-",
-        score: 0,
+        score: null,
         title: "More Data Needed",
         feedback:
-          "You have logged fewer than 3 days. A true sleep pattern usually emerges over a full week. Please continue logging to get a more accurate action plan.",
+          "You have logged fewer than 3 days. A true sleep pattern usually emerges over a full week. Please continue logging to get a more accurate view.",
         isError: true,
       });
       return;
     }
 
-    const efficiency = Math.round((totalTst / totalTib) * 100);
     const avgTib = (totalTib / validDays).toFixed(1);
     const avgTst = (totalTst / validDays).toFixed(1);
 
-    let title = "";
-    let feedback = "";
-
-    if (efficiency >= 90) {
-      title = "Highly Consolidated";
-      feedback =
-        "Your sleep efficiency is excellent (>90%). You are utilizing your time in bed well. In CBT-I, this is the signal to potentially expand your sleep window by 15 minutes next week.";
-    } else if (efficiency >= 85) {
-      title = "Balanced & Stable";
-      feedback =
-        "Good work (85-89%). Your sleep is stabilizing. Maintain this current window for another week. Once you consistently hit 90%, you can begin to extend your time in bed.";
+    if (!showScore) {
+      setResult({
+        daysLogged: validDays,
+        avgTib: `${avgTib}h`,
+        avgTst: `${avgTst}h`,
+        score: null, 
+        title: "",
+        feedback: "",
+        isError: false,
+        hasSafetyWarning: false
+      });
     } else {
-      title = "Room for Improvement";
-      feedback = `Your efficiency is ${efficiency}%. In CBT-I, we aim for >85%. We recommend restricting your Time in Bed closer to your average sleep duration (${avgTst}h) to build higher sleep pressure.`;
-    }
+      const efficiency = Math.round((totalTst / totalTib) * 100);
+      const title = "Your Next Steps";
+      const feedback = "Please refer to your physical book in order to see your next action.";
 
-    setResult({
-      daysLogged: validDays,
-      avgTib: `${avgTib}h`,
-      avgTst: `${avgTst}h`,
-      score: efficiency,
-      title,
-      feedback,
-      isError: false,
-      hasSafetyWarning: shortWindowCount > 0,
-    });
+      setResult({
+        daysLogged: validDays,
+        avgTib: `${avgTib}h`,
+        avgTst: `${avgTst}h`,
+        score: efficiency,
+        title,
+        feedback,
+        isError: false,
+        hasSafetyWarning: shortWindowCount > 0,
+      });
+    }
 
     setTimeout(() => {
       document
@@ -127,7 +127,6 @@ export default function CalculatorPage() {
       <div className="card-container w-full max-w-2xl relative p-6 md:p-12">
         {/* Navigation & Header */}
         <div className="relative mb-8">
-          {/* FIX: Added z-50 to ensure clickability */}
           <div className="absolute -top-2 right-0 z-50">
             <Link
               href="/"
@@ -177,7 +176,7 @@ export default function CalculatorPage() {
 
         <div className="text-center space-y-1 mb-8">
           <p className="text-sm text-[var(--text-secondary)]">
-            Round to nearest half hour (e.g., 7.5).
+            Round to nearest 15 minutes.
           </p>
           <p className="text-sm text-[var(--text-secondary)]">
             Leave &quot;Planned Deviation&quot; nights blank.
@@ -208,7 +207,7 @@ export default function CalculatorPage() {
                 <div className="col-span-5">
                   <input
                     type="number"
-                    step="0.5"
+                    step="0.25"
                     placeholder="8.0"
                     className="w-full text-center p-3 bg-white border border-gray-100 rounded-lg focus:outline-none focus:border-[var(--primary)] text-[var(--text-primary)] font-serif text-lg shadow-sm placeholder:text-gray-300"
                     value={day.tib}
@@ -221,7 +220,7 @@ export default function CalculatorPage() {
                 <div className="col-span-5 relative">
                   <input
                     type="number"
-                    step="0.5"
+                    step="0.25"
                     placeholder="7.5"
                     className={`w-full text-center p-3 bg-white border rounded-lg focus:outline-none focus:border-[var(--primary)] text-[var(--text-primary)] font-serif text-lg shadow-sm placeholder:text-gray-300 ${
                       isInvalid
@@ -239,18 +238,29 @@ export default function CalculatorPage() {
           })}
         </div>
 
-        <div className="text-center mt-8 mb-8">
+        <div className="text-center mt-8 mb-6">
           <p className="text-xs text-[var(--text-secondary)] opacity-60">
             Shift Workers: Calculate Day/Night separately.
           </p>
         </div>
 
-        <button
-          onClick={calculateEfficiency}
-          className="w-full py-4 bg-[#94A396] hover:bg-[#829285] text-white rounded-full font-bold uppercase tracking-widest text-sm shadow-md transition-all active:scale-99 cursor-pointer"
-        >
-          Calculate Score
-        </button>
+        {/* --- TWO BUTTONS --- */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-4">
+          <button
+            onClick={() => calculate(false)}
+            className="w-full sm:w-1/2 py-4 bg-[#EBE9E1] hover:bg-[#dfddcf] text-[var(--text-primary)] rounded-full font-bold uppercase tracking-widest text-xs shadow-sm transition-all active:scale-99 cursor-pointer"
+          >
+            See Averages Only
+          </button>
+          
+          <button
+            onClick={() => calculate(true)}
+            className="w-full sm:w-1/2 py-4 bg-[#94A396] hover:bg-[#829285] text-white rounded-full font-bold uppercase tracking-widest text-xs shadow-md transition-all active:scale-99 cursor-pointer"
+          >
+            Calculate Score
+          </button>
+        </div>
+
 
         {/* --- RESULT SECTION --- */}
         {result && (
@@ -291,7 +301,7 @@ export default function CalculatorPage() {
               </div>
             </div>
 
-            {!result.isError && (
+            {result.score !== null && !result.isError && (
               <div className="text-center py-4">
                 <p className="text-xs font-bold uppercase tracking-wider text-[var(--text-secondary)] mb-2 opacity-60">
                   Sleep Efficiency (SE)
@@ -309,38 +319,56 @@ export default function CalculatorPage() {
               </div>
             )}
 
-            <div className="mt-8">
-              <p className="text-lg text-[var(--text-secondary)] mb-4 font-sans">
-                Insights
-              </p>
-              <div
-                className={`bg-white rounded-2xl p-8 border-l-4 shadow-sm ${result.isError ? "border-l-[#D4B483]" : "border-l-[#8da399]"}`}
-              >
-                <h3 className="font-serif text-2xl text-[var(--text-primary)] mb-3">
-                  {result.title}
-                </h3>
-                <p className="text-sm md:text-base text-[var(--text-secondary)] leading-relaxed">
-                  {result.feedback}
+            {(result.title || result.feedback) && (
+              <div className="mt-8">
+                <p className="text-lg text-[var(--text-secondary)] mb-4 font-sans">
+                  Insights
                 </p>
+                <div
+                  className={`bg-white rounded-2xl p-8 border-l-4 shadow-sm ${result.isError ? "border-l-[#D4B483]" : "border-l-[#8da399]"}`}
+                >
+                  <h3 className="font-serif text-2xl text-[var(--text-primary)] mb-3">
+                    {result.title}
+                  </h3>
+                  <p className="text-sm md:text-base text-[var(--text-secondary)] leading-relaxed font-semibold">
+                    {result.feedback}
+                  </p>
 
-                {result.hasSafetyWarning && (
-                  <div className="mt-6 pt-4 border-t border-red-100">
-                    <p className="text-xs font-bold uppercase tracking-widest text-red-500 mb-1">
-                      Safety Warning
-                    </p>
-                    <p className="text-sm text-[var(--text-secondary)]">
-                      You logged nights with{" "}
-                      <span className="font-bold">less than 5.5 hours</span> in
-                      bed. Unless supervised by a clinician, we strongly
-                      recommend never restricting your TIB below 5.5 hours to
-                      avoid excessive sleep deprivation.
-                    </p>
-                  </div>
-                )}
+                  {result.hasSafetyWarning && (
+                    <div className="mt-6 pt-4 border-t border-red-100">
+                      <p className="text-xs font-bold uppercase tracking-widest text-red-500 mb-1">
+                        Safety Warning
+                      </p>
+                      <p className="text-sm text-[var(--text-secondary)]">
+                        You logged nights with{" "}
+                        <span className="font-bold">less than 5.5 hours</span> in
+                        bed. Unless supervised by a clinician, we strongly
+                        recommend never restricting your TIB below 5.5 hours to
+                        avoid excessive sleep deprivation.
+                      </p>
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         )}
+
+        {/* --- SHORT MEDICAL DISCLAIMER --- */}
+        <div className="mt-16 pt-8 border-t border-[#8da399]/10">
+          <div className="bg-[#EBE9E1]/30 rounded-xl p-6 border border-[#8da399]/10 text-xs text-[var(--text-secondary)] leading-relaxed">
+            <p className="font-bold text-[var(--text-primary)] uppercase tracking-wider mb-2">
+              Medical Disclaimer & Safety Warning
+            </p>
+            <p className="mb-2">
+              This tool utilizes Sleep Restriction Therapy (SRT) concepts. This technique is <strong className="text-[var(--text-primary)]">NOT</strong> recommended for individuals with Bipolar Disorder, Seizure Disorders, untreated Sleep Apnea, or those in safety-sensitive occupations (e.g., transportation).
+            </p>
+            <p>
+              SRT causes temporary daytime sleepiness. Use extreme caution when driving. Consult a healthcare provider before restricting your sleep window below 5.5 hours.
+            </p>
+          </div>
+        </div>
+
       </div>
     </main>
   );

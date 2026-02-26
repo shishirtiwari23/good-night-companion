@@ -130,7 +130,7 @@ export default function PMRPage() {
           <h1 className="text-3xl md:text-4xl font-serif text-[var(--text-primary)]">
             Unwind Your Body
           </h1>
-          <p className="text-[10px] font-bold tracking-widest uppercase text-[var(--text-secondary)] mt-2">
+          <p className="text-xs md:text-sm font-bold tracking-[0.15em] uppercase text-[var(--text-secondary)] mt-4">
             Progressive Muscle Relaxation
           </p>
 
