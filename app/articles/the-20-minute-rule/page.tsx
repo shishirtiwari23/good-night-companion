@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The 20-Minute Rule: Why Getting Out of Bed is the Key to Fixing Insomnia | The Good Night Companion",
-  description: "Staying in bed when you are wide awake is one of the worst things you can do. Learn how to use the 20-Minute Contingency Plan to break the cycle.",
+  title: "The 20-Minute Rule: Why Getting Out of Bed is the Key to Fixing Insomnia",
+  description: "Waking up at 3 AM? Learn why staying in bed awake fuels anxiety, and how the clinical 20-Minute Rule can fix your broken brain-bed association.",
 };
 
 export default function Article2Page() {
@@ -157,6 +157,13 @@ export default function Article2Page() {
               Get The Goodnight Companion
             </Link>
           </div>
+
+          <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+          <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">
+            <li><strong>Stimulus Control Therapy:</strong> Bootzin, R. R. (1972). Stimulus control treatment for insomnia. <em>Proceedings of the American Psychological Association</em>. (This is the foundational clinical paper that established the &quot;get out of bed if you cannot sleep&quot; rule to rebuild the bed-sleep association).</li>
+            <li><strong>The 3P Model of Insomnia:</strong> Spielman, A. J., Caruso, L. S., & Glovinsky, P. B. (1987). A clinical perspective on the nature and management of insomnia. <em>Psychiatric Clinics of North America</em>, 10(4), 541-553. (This highly cited model explains how acute stress turns into chronic insomnia through maladaptive habits like staying in bed while awake).</li>
+            <li><strong>Screen Light & Sleep Interruption:</strong> Chang, A.-M., Aeschbach, D., Duffy, J. F., & Czeisler, C. A. (2015). Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness. <em>Proceedings of the National Academy of Sciences</em>. (This Harvard study proves why reaching for a screen in the middle of the night actively suppresses melatonin and extends wakefulness).</li>
+          </ul>
           
           <p className="text-xs opacity-60 mt-12 leading-relaxed">
             <strong>Disclaimer:</strong> The content provided in this article is for educational and informational purposes only and does not constitute medical advice, diagnosis, or clinical therapy. If you have a history of bipolar disorder, seizure disorders, untreated sleep apnea, or operate heavy machinery, please consult a qualified healthcare provider before making changes to your sleep schedule or restricting your time in bed.

@@ -3,8 +3,8 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Why Going to Bed Early is Making Your Insomnia Worse | The Good Night Companion",
-  description: "If you are battling chronic insomnia, going to bed early is actually a physiological trap. Here is the science behind why, and the counterintuitive steps to fix it.",
+  title: "Why Going to Bed Early is Making Your Insomnia Worse",
+  description: "Exhausted but can't sleep? Discover why going to bed early actually makes insomnia worse, and how to use biological \"sleep pressure\" to finally rest.",
 };
 
 export default function Article1Page() {
@@ -145,6 +145,13 @@ export default function Article1Page() {
               Get The Goodnight Companion
             </Link>
           </div>
+
+          <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+          <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">
+            <li><strong>The Two-Process Model of Sleep (Sleep Pressure):</strong> Borbély, A. A. (1982). A two process model of sleep regulation. <em>Human Neurobiology</em>, 1(3), 195-204. (This is the foundational scientific paper that established how the &quot;Homeostatic Sleep Drive&quot; builds during wakefulness and dissipates during sleep).</li>
+            <li><strong>Sleep Restriction Therapy (Compressing the Window):</strong> Spielman, A. J., Saskin, P., & Thorpy, M. J. (1987). Treatment of chronic insomnia by restriction of time in bed. <em>Sleep</em>, 10(1), 45-56. (This clinical study proves that temporarily restricting time in bed significantly improves sleep efficiency and consolidated rest. It also establishes the core 5.5-hour safety minimum).</li>
+            <li><strong>The Difference Between Tired and Sleepy:</strong> Pigeon, W. R., & Perlis, M. L. (2006). Sleep hygiene and sleep restriction therapy. In <em>Sleep Medicine Clinics</em>. (This clinical literature clarifies the crucial distinction between general fatigue and the actual biological drive to initiate sleep).</li>
+          </ul>
           
           <p className="text-xs opacity-60 mt-12 leading-relaxed">
             <strong>Disclaimer:</strong> The content provided in this article is for educational and informational purposes only and does not constitute medical advice, diagnosis, or clinical therapy. If you have a history of bipolar disorder, seizure disorders, untreated sleep apnea, or operate heavy machinery, please consult a qualified healthcare provider before making changes to your sleep schedule or restricting your time in bed.

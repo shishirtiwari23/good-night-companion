@@ -17,6 +17,31 @@ const articles = [
     title: "The 20-Minute Rule: Why Getting Out of Bed is the Key to Fixing Insomnia",
     description: "Staying in bed when you are wide awake is one of the worst things you can do. Learn how to use the 20-Minute Contingency Plan to break the cycle.",
     slug: "the-20-minute-rule",
+  },
+  {
+    title: "How to Stop Overthinking at Night",
+    description: "Can't turn your brain off? Learn why trying to empty your mind backfires, and how to use Cognitive Defusion to stop overthinking and finally sleep.",
+    slug: "how-to-stop-overthinking-at-night",
+  },
+  {
+    title: "The \"Catch-Up Sleep\" Trap",
+    description: "Sunday night insomnia? Discover why sleeping in on weekends causes \"social jetlag,\" ruins your internal clock, and how an Anchor Time can fix it.",
+    slug: "the-catch-up-sleep-trap",
+  },
+  {
+    title: "How to Optimize Your Bedroom for Sleep",
+    description: "Still awake at 3 AM? Discover why expensive mattresses won't fix insomnia, and how to biologically optimize your bedroom using temperature and light.",
+    slug: "how-to-optimize-your-bedroom-for-sleep",
+  },
+  {
+    title: "Waking Up at 3 AM? Why \"Unbroken\" Sleep is a Biological Myth",
+    description: "Keep waking up at 3 AM? Learn why unbroken 8-hour sleep is a biological myth. Discover the science of sleep cycles and how to stop the midnight panic.",
+    slug: "waking-up-at-3-am",
+  },
+  {
+    title: "Why Your Sleep Tracker is Making Your Insomnia Worse",
+    description: "Is your Apple Watch or Oura ring making your insomnia worse? Discover the science of Orthosomnia and why obsessing over your sleep score ruins your rest.",
+    slug: "the-orthosomnia-trap",
   }
 ];
 
