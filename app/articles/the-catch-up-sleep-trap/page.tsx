@@ -107,7 +107,9 @@ export default function Article4Page() {
               Tired of feeling out of sync? Establishing an Anchor Time is just the first foundational step. The Goodnight Companion provides the exact formulas to help you calculate your ideal Anchor Time and build a personalized Sleep Window.
             </p>
             <Link 
-              href="/journey" 
+              href="https://www.amazon.com/dp/B0GQTGFSG7" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion

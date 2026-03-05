@@ -113,7 +113,9 @@ export default function Article5Page() {
               Ready to rebuild your sleep from the ground up? The Goodnight Companion provides the exact mathematical formulas to rebuild your sleep pressure and the cognitive tools to finally call a truce with your racing mind.
             </p>
             <Link 
-              href="/journey" 
+              href="https://www.amazon.com/dp/B0GQTGFSG7" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion

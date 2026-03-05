@@ -66,7 +66,7 @@ export default function JourneyPage() {
             <div className="flex flex-col items-center justify-center gap-6 pt-6">
               {/* Primary: Amazon Affiliate Link */}
               <a
-                href="https://www.amazon.com/dp/YOUR_BOOK_ID?tag=YOUR_TAG"
+                href="https://www.amazon.com/dp/B0GQTGFSG7"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full md:w-auto px-10 py-5 flex items-center justify-center gap-3 group text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"

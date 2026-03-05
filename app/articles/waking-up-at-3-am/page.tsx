@@ -124,7 +124,9 @@ export default function Article6Page() {
               Tired of dreading the middle of the night? Understanding the biology of sleep is a great first step, but rebuilding a broken sleep architecture requires a structured blueprint. The Goodnight Companion provides the exact tools to lower your hyperarousal, neutralize the midnight panic, and retrain your brain to trust your bed again.
             </p>
             <Link 
-              href="/journey" 
+              href="https://www.amazon.com/dp/B0GQTGFSG7" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion

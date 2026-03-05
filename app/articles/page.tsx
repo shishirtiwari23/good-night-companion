@@ -42,6 +42,31 @@ const articles = [
     title: "Why Your Sleep Tracker is Making Your Insomnia Worse",
     description: "Is your Apple Watch or Oura ring making your insomnia worse? Discover the science of Orthosomnia and why obsessing over your sleep score ruins your rest.",
     slug: "the-orthosomnia-trap",
+  },
+  {
+    title: "Do I Have Chronic Insomnia? (The Clinical \"Rule of 3s\" Explained)",
+    description: "Worried your sleep is permanently broken? Discover the clinical \"Rule of 3s\" for chronic insomnia, and how the 3P model proves you can unlearn the pattern.",
+    slug: "do-i-have-chronic-insomnia",
+  },
+  {
+    title: "\"I Didn't Sleep a Wink\": The Clinical Science of Sleep State Misperception",
+    description: "Think you didn't sleep a wink, but your partner heard you snore? Discover the clinical science of Sleep State Misperception and the \"First-Night Effect.\"",
+    slug: "i-didnt-sleep-a-wink",
+  },
+  {
+    title: "Is It OK to Nap in the Afternoon? (The Clinical Rules of Daytime Sleep)",
+    description: "Is it OK to nap in the afternoon? Learn the clinical science of daytime napping, the 20-minute cap, and why insomniacs should use NSDR instead.",
+    slug: "is-it-ok-to-nap-in-the-afternoon",
+  },
+  {
+    title: "Paradoxical Intention: Why Trying to Stay Awake Can Cure Your Insomnia",
+    description: "Sleep anxiety keeping you awake? Discover Paradoxical Intention, the clinical CBT-I technique that uses reverse psychology to cure insomnia and performance anxiety.",
+    slug: "paradoxical-intention",
+  },
+  {
+    title: "The Math of Insomnia: How to Calculate Your Sleep Efficiency",
+    description: "What is a good Sleep Efficiency? Learn the clinical math behind insomnia recovery, the 15-minute titration rule, and why 85% is the gold standard.",
+    slug: "the-math-of-insomnia",
   }
 ];
 

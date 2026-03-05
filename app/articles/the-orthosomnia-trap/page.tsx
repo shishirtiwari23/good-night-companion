@@ -128,7 +128,9 @@ export default function Article7Page() {
               Ready to stop tracking and start sleeping? Throwing away the data is hard for an analytical mind, which is why you need a structured replacement. The Goodnight Companion replaces obsessive tech-tracking with proven clinical mechanics, giving you the formulas to rebuild your sleep without triggering performance anxiety.
             </p>
             <Link 
-              href="/journey" 
+              href="https://www.amazon.com/dp/B0GQTGFSG7" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion
