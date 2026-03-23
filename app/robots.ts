@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/private/'],
     },
-    sitemap: 'https://thegoodnightcompanion.com/sitemap.xml',
+    sitemap: 'https://www.thegoodnightcompanion.com/sitemap.xml',
   };
 }
