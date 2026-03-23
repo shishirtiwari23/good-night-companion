@@ -9,8 +9,22 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://thegoodnightcompanion.com"),
   title: "The Good Night Companion",
   description: "A 90-Day CBT-I Program & Toolkit",
+  openGraph: {
+    title: "The Good Night Companion",
+    description: "A 90-Day CBT-I Program & Toolkit",
+    url: "https://thegoodnightcompanion.com",
+    siteName: "The Good Night Companion",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Good Night Companion",
+    description: "A 90-Day CBT-I Program & Toolkit",
+  },
 };
 
 export default function RootLayout({

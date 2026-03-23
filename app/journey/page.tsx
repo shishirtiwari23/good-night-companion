@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 
+
 export default function JourneyPage() {
   return (
     <main className="min-h-screen flex justify-center p-6 md:p-12 pb-24 relative bg-[var(--background)]">

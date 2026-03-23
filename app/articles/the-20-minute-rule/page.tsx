@@ -5,6 +5,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The 20-Minute Rule: Why Getting Out of Bed is the Key to Fixing Insomnia",
   description: "Waking up at 3 AM? Learn why staying in bed awake fuels anxiety, and how the clinical 20-Minute Rule can fix your broken brain-bed association.",
+  alternates: {
+    canonical: '/articles/the-20-minute-rule',
+  },
 };
 
 export default function Article2Page() {

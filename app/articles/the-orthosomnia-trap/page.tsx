@@ -5,6 +5,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Why Your Sleep Tracker is Making Your Insomnia Worse (The Orthosomnia Trap)",
   description: "Is your Apple Watch or Oura ring making your insomnia worse? Discover the science of Orthosomnia and why obsessing over your sleep score ruins your rest.",
+  alternates: {
+    canonical: '/articles/the-orthosomnia-trap',
+  },
 };
 
 export default function Article7Page() {

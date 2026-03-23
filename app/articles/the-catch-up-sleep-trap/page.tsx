@@ -5,6 +5,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "The \"Catch-Up Sleep\" Trap: Why Sleeping In on Weekends Ruins Your Internal Clock",
   description: "Sunday night insomnia? Discover why sleeping in on weekends causes \"social jetlag,\" ruins your internal clock, and how an Anchor Time can fix it.",
+  alternates: {
+    canonical: '/articles/the-catch-up-sleep-trap',
+  },
 };
 
 export default function Article4Page() {

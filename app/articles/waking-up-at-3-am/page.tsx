@@ -5,6 +5,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Waking Up at 3 AM? Why \"Unbroken\" Sleep a Biological Myth",
   description: "Keep waking up at 3 AM? Learn why unbroken 8-hour sleep is a biological myth. Discover the science of sleep cycles and how to stop the midnight panic.",
+  alternates: {
+    canonical: '/articles/waking-up-at-3-am',
+  },
 };
 
 export default function Article6Page() {

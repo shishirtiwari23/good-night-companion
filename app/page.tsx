@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative overflow-hidden bg-[var(--background)]">

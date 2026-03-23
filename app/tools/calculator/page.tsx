@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
+
 export default function CalculatorPage() {
   const [days, setDays] = useState(
     Array.from({ length: 8 }, () => ({ tib: "", tst: "" })),

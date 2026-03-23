@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 
+
 export default function WorryDumpPage() {
   return (
     <main className="min-h-screen flex items-center justify-center p-6 relative bg-[var(--background)]">

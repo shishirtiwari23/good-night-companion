@@ -5,6 +5,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Paradoxical Intention: Why Trying to Stay Awake Can Cure Your Insomnia",
   description: "Sleep anxiety keeping you awake? Discover Paradoxical Intention, the clinical CBT-I technique that uses reverse psychology to cure insomnia and performance anxiety.",
+  alternates: {
+    canonical: '/articles/paradoxical-intention',
+  },
 };
 
 export default function Article11Page() {

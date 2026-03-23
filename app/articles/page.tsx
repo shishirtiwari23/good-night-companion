@@ -5,6 +5,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Articles | The Good Night Companion",
   description: "Science-backed insights and strategies for fixing insomnia.",
+  alternates: {
+    canonical: '/articles',
+  },
 };
 
 const articles = [

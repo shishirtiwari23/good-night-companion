@@ -5,6 +5,9 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Is It OK to Nap in the Afternoon? (The Clinical Rules of Daytime Sleep)",
   description: "Is it OK to nap in the afternoon? Learn the clinical science of daytime napping, the 20-minute cap, and why insomniacs should use NSDR instead.",
+  alternates: {
+    canonical: '/articles/is-it-ok-to-nap-in-the-afternoon',
+  },
 };
 
 export default function Article10Page() {
