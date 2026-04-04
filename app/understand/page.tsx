@@ -532,10 +532,9 @@ export default function UnderstandPage() {
           </div>
 
           <div className="pt-4">
-            {/* Note: This button likely points to a signup or journal page in a real app */}
-            <button className="btn-primary max-w-xs mx-auto text-sm px-10 py-5">
+            <Link href="/journey" className="btn-primary max-w-xs mx-auto text-sm px-10 py-5 inline-block">
               Join Your Journey
-            </button>
+            </Link>
           </div>
         </div>
       </article>
