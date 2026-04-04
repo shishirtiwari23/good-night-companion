@@ -187,7 +187,7 @@ export default function UnderstandPage() {
                 Your Mind
               </h3>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                We use Cognitive Reframing (The 3-C Method) to stop the nightly
+                We use Cognitive Defusion to stop the nightly
                 anxiety loop.
               </p>
             </div>
@@ -321,7 +321,7 @@ export default function UnderstandPage() {
               bedroom.
             </p>
             <p>
-              If you are a caregiver, shift worker, student, or living in a
+              If you are a caregiver, student, or living in a
               shared space, rigid rules can feel impossible. You will not be
               left behind. This program supports you with compassionate,
               adaptive protocols designed to fit your reality.

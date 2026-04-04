@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import FaqAccordion from "../../components/FaqAccordion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,16 +11,31 @@ export const metadata: Metadata = {
   },
 };
 
+
+const faqs = [
+  { question: "Is taking an afternoon nap bad for insomnia?", answer: "Yes. If you struggle with chronic insomnia or nighttime awakenings, you should not nap. Napping acts as a pressure release valve, flushing out the adenosine (sleep hunger) your brain needs to pull you into a deep sleep at night. Napping directly fuels midnight wakefulness." },
+  { question: "How long is the perfect power nap?", answer: "For healthy sleepers, the perfect power nap is capped at exactly 20 minutes. Waking up before you enter deep sleep leaves you feeling refreshed and cognitively sharp. Sleeping for 30 minutes or more triggers 'sleep inertia,' leaving you feeling groggy and disoriented." },
+  { question: "What is NSDR and why is it better than napping?", answer: "Non-Sleep Deep Rest (NSDR) is a guided relaxation protocol that deeply rests the nervous system without crossing into unconsciousness. It lowers cortisol and replenishes dopamine to cure afternoon fatigue, but because you stay awake, it preserves your vital sleep pressure for the night ahead." },
+  { question: "Why do I crash at 2 PM every day?", answer: "An afternoon crash is a normal biological guarantee, not a sign of broken sleep. Your circadian rhythm naturally dips in the early afternoon, causing a slight drop in core body temperature and alertness, regardless of how many hours you slept the night before." }
+];
+
 export default function Article10Page() {
   return (
     <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
-      <div className="w-full max-w-3xl z-10 mb-12">
+      <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
           className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
+        </Link>
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
         </Link>
       </div>
 
@@ -142,6 +158,8 @@ export default function Article10Page() {
               Get The Goodnight Companion
             </Link>
           </div>
+
+          <FaqAccordion faqs={faqs} />
 
           <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">

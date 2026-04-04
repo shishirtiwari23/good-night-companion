@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import FaqAccordion from "../../components/FaqAccordion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,17 +11,32 @@ export const metadata: Metadata = {
   },
 };
 
+
+const faqs = [
+  { question: "Why does my brain race as soon as I try to sleep?", answer: "When you aggressively try to force your mind to be quiet, you signal to your nervous system that your thoughts are dangerous threats. This triggers a 'fight-or-flight' response, spiking adrenaline and cortisol, which makes your overthinking even louder and pushes sleep further away." },
+  { question: "How can I clear my mind to fall asleep?", answer: "You don't need a completely silent mind to fall asleep; you just need a neutral reaction to a busy one. Instead of fighting your thoughts, use a technique called Cognitive Defusion. Acknowledge your racing thoughts as harmless mental notifications rather than commands you must act on." },
+  { question: "What is Cognitive Defusion for insomnia?", answer: "Cognitive Defusion is an ACT-I clinical technique where you create psychological distance from anxious nighttime thoughts. By mentally stating, 'I am noticing that I\'m having the thought that tomorrow will be ruined,' you take away the thought's power, lowering your adrenaline and allowing your body to rest." },
+  { question: "Should I meditate in bed to stop overthinking?", answer: "If you are already highly anxious in bed, trying to force meditation can backfire and create performance anxiety. If defusion doesn't work and you feel deeply frustrated after 20 minutes, it is better to physically get out of bed and reset the scene in another room." }
+];
+
 export default function Article3Page() {
   return (
     <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
       {/* Navigation */}
-      <div className="w-full max-w-3xl z-10 mb-12">
+      <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
           className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
+        </Link>
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
         </Link>
       </div>
 
@@ -133,6 +149,8 @@ export default function Article3Page() {
               Get The Goodnight Companion
             </Link>
           </div>
+
+          <FaqAccordion faqs={faqs} />
 
           <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">

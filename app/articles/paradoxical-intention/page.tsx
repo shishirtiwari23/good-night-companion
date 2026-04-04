@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import FaqAccordion from "../../components/FaqAccordion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,16 +11,31 @@ export const metadata: Metadata = {
   },
 };
 
+
+const faqs = [
+  { question: "Why does trying hard to fall asleep keep me awake?", answer: "Sleep is an autonomic nervous system process. When you consciously try to force sleep, you trigger 'Sleep Effort' and performance anxiety. Your brain misinterprets this pressure as a threat, dumping adrenaline into your system and activating your fight-or-flight response, which prevents unconsciousness." },
+  { question: "What is Paradoxical Intention for sleep?", answer: "Paradoxical Intention is a clinical CBT-I technique where you intentionally try to stay awake while lying in bed in the dark. By voluntarily removing the pressure and demand to fall asleep, your performance anxiety evaporates, allowing your autonomic nervous system to safely initiate sleep." },
+  { question: "How do I do Paradoxical Intention correctly?", answer: "Get into bed only when sleepy, keep the room dark, and gently keep your eyes open. Tell yourself, 'I am not going to try to sleep; I am just going to rest my body and stay awake.' You must genuinely surrender the goal of sleeping for the adrenaline to drop." },
+  { question: "Can I use my phone while doing Paradoxical Intention?", answer: "No. Paradoxical Intention must be practiced in a dark, quiet room without screens or distractions. The goal is to remove sleep anxiety while resting, not to entertain yourself. Blue light and scrolling will actively suppress melatonin and keep you artificially awake." }
+];
+
 export default function Article11Page() {
   return (
     <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
-      <div className="w-full max-w-3xl z-10 mb-12">
+      <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
           className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
+        </Link>
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
         </Link>
       </div>
 
@@ -150,6 +166,8 @@ export default function Article11Page() {
               Get The Goodnight Companion
             </Link>
           </div>
+
+          <FaqAccordion faqs={faqs} />
 
           <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">

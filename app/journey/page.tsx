@@ -1,10 +1,24 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 
+const AMAZON_LINKS: Record<string, string> = {
+  US: "https://www.amazon.com/dp/B0GQTGFSG7",
+  UK: "https://www.amazon.co.uk/dp/B0GQTGFSG7",
+  DE: "https://www.amazon.de/dp/B0GQTGFSG7",
+  FR: "https://www.amazon.fr/dp/B0GQTGFSG7",
+  ES: "https://www.amazon.es/dp/B0GQTGFSG7",
+  IT: "https://www.amazon.it/dp/B0GQTGFSG7",
+  NL: "https://www.amazon.nl/dp/B0GQTGFSG7",
+  PL: "https://www.amazon.pl/dp/B0GQTGFSG7",
+  SE: "https://www.amazon.se/dp/B0GQTGFSG7",
+  BE: "https://www.amazon.com.be/dp/B0GQTGFSG7",
+  IE: "https://www.amazon.ie/dp/B0GQTGFSG7"
+};
 
 export default function JourneyPage() {
+  const [selectedCountry, setSelectedCountry] = useState("US");
   return (
     <main className="min-h-screen flex justify-center p-6 md:p-12 pb-24 relative bg-[var(--background)]">
       {/* Navigation */}
@@ -65,28 +79,48 @@ export default function JourneyPage() {
 
             {/* ACTION BUTTONS */}
             <div className="flex flex-col items-center justify-center gap-6 pt-6">
-              {/* Primary: Amazon Affiliate Link */}
-              <a
-                href="https://www.amazon.com/dp/B0GQTGFSG7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary w-full md:w-auto px-10 py-5 flex items-center justify-center gap-3 group text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
-              >
-                <span>Get the Book</span>
-                <svg
-                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+              <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
+                <select
+                  value={selectedCountry}
+                  onChange={(e) => setSelectedCountry(e.target.value)}
+                  className="px-4 py-4 rounded-[1rem] border border-[var(--text-secondary)]/20 shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent text-[var(--text-primary)] transition-shadow w-full sm:w-auto min-w-[140px] text-center font-bold"
+                  style={{ backgroundImage: 'none' }}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M14 5l7 7m0 0l-7 7m7-7H3"
-                  ></path>
-                </svg>
-              </a>
+                  <option value="US">🇺🇸 United States</option>
+                  <option value="UK">🇬🇧 United Kingdom</option>
+                  <option value="DE">🇩🇪 Germany</option>
+                  <option value="FR">🇫🇷 France</option>
+                  <option value="ES">🇪🇸 Spain</option>
+                  <option value="IT">🇮🇹 Italy</option>
+                  <option value="NL">🇳🇱 Netherlands</option>
+                  <option value="PL">🇵🇱 Poland</option>
+                  <option value="SE">🇸🇪 Sweden</option>
+                  <option value="BE">🇧🇪 Belgium</option>
+                  <option value="IE">🇮🇪 Ireland</option>
+                </select>
+
+                <a
+                  href={AMAZON_LINKS[selectedCountry]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary w-full sm:w-auto px-10 py-5 flex items-center justify-center gap-3 group text-sm shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+                >
+                  <span>Get the Book</span>
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
 
               {/* Secondary: Understand the Science */}
               <Link

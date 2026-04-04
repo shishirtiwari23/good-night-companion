@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import FaqAccordion from "../../components/FaqAccordion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,12 +11,20 @@ export const metadata: Metadata = {
   },
 };
 
+
+const faqs = [
+  { question: "Does going to bed early help catch up on sleep?", answer: "No. If you have chronic insomnia, going to bed early dilutes your biological 'sleep pressure' (the body's natural hunger for sleep). Instead of sleeping more, you are likely to wake up in the middle of the night or spend hours tossing and turning in bed." },
+  { question: "What is the difference between being tired and being sleepy?", answer: "Tiredness is a state of low mental or physical energy, while sleepiness is the biological inability to stay awake (like heavy eyelids or nodding off). You should only get into bed when you are biologically sleepy, not just when you feel tired." },
+  { question: "Why do I wake up at 2 AM when I go to bed early?", answer: "By going to bed before your sleep pressure has fully peaked, your body lacks the biological drive needed to sustain a full night of sleep. You might fall asleep initially, but the weak pressure causes you to wake up early and struggle to fall back asleep." },
+  { question: "How many hours should I spend in bed if I have insomnia?", answer: "You should closely match your 'Time in Bed' to your actual 'Total Sleep Time,' but never restrict your sleep window to less than 5.5 hours. Compressing your time in bed builds stronger sleep pressure, helping you fall asleep faster and stay asleep longer." }
+];
+
 export default function Article1Page() {
   return (
     <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
       
       {/* Navigation */}
-      <div className="w-full max-w-3xl z-10 mb-12">
+      <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
           className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
@@ -35,6 +44,13 @@ export default function Article1Page() {
             <path d="m15 18-6-6 6-6"/>
           </svg>
           Back to Articles
+        </Link>
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
         </Link>
       </div>
 
@@ -150,6 +166,8 @@ export default function Article1Page() {
               Get The Goodnight Companion
             </Link>
           </div>
+
+          <FaqAccordion faqs={faqs} />
 
           <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">

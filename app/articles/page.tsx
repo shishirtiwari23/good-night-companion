@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
+import ArticlesList from "./ArticlesList";
 
 export const metadata: Metadata = {
   title: "Articles | The Good Night Companion",
@@ -36,11 +37,7 @@ const articles = [
     description: "Still awake at 3 AM? Discover why expensive mattresses won't fix insomnia, and how to biologically optimize your bedroom using temperature and light.",
     slug: "how-to-optimize-your-bedroom-for-sleep",
   },
-  {
-    title: "Waking Up at 3 AM? Why \"Unbroken\" Sleep is a Biological Myth",
-    description: "Keep waking up at 3 AM? Learn why unbroken 8-hour sleep is a biological myth. Discover the science of sleep cycles and how to stop the midnight panic.",
-    slug: "waking-up-at-3-am",
-  },
+
   {
     title: "Why Your Sleep Tracker is Making Your Insomnia Worse",
     description: "Is your Apple Watch or Oura ring making your insomnia worse? Discover the science of Orthosomnia and why obsessing over your sleep score ruins your rest.",
@@ -70,6 +67,21 @@ const articles = [
     title: "The Math of Insomnia: How to Calculate Your Sleep Efficiency",
     description: "What is a good Sleep Efficiency? Learn the clinical math behind insomnia recovery, the 15-minute titration rule, and why 85% is the gold standard.",
     slug: "the-math-of-insomnia",
+  },
+  {
+    title: "What is NSDR (Non-Sleep Deep Rest)? And Why is it Better Than Napping?",
+    description: "Learn why Non-Sleep Deep Rest (NSDR) is better than a daytime nap for repairing neurochemistry and restoring daytime energy.",
+    slug: "what-is-nsdr-and-why-is-it-better-than-napping",
+  },
+  {
+    title: "Why I Wake Up at Exactly 3 AM Every Night and Lie There Until Morning",
+    description: "Learn what sleep maintenance insomnia actually feels like from the inside, and why your nervous system is specifically vulnerable at 3 AM.",
+    slug: "why-i-wake-up-at-3-am-every-night",
+  },
+  {
+    title: "Why Melatonin Does Absolutely Nothing for My Chronic Insomnia",
+    description: "Learn why high doses of over-the-counter melatonin might be making your sleep worse and how to actually address hyperarousal.",
+    slug: "why-melatonin-does-nothing-for-chronic-insomnia",
   }
 ];
 
@@ -110,38 +122,7 @@ export default function ArticlesPage() {
         </p>
       </div>
 
-      <div className="w-full max-w-4xl z-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-        {articles.map((article) => (
-          <Link href={`/articles/${article.slug}`} key={article.slug} className="block group h-full">
-            <div className="card-container flex flex-col h-full items-start text-left p-8 hover:-translate-y-2 hover:shadow-md transition-all duration-500 cursor-pointer">
-              <h2 className="font-serif text-2xl text-[var(--text-primary)] mb-4 group-hover:text-[var(--primary-dark)] transition-colors">
-                {article.title}
-              </h2>
-              <p className="text-sm text-[var(--text-secondary)] leading-relaxed mb-6 flex-grow">
-                {article.description}
-              </p>
-              <div className="text-[var(--primary)] text-xs font-bold uppercase tracking-widest flex items-center">
-                Read Article
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="ml-2 group-hover:translate-x-1 transition-transform"
-                >
-                  <path d="M5 12h14" />
-                  <path d="m12 5 7 7-7 7" />
-                </svg>
-              </div>
-            </div>
-          </Link>
-        ))}
-      </div>
+      <ArticlesList articles={articles} />
       
     </main>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import FaqAccordion from "../../components/FaqAccordion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,16 +11,31 @@ export const metadata: Metadata = {
   },
 };
 
+
+const faqs = [
+  { question: "Why do I feel like I didn't sleep at all, but my partner heard me snoring?", answer: "You are experiencing Sleep State Misperception (Paradoxical Insomnia). During Light Sleep, your brain's sensory processing can remain partially online. Because you can still hear sounds or follow a train of thought, your analytical mind incorrectly logs the night as 'zero sleep,' even though you were biologically resting." },
+  { question: "What is the First-Night Effect?", answer: "The First-Night Effect is an evolutionary survival mechanism where one hemisphere of your brain remains more alert when sleeping in unfamiliar environments (like a hotel). It keeps your sensory networks online to monitor for danger, often making you feel like you barely slept." },
+  { question: "Is Paradoxical Insomnia dangerous?", answer: "No. While it feels incredibly frustrating and unrefreshing, Paradoxical Insomnia means your body is still extracting the core biological rest it needs to survive. Understanding that you are getting more sleep than you think drastically reduces cortisol and midnight panic." },
+  { question: "How do I cure Sleep State Misperception?", answer: "The key to fixing Sleep State Misperception is to stop trying to consciously monitor whether or not you are unconscious. Treating sleep as a performance metric triggers hyperarousal. Drop the struggle, trust that resting quietly is beneficial, and use CBT-I tools to make your brain feel safe in bed." }
+];
+
 export default function Article9Page() {
   return (
     <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
-      <div className="w-full max-w-3xl z-10 mb-12">
+      <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
           className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
+        </Link>
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
         </Link>
       </div>
 
@@ -127,6 +143,8 @@ export default function Article9Page() {
               Get The Goodnight Companion
             </Link>
           </div>
+
+          <FaqAccordion faqs={faqs} />
 
           <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">

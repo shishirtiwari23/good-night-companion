@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import FaqAccordion from "../../components/FaqAccordion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,17 +11,32 @@ export const metadata: Metadata = {
   },
 };
 
+
+const faqs = [
+  { question: "What is the best bedroom temperature for falling asleep?", answer: "The optimal bedroom temperature for sleep is between 60°F and 67°F (15°C to 19°C). To transition into sleep, your body must drop its core temperature by 1 to 3 degrees. A cool room facilitates this biological requirement, while a warm room actively prevents sleep onset." },
+  { question: "Can the standby light on my TV keep me awake?", answer: "Yes. Your brain's master clock is highly sensitive to artificial light. Even the tiny glow from a digital clock, a TV standby LED, or a streetlamp can suppress your brain's natural melatonin production, tricking your body into thinking the sun is rising." },
+  { question: "How long before bed should I stop drinking caffeine?", answer: "You should stop consuming caffeine at least 10 hours before your target bedtime. Caffeine blocks your brain's adenosine receptors, masking your natural sleep pressure. Because caffeine has a long quarter-life, afternoon coffee can actively prevent you from falling asleep at midnight." },
+  { question: "Does a glass of wine help with insomnia?", answer: "No. While alcohol is a depressant that may sedate you initially, it actively destroys your sleep architecture. It suppresses restorative REM sleep and causes a 'rebound arousal effect' as it leaves your bloodstream, frequently causing you to wake up at 3 AM with a racing heart." }
+];
+
 export default function Article5Page() {
   return (
     <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
       {/* Navigation */}
-      <div className="w-full max-w-3xl z-10 mb-12">
+      <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
           className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
+        </Link>
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
         </Link>
       </div>
 
@@ -124,6 +140,8 @@ export default function Article5Page() {
               Get The Goodnight Companion
             </Link>
           </div>
+
+          <FaqAccordion faqs={faqs} />
 
           <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">

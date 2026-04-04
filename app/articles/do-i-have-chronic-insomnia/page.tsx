@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import FaqAccordion from "../../components/FaqAccordion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,16 +11,31 @@ export const metadata: Metadata = {
   },
 };
 
+
+const faqs = [
+  { question: "What is the clinical definition of Chronic Insomnia?", answer: "To be diagnosed with Chronic Insomnia, you must meet the 'Rule of 3s': taking more than 30 minutes to fall asleep (or stay asleep), happening at least 3 nights a week, for a duration of at least 3 months, while causing significant daytime impairment." },
+  { question: "Is chronic insomnia permanent?", answer: "No. In sleep medicine, 'chronic' does not mean incurable or permanent. It simply means your sleep struggle has transitioned from a temporary stress reaction into a learned behavioral pattern of hyperarousal. Because the brain learned this pattern, it can also unlearn it through CBT-I." },
+  { question: "What is the difference between acute and chronic insomnia?", answer: "Acute insomnia is a short-term inability to sleep caused by a specific trigger, like an illness, stress, or a major life event. Chronic insomnia occurs when the original stressor has passed, but the anxiety and fear around sleep itself perpetuate the sleeplessness." },
+  { question: "How does the 3P model explain insomnia?", answer: "The 3P Model explains how insomnia develops through Predisposing factors (a naturally alert nervous system), Precipitating factors (a stressful trigger like job loss), and Perpetuating factors (bad habits like going to bed early or clock-watching that turn a temporary glitch into a chronic pattern)." }
+];
+
 export default function Article8Page() {
   return (
     <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
-      <div className="w-full max-w-3xl z-10 mb-12">
+      <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
           className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
+        </Link>
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
         </Link>
       </div>
 
@@ -125,6 +141,8 @@ export default function Article8Page() {
               Get The Goodnight Companion
             </Link>
           </div>
+
+          <FaqAccordion faqs={faqs} />
 
           <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">

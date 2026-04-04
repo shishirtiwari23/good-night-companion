@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import FaqAccordion from "../../components/FaqAccordion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,17 +11,32 @@ export const metadata: Metadata = {
   },
 };
 
+
+const faqs = [
+  { question: "What is Orthosomnia?", answer: "Orthosomnia is a clinical term for an unhealthy obsession with achieving perfect sleep data on wearable fitness trackers. For people with insomnia, constantly checking their 'Sleep Score' creates severe performance anxiety, triggering the exact fight-or-flight response that prevents them from falling asleep." },
+  { question: "Why does my smartwatch say I got poor deep sleep?", answer: "Consumer sleep trackers cannot read brainwaves (EEG). They rely on heart rate and wrist movement to guess your sleep stages. If you lie perfectly still but awake, or experience normal micro-awakenings, the tracker often misinterprets the data, giving you a falsely alarming sleep score." },
+  { question: "Can tracking my sleep make me feel more tired?", answer: "Yes. Seeing a low sleep score on your app can trigger the 'nocebo effect,' where negative expectations directly increase your perceived daytime fatigue and anxiety. By removing the tracker, you often remove this artificially induced exhaustion." },
+  { question: "Should I use an Apple Watch or Oura Ring to fix my insomnia?", answer: "Sleep doctors recommend taking off your sleep tracker if you suffer from chronic insomnia. Treating sleep like a metric you can 'win' triggers the sympathetic nervous system. Healing your sleep architecture requires a 30-day data detox to rely on how you actually feel, rather than a screen." }
+];
+
 export default function Article7Page() {
   return (
     <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
       {/* Navigation */}
-      <div className="w-full max-w-3xl z-10 mb-12">
+      <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
           className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
+        </Link>
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
         </Link>
       </div>
 
@@ -84,7 +100,7 @@ export default function Article7Page() {
           
           <ul className="list-disc pl-6 space-y-4 my-6">
             <li><strong>The Stillness Trap:</strong> If you wake up at 3:00 AM and lie perfectly still, frustrated but motionless, your watch will often record that as &quot;Light Sleep,&quot; giving you false data.</li>
-            <li><strong>The Normal Awakening Trap:</strong> As we covered in our guide on <Link href="/articles/waking-up-at-3-am" className="text-[var(--primary)] font-bold hover:underline">Waking Up at 3 AM</Link>, brief awakenings between sleep cycles are biologically normal. But when your app flags them with alarming red bars, it pathologizes a perfectly healthy human function.</li>
+            <li><strong>The Normal Awakening Trap:</strong> As we covered in our guide on <Link href="/articles/why-i-wake-up-at-3-am-every-night" className="text-[var(--primary)] font-bold hover:underline">Waking Up at 3 AM</Link>, brief awakenings between sleep cycles are biologically normal. But when your app flags them with alarming red bars, it pathologizes a perfectly healthy human function.</li>
           </ul>
 
           <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Solution: The 30-Day Data Detox</h2>
@@ -139,6 +155,8 @@ export default function Article7Page() {
               Get The Goodnight Companion
             </Link>
           </div>
+
+          <FaqAccordion faqs={faqs} />
 
           <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">
