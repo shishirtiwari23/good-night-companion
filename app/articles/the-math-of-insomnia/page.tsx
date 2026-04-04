@@ -157,10 +157,7 @@ export default function Article12Page() {
               Ready to start tracking your data correctly? Calculating your Sleep Efficiency is the very first step.<br/><br/>The Goodnight Companion system gives you the exact daily logs to track your data, and the step-by-step instructions to navigate your recovery safely.
             </p>
             <Link 
-              href="https://www.amazon.com/dp/B0GQTGFSG7" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion
             </Link>

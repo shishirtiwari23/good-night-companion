@@ -147,10 +147,7 @@ export default function Article14Page() {
               The Goodnight Companion is a 90-day guided journal built on the clinical mechanics of CBT-I and the mindful flexibility of ACT-I. It walks you step by step through calculating your personalised sleep window, rebuilding your sleep pressure safely, and retraining your brain to sleep through that 3 AM crossroads again.
             </p>
             <Link 
-              href="https://www.amazon.com/dp/B0GQTGFSG7" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Explore The Goodnight Companion
             </Link>

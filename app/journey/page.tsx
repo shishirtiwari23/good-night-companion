@@ -78,26 +78,35 @@ export default function JourneyPage() {
             </div>
 
             {/* ACTION BUTTONS */}
-            <div className="flex flex-col items-center justify-center gap-6 pt-6">
-              <div className="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto">
-                <select
-                  value={selectedCountry}
-                  onChange={(e) => setSelectedCountry(e.target.value)}
-                  className="px-4 py-4 rounded-[1rem] border border-[var(--text-secondary)]/20 shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent text-[var(--text-primary)] transition-shadow w-full sm:w-auto min-w-[140px] text-center font-bold"
-                  style={{ backgroundImage: 'none' }}
-                >
-                  <option value="US">🇺🇸 United States</option>
-                  <option value="UK">🇬🇧 United Kingdom</option>
-                  <option value="DE">🇩🇪 Germany</option>
-                  <option value="FR">🇫🇷 France</option>
-                  <option value="ES">🇪🇸 Spain</option>
-                  <option value="IT">🇮🇹 Italy</option>
-                  <option value="NL">🇳🇱 Netherlands</option>
-                  <option value="PL">🇵🇱 Poland</option>
-                  <option value="SE">🇸🇪 Sweden</option>
-                  <option value="BE">🇧🇪 Belgium</option>
-                  <option value="IE">🇮🇪 Ireland</option>
-                </select>
+            <div className="flex flex-col items-center justify-center pt-6">
+              <div className="w-full">
+                <p className="text-xs font-bold uppercase tracking-widest text-[#8da399] mb-3 text-center">
+                  Select Your Amazon Region:
+                </p>
+                <div className="flex flex-col sm:flex-row items-stretch justify-center gap-4 w-full">
+                  <select
+                    value={selectedCountry}
+                    onChange={(e) => setSelectedCountry(e.target.value)}
+                    className="px-6 py-4 rounded-[1rem] border border-[var(--text-secondary)]/20 shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent text-[var(--text-primary)] transition-shadow w-full sm:w-[220px] text-left font-bold appearance-none bg-white cursor-pointer"
+                    style={{ 
+                      backgroundImage: `url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e")`,
+                      backgroundRepeat: 'no-repeat',
+                      backgroundPosition: 'right 1rem center',
+                      backgroundSize: '1em'
+                    }}
+                  >
+                    <option value="US">🇺🇸 United States</option>
+                    <option value="UK">🇬🇧 United Kingdom</option>
+                    <option value="DE">🇩🇪 Germany</option>
+                    <option value="FR">🇫🇷 France</option>
+                    <option value="ES">🇪🇸 Spain</option>
+                    <option value="IT">🇮🇹 Italy</option>
+                    <option value="NL">🇳🇱 Netherlands</option>
+                    <option value="PL">🇵🇱 Poland</option>
+                    <option value="SE">🇸🇪 Sweden</option>
+                    <option value="BE">🇧🇪 Belgium</option>
+                    <option value="IE">🇮🇪 Ireland</option>
+                  </select>
 
                 <a
                   href={AMAZON_LINKS[selectedCountry]}
@@ -121,11 +130,12 @@ export default function JourneyPage() {
                   </svg>
                 </a>
               </div>
+              </div>
 
               {/* Secondary: Understand the Science */}
               <Link
                 href="/understand"
-                className="text-xs uppercase font-bold tracking-widest text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors border-b border-transparent hover:border-[var(--primary)] pb-1"
+                className="text-xs uppercase font-bold tracking-widest text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors border-b border-transparent hover:border-[var(--primary)] mt-6 inline-block pb-1"
               >
                 Read the Science First
               </Link>
