@@ -83,6 +83,27 @@ const articles = [
     description: "Melatonin is a clock-setter, not a sedative. If your nervous system is flooded with adrenaline, a 10mg gummy cannot compete. Here is the science — and what actually works.",
     slug: "why-melatonin-does-nothing-for-chronic-insomnia",
   }
+
+  {
+    title: "Why My Body Feels Stuck in Fight-or-Flight Every Time I Try to Sleep",
+    description: "After months of insomnia, your brain learns that your bed is dangerous. Here is the biology of conditioned hyperarousal and the behavioral tool that retrains your threat response.",
+    slug: "why-my-body-feels-stuck-in-fight-or-flight",
+  },
+  {
+    title: "Why I Followed Every Sleep Hygiene Rule Perfectly for a Year and It Did Nothing",
+    description: "Sleep hygiene fixes bad habits in normal sleepers. It cannot fix a nervous system locked in fight-or-flight. Here is what you actually need instead — and why the ritual is making it worse.",
+    slug: "why-i-followed-every-sleep-hygiene-rule-perfectly",
+  },
+  {
+    title: "Why It Takes Me Three to Five Hours to Fall Asleep Every Single Night",
+    description: "Sleep onset insomnia happens when sleep effort overpowers sleep pressure. The harder you try to force sleep, the more adrenaline floods your system. Here is the clinical fix.",
+    slug: "why-it-takes-me-hours-to-fall-asleep",
+  },
+  {
+    title: "Why CBT-I Didn't Work for Me the First Time (And What Was Actually Missing)",
+    description: "Rigid, unguided CBT-I often fails because it spikes anxiety without psychological support. Here is why ACT-I is the missing piece — and why a bad night is data, not a verdict.",
+    slug: "why-cbt-i-didnt-work-for-me",
+  },
 ];
 
 export default function ArticlesPage() {
