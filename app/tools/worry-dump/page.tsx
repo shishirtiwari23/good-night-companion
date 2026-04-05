@@ -110,11 +110,11 @@ export default function WorryDumpPage() {
 
       <div className="w-full max-w-4xl z-10 mb-8 flex justify-between items-center">
         <Link 
-          href="/tools" 
+          href="/" 
           className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
-          Back to Tools
+          Back to Home
         </Link>
       </div>
 
