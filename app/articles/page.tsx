@@ -82,8 +82,7 @@ const articles = [
     title: "Why Melatonin Does Absolutely Nothing for My Chronic Insomnia",
     description: "Melatonin is a clock-setter, not a sedative. If your nervous system is flooded with adrenaline, a 10mg gummy cannot compete. Here is the science — and what actually works.",
     slug: "why-melatonin-does-nothing-for-chronic-insomnia",
-  }
-
+  },
   {
     title: "Why My Body Feels Stuck in Fight-or-Flight Every Time I Try to Sleep",
     description: "After months of insomnia, your brain learns that your bed is dangerous. Here is the biology of conditioned hyperarousal and the behavioral tool that retrains your threat response.",
