@@ -5,7 +5,7 @@ import FaqAccordion from "../../components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "The Night Every Sleep Medication I Had Stopped Working at Once — What Happens When Your Brain Becomes Tolerant to Every Sedative",
-  description: "Over time, your brain develops a chemical tolerance to sedatives. The receptors in your nervous system downregulate, meaning they require escalating doses to achieve the same effect.",
+  description: "When sleeping pills stop working, it is terrifying. Learn the biology of sedative tolerance, receptor downregulation, and how to treat underlying hyperarousal.",
   alternates: {
     canonical: '/articles/the-night-every-sleep-medication-stopped-working',
   },

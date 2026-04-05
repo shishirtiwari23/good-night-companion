@@ -5,7 +5,7 @@ import FaqAccordion from "../../components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "After 82 Hours Without Sleep I Started Seeing Shadow Figures by My Bed — What Severe Sleep Deprivation Hallucinations Feel Like From Inside",
-  description: "After 48 to 72 hours without sleep, the immense biological pressure for REM (dream) sleep forces your brain to experience 'microsleeps' while you are still awake.",
+  description: "Seeing shadow figures from lack of sleep? Learn the neuroscience behind sleep deprivation hallucinations, REM microsleeps, and when to seek emergency medical help.",
   alternates: {
     canonical: '/articles/after-82-hours-without-sleep-i-started-seeing-shadow-figures',
   },

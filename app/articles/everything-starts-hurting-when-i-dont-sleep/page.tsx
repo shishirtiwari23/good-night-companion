@@ -5,7 +5,7 @@ import FaqAccordion from "../../components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "Everything Starts Hurting When I Don't Sleep — The Physical Symptoms of Chronic Insomnia Nobody Warned Me About",
-  description: "When you stop sleeping, your central nervous system becomes hyper-sensitized to pain—a condition called hyperalgesia. Sleep loss also spikes systemic inflammation, leading to a bone-deep ache, burning skin, and nausea.",
+  description: "Discover why chronic sleep deprivation causes intense physical pain, from burning skin to nausea, and how hyperalgesia and inflammation explain your symptoms.",
   alternates: {
     canonical: '/articles/everything-starts-hurting-when-i-dont-sleep',
   },
