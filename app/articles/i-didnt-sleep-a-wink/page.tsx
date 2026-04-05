@@ -51,6 +51,13 @@ export default function Article9Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">Why do you feel completely awake even when you slept? This is called Sleep State Misperception (Paradoxical Insomnia). During lighter sleep stages, your brain's sensory processing remains partially active. Because you can still hear sounds or think, your mind incorrectly logs the night as "zero sleep," even though your body was biologically resting and recovering.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             It is a uniquely maddening experience. You get out of bed exhausted, utterly convinced that you did not sleep for a single second. You remember hearing the clock chime at 1:00 AM, 2:00 AM, and 3:00 AM. You remember thinking about your to-do list the entire night.
           </p>

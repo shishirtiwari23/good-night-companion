@@ -66,6 +66,13 @@ export default function Article2Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">What should you do if you can't sleep after 20 minutes? You must get out of bed. Lying awake and frustrated trains your brain to associate your mattress with stress, causing a conditioned fight-or-flight response. By leaving the room and doing a quiet activity until you feel heavy and sleepy, you break this anxiety cycle and protect your bed.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             It is 2:00 AM. You are wide awake, staring at the ceiling, and your mind is racing.
           </p>

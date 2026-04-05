@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import FaqAccordion from "../../components/FaqAccordion";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -42,6 +43,13 @@ export default function Article13Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">What is NSDR and why is it better than napping? Non-Sleep Deep Rest (NSDR) is a guided relaxation protocol that keeps you consciously awake while shifting your brain into profound rest. It actively lowers cortisol and replenishes dopamine to cure midday fatigue without burning through the biological sleep pressure you need for the upcoming night.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             We all know the feeling. It’s 2:30 PM, your energy has crashed, and your brain feels like it’s moving through molasses. You are faced with a choice: brew another cup of coffee that will leave you jittery, or take a quick nap.
           </p>
@@ -130,6 +138,29 @@ export default function Article13Page() {
           <p className="text-xs opacity-60 mt-12 leading-relaxed">
             <strong>Disclaimer:</strong> This article is an educational resource and does not constitute medical advice. Consult a physician if you are experiencing severe chronic fatigue.
           </p>
+        
+          <FaqAccordion faqs={[
+  {
+    "question": "What is the difference between NSDR and a nap?",
+    "answer": "Napping involves falling unconscious, which depletes your biological sleep pressure and can leave you groggy if you sleep too long. NSDR (Non-Sleep Deep Rest) keeps you consciously awake while deeply relaxing your body, restoring dopamine and lowering cortisol without ruining your ability to sleep that night."
+  },
+  {
+    "question": "Is NSDR the exact same thing as Yoga Nidra?",
+    "answer": "Essentially, yes. NSDR is a modern, scientific umbrella term coined by neurobiologist Dr. Andrew Huberman that heavily incorporates the ancient practice of Yoga Nidra. Both use guided body scans and controlled breathing to slow brain waves and shift the nervous system into profound, conscious relaxation."
+  },
+  {
+    "question": "Can I do NSDR in bed to help me fall asleep?",
+    "answer": "While NSDR is highly effective for daytime energy restoration, it is also an excellent tool for lowering nighttime hyperarousal. If you get into bed with a racing heart, listening to an NSDR track can deactivate your fight-or-flight response, making it easier for natural sleep to take over."
+  },
+  {
+    "question": "Does an NSDR session replace lost sleep?",
+    "answer": "No. You cannot biologically replace lost deep sleep or REM sleep while remaining awake. However, NSDR is the safest daytime tool for surviving sleep deprivation because it flushes stress hormones (cortisol) and restores cognitive focus (dopamine) without stealing the biological sleep pressure you need for the upcoming night."
+  },
+  {
+    "question": "How long should an NSDR session be to work?",
+    "answer": "Clinical benefits are typically seen in sessions lasting between 10 to 30 minutes. A quick 10-minute session is usually enough to clear midday brain fog. If you are highly sleep-deprived, a 20-minute session provides deeper dopamine restoration and nervous system resetting without crossing into sleep inertia."
+  }
+]} title="FAQs: People Also Ask About NSDR and Napping" />
         </div>
       </article>
     </main>

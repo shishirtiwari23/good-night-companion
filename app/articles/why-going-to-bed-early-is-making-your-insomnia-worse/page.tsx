@@ -66,6 +66,13 @@ export default function Article1Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">Why does going to bed early make your insomnia worse? Getting into bed before you are biologically sleepy dilutes your "sleep pressure"—the body's natural hunger for rest. Instead of catching up on sleep, you end up tossing and turning, which trains your brain to associate your mattress with anxiety and wakefulness rather than sleep.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             It is 8:30 PM. You are existentially exhausted. Your eyes are burning, your brain is foggy, and you think the most logical thought in the world: "I am so tired. If I just get in bed now, maybe I can finally catch up on some sleep."
           </p>

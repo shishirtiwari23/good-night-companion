@@ -52,6 +52,13 @@ export default function Article5Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">How should you optimize your bedroom for sleep? Your room should be entirely dark, quiet, and cool (between 60°F and 67°F). Your core body temperature must drop to initiate sleep, making a cool room biologically necessary. However, be careful not to turn environmental control into an obsessive "safety behavior," as perfectionism can trigger performance anxiety.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             If you are battling chronic insomnia, chances are your bedroom already looks like a luxury sleep lab. You have invested in the cooling sheets, the heavy blackout curtains, the ergonomic pillow, and the top-tier white noise machine.
           </p>

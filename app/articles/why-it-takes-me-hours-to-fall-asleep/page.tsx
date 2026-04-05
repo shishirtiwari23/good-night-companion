@@ -67,9 +67,11 @@ export default function Article17Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
-<p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
-            <strong>The Short Answer:</strong> Why does it take hours to fall asleep? This is called Sleep Onset Insomnia. It happens when your biological "sleep pressure" (the body's physical hunger for sleep) is too weak to overpower your psychological "sleep effort" (the anxiety of trying to force yourself to sleep). To fall asleep quickly, you have to use a clinical tool called Sleep Scheduling: strictly calculating a delayed bedtime based on your actual sleep capability, forcing an undeniable wave of biological sleep pressure.
-          </p>
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">Why does it take hours to fall asleep? This is called Sleep Onset Insomnia. It happens when your biological "sleep pressure" (the body's physical hunger for sleep) is too weak to overpower your psychological "sleep effort" (the anxiety of trying to force yourself to sleep). To fall asleep quickly, you have to use a clinical tool called Sleep Scheduling: strictly calculating a delayed bedtime based on your actual sleep capability, forcing an undeniable wave of biological sleep pressure.</p>
+          </div>
           <p>
             You get into bed at 10:30 PM. Your partner is lying next to you, and within three minutes, they are breathing heavily, fast asleep.
           </p>

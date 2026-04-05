@@ -52,6 +52,13 @@ export default function Article3Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">How do you stop overthinking at night? Trying to forcefully "empty your mind" triggers performance anxiety and dumps adrenaline into your system. Instead, use a clinical tool called Cognitive Defusion. By acknowledging your racing thoughts as harmless mental notifications rather than commands you must act on, you remove their power and allow your nervous system to calm down.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             Most people believe that sleep is a task—something you can &quot;complete&quot; if you just try hard enough. But if you have ever spent a night staring at the ceiling while your brain boots up like a high-powered supercomputer, you know the frustrating truth: Sleep is a biological result, not a conscious effort.
           </p>

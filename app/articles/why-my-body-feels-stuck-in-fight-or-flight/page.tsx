@@ -68,9 +68,11 @@ export default function Article15Page() {
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
 
-          <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
-            <strong>The Short Answer:</strong> Why does your heart race as soon as you get into bed? After weeks of struggling with insomnia, your brain begins to associate your bed with the trauma of not sleeping. This is called Conditioned Hyperarousal. Your brain mistakenly identifies your mattress as a threat, dumping adrenaline and cortisol into your bloodstream to initiate a "fight-or-flight" survival response the moment your head hits the pillow.
-          </p>
+          
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">Why does your heart race as soon as you get into bed? After weeks of struggling with insomnia, your brain begins to associate your bed with the trauma of not sleeping. This is called Conditioned Hyperarousal. Your brain mistakenly identifies your mattress as a threat, dumping adrenaline and cortisol into your bloodstream to initiate a "fight-or-flight" survival response the moment your head hits the pillow.</p>
+          </div>
           <p>
             I can be exhausted all day. I can be yawning on the couch at 9 PM, my eyes burning, my body so heavy I can barely lift myself up to brush my teeth. I feel completely, desperately ready for sleep.
           </p>

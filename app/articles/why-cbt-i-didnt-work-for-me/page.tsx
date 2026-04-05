@@ -66,9 +66,11 @@ export default function Article18Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
-<p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
-            <strong>The Short Answer:</strong> Why does CBT-I sometimes fail? Standard CBT-I is biologically highly effective, but it often fails because it is too rigid. When you aggressively restrict your sleep to build sleep pressure, it temporarily spikes daytime fatigue and anxiety. If you treat the CBT-I rules like a strict test you can fail, your performance anxiety skyrockets. To succeed, CBT-I must be paired with ACT-I (Acceptance and Commitment Therapy) to manage the panic and introduce psychological flexibility.
-          </p>
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">Why does CBT-I sometimes fail? Standard CBT-I is biologically highly effective, but it often fails because it is too rigid. When you aggressively restrict your sleep to build sleep pressure, it temporarily spikes daytime fatigue and anxiety. If you treat the CBT-I rules like a strict test you can fail, your performance anxiety skyrockets. To succeed, CBT-I must be paired with ACT-I (Acceptance and Commitment Therapy) to manage the panic and introduce psychological flexibility.</p>
+          </div>
           <p>
             You hit your breaking point, so you did what you were supposed to do. You researched the gold-standard medical treatment for insomnia. You found CBT-I (Cognitive Behavioral Therapy for Insomnia).
           </p>

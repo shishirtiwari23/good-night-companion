@@ -51,6 +51,13 @@ export default function Article12Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">What is Sleep Efficiency? It is a clinical metric calculated by dividing your actual time asleep by the total time you spend in bed. For chronic insomnia, spreading 6 hours of sleep across 10 hours in bed causes fragmented, anxious rest. Compressing your sleep window to hit an 85% efficiency score is the key to consolidated, deep sleep.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             If you have an analytical mind, dealing with insomnia is uniquely frustrating because sleep feels so unmeasurable. You know you feel terrible, but when you look at the &quot;Sleep Score&quot; on your smartwatch, the data often feels completely disconnected from reality.
           </p>

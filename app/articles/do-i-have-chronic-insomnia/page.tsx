@@ -51,6 +51,13 @@ export default function Article8Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">How do you know if you have chronic insomnia? Sleep medicine uses the "Rule of 3s": taking more than 30 minutes to fall or stay asleep, at least three nights a week, for more than three months. Chronic insomnia means your sleeplessness is no longer just a reaction to stress, but a learned, biological habit of hyperarousal.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             When you string together a few terrible nights of sleep, it is incredibly easy to panic. You wake up exhausted, open Google, and suddenly you are reading articles about the long-term health effects of &quot;Chronic Insomnia.&quot;
           </p>

@@ -52,6 +52,13 @@ export default function Article4Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">Does sleeping in on weekends help insomnia? No. Sleeping in creates "social jetlag," which disrupts your circadian rhythm and delays your evening melatonin release. It also burns through your biological sleep pressure too early in the day, virtually guaranteeing that you will struggle to fall asleep the following night.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             You survive a brutal week of fragmented sleep, functioning on pure adrenaline. When the weekend finally arrives, you turn off your alarm and sleep in to &quot;catch up&quot; and pay off your sleep debt.
           </p>

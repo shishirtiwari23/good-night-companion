@@ -51,6 +51,13 @@ export default function Article11Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">What is Paradoxical Intention? It is a clinical CBT-I technique used to cure performance anxiety in bed. Instead of trying hard to sleep, you get into bed in the dark, keep your eyes open, and gently try to stay awake. Removing the demand to sleep eliminates your adrenaline response, allowing your autonomic nervous system to safely take over.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             If you are an analytical, problem-solving person, you are used to succeeding through sheer willpower. If you want to run a marathon, you train harder. If you want a promotion, you work longer hours. Effort equals results.
           </p>

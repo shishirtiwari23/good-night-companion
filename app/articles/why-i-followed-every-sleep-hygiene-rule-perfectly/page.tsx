@@ -67,9 +67,11 @@ export default function Article16Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
-<p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
-            <strong>The Short Answer:</strong> Why does sleep hygiene fail for chronic insomnia? Sleep hygiene (like avoiding screens, reading a book, or drinking chamomile tea) is designed to help normal sleepers wind down. If you have chronic insomnia, your nervous system is locked in a biological "fight-or-flight" state. You cannot fix an adrenaline-driven hyperarousal problem with a cold room and lavender spray; you need clinical behavioral tools to reset your threat response.
-          </p>
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">Why does sleep hygiene fail for chronic insomnia? Sleep hygiene (like avoiding screens, reading a book, or drinking chamomile tea) is designed to help normal sleepers wind down. If you have chronic insomnia, your nervous system is locked in a biological "fight-or-flight" state. You cannot fix an adrenaline-driven hyperarousal problem with a cold room and lavender spray; you need clinical behavioral tools to reset your threat response.</p>
+          </div>
           <p>
             Your bedroom looks like a sleep clinic.
           </p>

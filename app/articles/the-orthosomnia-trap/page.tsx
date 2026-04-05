@@ -52,6 +52,13 @@ export default function Article7Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">Is your sleep tracker making your insomnia worse? Yes. Obsessing over sleep data causes "Orthosomnia"—a clinical condition where chasing a perfect sleep score triggers intense performance anxiety. Furthermore, consumer trackers cannot accurately read brain waves, often falsely reporting poor deep sleep. This artificially spikes your cortisol and traps you in a cycle of hyperarousal.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             You wake up on a Tuesday morning and actually feel... okay. You stretch, sit up, and reach for your phone to check your Oura Ring, Whoop strap, or Apple Watch.
           </p>

@@ -51,6 +51,13 @@ export default function Article10Page() {
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg">Should you nap if you have chronic insomnia? No. Napping acts as a pressure release valve, burning through the biological "sleep pressure" (adenosine) your brain needs to pull you into a deep sleep at night. To fix your sleep architecture, you must survive the afternoon crash without napping to ensure your sleep drive is massive at bedtime.</p>
+          </div>
+
+
           <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             It is 2:00 PM. You are staring at your computer screen, but your brain is completely offline. The afternoon crash has hit, your eyelids are heavy, and the couch is calling your name.
           </p>
