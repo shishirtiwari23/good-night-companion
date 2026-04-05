@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Metadata } from "next";
+import FaqAccordion from "../../components/FaqAccordion";
 
 export const metadata: Metadata = {
   title: "Why CBT-I Didn't Work for Me the First Time (And What Was Actually Missing)",
@@ -11,6 +12,29 @@ export const metadata: Metadata = {
 };
 
 export default function Article18Page() {
+  const pageFaqs = [
+    {
+      "question": "Why does CBT-I make me feel worse at first?",
+      "answer": "CBT-I relies on Sleep Restriction Therapy, which temporarily compresses your sleep window to build biological sleep pressure. In the first 1 to 2 weeks, this causes mild sleep deprivation, which temporarily spikes daytime fatigue, cortisol, and anxiety before your sleep architecture successfully consolidates."
+    },
+    {
+      "question": "What is the success rate of CBT-I?",
+      "answer": "Clinical studies show CBT-I is highly effective, with roughly 70% to 80% of patients experiencing significant improvements in sleep quality. However, drop-out rates can be high if patients attempt unguided CBT-I without psychological support to manage the initial increase in fatigue."
+    },
+    {
+      "question": "What is the difference between CBT-I and ACT-I?",
+      "answer": "CBT-I focuses on altering behaviors (restricting sleep, getting out of bed) and restructuring anxious thoughts. ACT-I (Acceptance and Commitment Therapy) focuses on mindfulness—teaching you to stop fighting your wakefulness, drop the struggle, and neutrally observe anxious thoughts without reacting to them."
+    },
+    {
+      "question": "Can I do CBT-I on my own?",
+      "answer": "While you can learn the mechanics of CBT-I independently, unguided CBT-I often leads to increased anxiety and perfectionism around sleep rules. Utilizing a structured framework, like a guided journal or a certified sleep therapist, drastically improves compliance and success rates."
+    },
+    {
+      "question": "What do I do if Sleep Restriction Therapy causes a panic attack?",
+      "answer": "If compressing your sleep window causes severe panic, you must raise your \"clinical safety floor.\" Never restrict your sleep below 5.5 hours. If panic persists, pause the restriction and focus entirely on ACT-I cognitive tools (like Cognitive Defusion) to lower your hyperarousal first."
+    }
+  ];
+
   return (
     <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
       <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
@@ -131,6 +155,9 @@ export default function Article18Page() {
             <li><strong>CBT-I Efficacy & Outcomes:</strong> Morin, C. M., et al. (1994). Nonpharmacological interventions for insomnia: a meta-analysis of treatment efficacy. <em>American Journal of Psychiatry</em>, 151(8), 1172-1180.</li>
             <li><strong>Sleep Restriction Therapy:</strong> Spielman, A. J., Saskin, P., & Thorpy, M. J. (1987). Treatment of chronic insomnia by restriction of time in bed. <em>Sleep</em>, 10(1), 45-56.</li>
           </ul>
+
+          <FaqAccordion faqs={pageFaqs} title="FAQs: People Also Ask About CBT-I" />
+
         </div>
       </article>
     </main>
