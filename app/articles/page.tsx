@@ -103,6 +103,21 @@ const articles = [
     description: "Rigid, unguided CBT-I often fails because it spikes anxiety without psychological support. Here is why ACT-I is the missing piece — and why a bad night is data, not a verdict.",
     slug: "why-cbt-i-didnt-work-for-me",
   },
+  {
+    title: "Everything Starts Hurting When I Don't Sleep — The Physical Symptoms of Chronic Insomnia Nobody Warned Me About",
+    description: "When you stop sleeping, your central nervous system becomes hyper-sensitized to pain—a condition called hyperalgesia. Sleep loss also spikes systemic inflammation, leading to a bone-deep ache, burning skin, and nausea.",
+    slug: "everything-starts-hurting-when-i-dont-sleep",
+  },
+  {
+    title: "The Night Every Sleep Medication I Had Stopped Working at Once — What Happens When Your Brain Becomes Tolerant to Every Sedative",
+    description: "Over time, your brain develops a chemical tolerance to sedatives. The receptors in your nervous system downregulate, meaning they require escalating doses to achieve the same effect.",
+    slug: "the-night-every-sleep-medication-stopped-working",
+  },
+  {
+    title: "After 82 Hours Without Sleep I Started Seeing Shadow Figures by My Bed — What Severe Sleep Deprivation Hallucinations Feel Like From Inside",
+    description: "After 48 to 72 hours without sleep, the immense biological pressure for REM (dream) sleep forces your brain to experience 'microsleeps' while you are still awake.",
+    slug: "after-82-hours-without-sleep-i-started-seeing-shadow-figures",
+  },
 ];
 
 export default function ArticlesPage() {
