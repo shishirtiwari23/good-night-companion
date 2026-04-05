@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "The Math of Insomnia: How to Calculate Your Sleep Efficiency (And Why 85% is the Goal)",
-  description: "What is a good Sleep Efficiency? Learn the clinical math behind insomnia recovery, the 15-minute titration rule, and why 85% is the gold standard.",
+  description: "Stop trusting your smartwatch. Sleep Efficiency is the only clinical metric that matters for insomnia recovery — here is the exact formula and the 85% target.",
   alternates: {
     canonical: '/articles/the-math-of-insomnia',
   },

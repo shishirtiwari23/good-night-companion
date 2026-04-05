@@ -14,58 +14,58 @@ export const metadata: Metadata = {
 const articles = [
   {
     title: "Why Going to Bed Early is Making Your Insomnia Worse",
-    description: "If you are battling chronic insomnia, going to bed early is actually a physiological trap. Here is the science behind why, and the counterintuitive steps to fix it.",
+    description: "Going to bed early feels logical — but for chronic insomnia, it dilutes your sleep pressure and wires your brain for wakefulness. Here is the science and the fix.",
     slug: "why-going-to-bed-early-is-making-your-insomnia-worse",
   },
   {
     title: "The 20-Minute Rule: Why Getting Out of Bed is the Key to Fixing Insomnia",
-    description: "Staying in bed when you are wide awake is one of the worst things you can do. Learn how to use the 20-Minute Contingency Plan to break the cycle.",
+    description: "Staying in bed when you can't sleep trains your brain to associate your mattress with stress. Here is the clinical protocol that actually breaks the cycle.",
     slug: "the-20-minute-rule",
   },
   {
     title: "How to Stop Overthinking at Night",
-    description: "Can't turn your brain off? Learn why trying to empty your mind backfires, and how to use Cognitive Defusion to stop overthinking and finally sleep.",
+    description: "The harder you try to quiet your mind, the louder it gets. Learn the ACT-I tool that neutralizes racing thoughts without fighting them.",
     slug: "how-to-stop-overthinking-at-night",
   },
   {
     title: "The \"Catch-Up Sleep\" Trap",
-    description: "Sunday night insomnia? Discover why sleeping in on weekends causes \"social jetlag,\" ruins your internal clock, and how an Anchor Time can fix it.",
+    description: "Sleeping in on weekends feels restorative but creates social jetlag that destroys Sunday night. Here is the biology and the one fix that stabilises your clock.",
     slug: "the-catch-up-sleep-trap",
   },
   {
     title: "How to Optimize Your Bedroom for Sleep",
-    description: "Still awake at 3 AM? Discover why expensive mattresses won't fix insomnia, and how to biologically optimize your bedroom using temperature and light.",
+    description: "Blackout curtains won't fix chronic insomnia. Here are the non-negotiable biological levers — temperature, light, caffeine timing — that actually control your nervous system.",
     slug: "how-to-optimize-your-bedroom-for-sleep",
   },
 
   {
     title: "Why Your Sleep Tracker is Making Your Insomnia Worse",
-    description: "Is your Apple Watch or Oura ring making your insomnia worse? Discover the science of Orthosomnia and why obsessing over your sleep score ruins your rest.",
+    description: "Waking up to a bad sleep score makes your insomnia worse. Learn what Orthosomnia is, why wearables are clinically inaccurate, and why you need a 30-day data detox.",
     slug: "the-orthosomnia-trap",
   },
   {
     title: "Do I Have Chronic Insomnia? (The Clinical \"Rule of 3s\" Explained)",
-    description: "Worried your sleep is permanently broken? Discover the clinical \"Rule of 3s\" for chronic insomnia, and how the 3P model proves you can unlearn the pattern.",
+    description: "A bad week of sleep is not chronic insomnia. Here is the exact medical criteria doctors use — and why chronic does not mean permanent or incurable.",
     slug: "do-i-have-chronic-insomnia",
   },
   {
     title: "\"I Didn't Sleep a Wink\": The Clinical Science of Sleep State Misperception",
-    description: "Think you didn't sleep a wink, but your partner heard you snore? Discover the clinical science of Sleep State Misperception and the \"First-Night Effect.\"",
+    description: "Your partner says you were snoring. You swear you were awake all night. Both of you are right. Here is the clinical science behind paradoxical insomnia.",
     slug: "i-didnt-sleep-a-wink",
   },
   {
     title: "Is It OK to Nap in the Afternoon? (The Clinical Rules of Daytime Sleep)",
-    description: "Is it OK to nap in the afternoon? Learn the clinical science of daytime napping, the 20-minute cap, and why insomniacs should use NSDR instead.",
+    description: "For chronic insomnia, a two-hour nap destroys your sleep pressure. Here is exactly when napping helps, when it hurts, and what to do instead.",
     slug: "is-it-ok-to-nap-in-the-afternoon",
   },
   {
     title: "Paradoxical Intention: Why Trying to Stay Awake Can Cure Your Insomnia",
-    description: "Sleep anxiety keeping you awake? Discover Paradoxical Intention, the clinical CBT-I technique that uses reverse psychology to cure insomnia and performance anxiety.",
+    description: "Forcing yourself to sleep triggers adrenaline and keeps you wired. The counterintuitive clinical technique that actually works — and exactly how to use it.",
     slug: "paradoxical-intention",
   },
   {
     title: "The Math of Insomnia: How to Calculate Your Sleep Efficiency",
-    description: "What is a good Sleep Efficiency? Learn the clinical math behind insomnia recovery, the 15-minute titration rule, and why 85% is the gold standard.",
+    description: "Stop trusting your smartwatch. Sleep Efficiency is the only clinical metric that matters for insomnia recovery — here is the exact formula and the 85% target.",
     slug: "the-math-of-insomnia",
   },
   {
@@ -75,12 +75,12 @@ const articles = [
   },
   {
     title: "Why I Wake Up at Exactly 3 AM Every Night and Lie There Until Morning",
-    description: "Learn what sleep maintenance insomnia actually feels like from the inside, and why your nervous system is specifically vulnerable at 3 AM.",
+    description: "By 3 AM your deep sleep is gone and cortisol is rising. If your nervous system is hyperaroused, this biological crossroads jolts you awake every night. Here is why — and how to fix it.",
     slug: "why-i-wake-up-at-3-am-every-night",
   },
   {
     title: "Why Melatonin Does Absolutely Nothing for My Chronic Insomnia",
-    description: "Learn why high doses of over-the-counter melatonin might be making your sleep worse and how to actually address hyperarousal.",
+    description: "Melatonin is a clock-setter, not a sedative. If your nervous system is flooded with adrenaline, a 10mg gummy cannot compete. Here is the science — and what actually works.",
     slug: "why-melatonin-does-nothing-for-chronic-insomnia",
   }
 ];

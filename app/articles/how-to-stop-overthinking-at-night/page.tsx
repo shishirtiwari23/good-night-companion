@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "How to Stop Overthinking at Night (Without Trying to \"Empty Your Mind\")",
-  description: "Can't turn your brain off? Learn why trying to empty your mind backfires, and how to use Cognitive Defusion to stop overthinking and finally sleep.",
+  description: "The harder you try to quiet your mind, the louder it gets. Learn the ACT-I tool that neutralizes racing thoughts without fighting them.",
   alternates: {
     canonical: '/articles/how-to-stop-overthinking-at-night',
   },

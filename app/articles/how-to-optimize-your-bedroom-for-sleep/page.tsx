@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "How to Optimize Your Bedroom for Sleep (Why Your Mattress Isn't the Problem)",
-  description: "Still awake at 3 AM? Discover why expensive mattresses won't fix insomnia, and how to biologically optimize your bedroom using temperature and light.",
+  description: "Blackout curtains won't fix chronic insomnia. Here are the non-negotiable biological levers — temperature, light, caffeine timing — that actually control your nervous system.",
   alternates: {
     canonical: '/articles/how-to-optimize-your-bedroom-for-sleep',
   },

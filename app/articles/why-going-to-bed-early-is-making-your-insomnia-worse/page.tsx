@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Why Going to Bed Early is Making Your Insomnia Worse",
-  description: "Exhausted but can't sleep? Discover why going to bed early actually makes insomnia worse, and how to use biological \"sleep pressure\" to finally rest.",
+  description: "Going to bed early feels logical — but for chronic insomnia, it dilutes your sleep pressure and wires your brain for wakefulness. Here is the science and the fix.",
   alternates: {
     canonical: '/articles/why-going-to-bed-early-is-making-your-insomnia-worse',
   },

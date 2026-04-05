@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Do I Have Chronic Insomnia? (The Clinical \"Rule of 3s\" Explained)",
-  description: "Worried your sleep is permanently broken? Discover the clinical \"Rule of 3s\" for chronic insomnia, and how the 3P model proves you can unlearn the pattern.",
+  description: "A bad week of sleep is not chronic insomnia. Here is the exact medical criteria doctors use — and why chronic does not mean permanent or incurable.",
   alternates: {
     canonical: '/articles/do-i-have-chronic-insomnia',
   },

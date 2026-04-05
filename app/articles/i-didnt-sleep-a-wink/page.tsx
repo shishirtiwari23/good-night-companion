@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "\"I Didn't Sleep a Wink\": The Clinical Science of Sleep State Misperception",
-  description: "Think you didn't sleep a wink, but your partner heard you snore? Discover the clinical science of Sleep State Misperception and the \"First-Night Effect.\"",
+  description: "Your partner says you were snoring. You swear you were awake all night. Both of you are right. Here is the clinical science behind paradoxical insomnia.",
   alternates: {
     canonical: '/articles/i-didnt-sleep-a-wink',
   },

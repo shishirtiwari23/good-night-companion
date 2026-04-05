@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Why I Wake Up at Exactly 3 AM Every Night and Lie There Until Morning",
-  description: "Learn what sleep maintenance insomnia actually feels like from the inside, and why your nervous system is specifically vulnerable at 3 AM.",
+  description: "By 3 AM your deep sleep is gone and cortisol is rising. If your nervous system is hyperaroused, this biological crossroads jolts you awake every night. Here is why — and how to fix it.",
   alternates: {
     canonical: '/articles/why-i-wake-up-at-3-am-every-night',
   },

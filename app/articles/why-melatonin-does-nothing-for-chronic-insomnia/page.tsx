@@ -5,7 +5,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Why Melatonin Does Absolutely Nothing for My Chronic Insomnia",
-  description: "Learn why high doses of over-the-counter melatonin might be making your sleep worse and how to actually address hyperarousal.",
+  description: "Melatonin is a clock-setter, not a sedative. If your nervous system is flooded with adrenaline, a 10mg gummy cannot compete. Here is the science — and what actually works.",
   alternates: {
     canonical: '/articles/why-melatonin-does-nothing-for-chronic-insomnia',
   },
