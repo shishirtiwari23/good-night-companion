@@ -108,9 +108,15 @@ export default function Article18Page() {
           <p>
             When you start standard CBT-I, you are handed a strict list of rules. Get out of bed after exactly 20 minutes. Log your hours. Hit 85% sleep efficiency.
           </p>
-          <p className="pl-6 border-l-4 border-[#8da399]/40 italic">
-            I became terrified of my sleep log. Every time I had a bad night, I felt like I was failing the therapy, which made my heart pound even faster the next night.
-          </p>
+          <div className="my-8 border-l-4 border-[var(--primary)] pl-6 py-4 bg-[#f9f8f6] rounded-r-xl shadow-sm">
+            <p className="text-xs font-bold tracking-widest uppercase text-[#8da399] mb-3 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" className="mr-2 text-[var(--primary)]"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.758.79 1.758 1.759 0 .312-.08.6-.22.846.015.152.023.308.023.465 0 3.255-3.535 5.892-7.896 5.892-4.362 0-7.897-2.637-7.897-5.892 0-.157.009-.313.024-.465a1.765 1.765 0 0 1-.22-.846c0-.969.79-1.759 1.759-1.759.458 0 .866.168 1.168.448 1.18-1.01 2.92-1.662 4.88-1.724l.875-4.111c.046-.222.261-.368.484-.325l3.153.665a1.252 1.252 0 0 1 1.124-.908zm-9.351 9.943c-.888 0-1.608.72-1.608 1.608 0 .889.72 1.609 1.608 1.609.889 0 1.609-.72 1.609-1.609 0-.888-.72-1.608-1.609-1.608zm7.555 0c-.889 0-1.609.72-1.609 1.608 0 .889.72 1.609 1.609 1.609.888 0 1.608-.72 1.608-1.609 0-.888-.72-1.608-1.608-1.608zm-3.778 3.902c-1.644 0-3.056-.583-3.094-.601a.342.342 0 1 1 .282-.622c.043.02 1.266.54 2.812.54 1.545 0 2.766-.52 2.81-.54a.342.342 0 1 1 .284.622c-.039.018-1.45.601-3.094.601z"/></svg>
+              A Reddit User Shared:
+            </p>
+            <p className="italic text-lg text-[var(--text-primary)] m-0">
+              "I became terrified of my sleep log. Every time I had a bad night, I felt like I was failing the therapy, which made my heart pound even faster the next night."
+            </p>
+          </div>
           <p>
             If you apply your perfectionism to CBT-I, you turn the cure into the poison. You start trying to perfectly execute the therapy, which creates massive "Sleep Effort." You aren't relaxing into sleep; you are rigidly trying to beat a high score.
           </p>
