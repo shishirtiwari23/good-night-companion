@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" });
@@ -36,7 +37,24 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} ${playfair.variable} scroll-smooth`}
     >
-      <body className="font-sans antialiased pb-safe">{children}</body>
+      <body className="font-sans antialiased pb-safe">
+        {children}
+        
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-YZXNTVG070"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-YZXNTVG070');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }
