@@ -118,6 +118,16 @@ const articles = [
     description: "Seeing shadow figures from lack of sleep? Learn the neuroscience behind sleep deprivation hallucinations, REM microsleeps, and when to seek emergency medical help.",
     slug: "after-82-hours-without-sleep-i-started-seeing-shadow-figures",
   },
+  {
+    title: "My Brain Turns Into a To-Do List the Second I Close My Eyes — Why Nighttime Overthinking Gets Louder the Harder You Fight It",
+    description: "Why does your brain list tasks when you try to sleep? Discover the Zeigarnik Effect, how it triggers adrenaline, and use Constructive Worry to stop nighttime overthinking.",
+    slug: "my-brain-turns-into-a-to-do-list",
+  },
+  {
+    title: "I'm Not Afraid of Not Sleeping Anymore — I'm Afraid of Bedtime Itself. How My Bedroom Became a Place of Pure Dread",
+    description: "Why do you feel intense dread before going to bed? Learn how Pavlovian conditioning triggers anticipatory anxiety and how an Environmental Reset can cure bedtime dread.",
+    slug: "im-afraid-of-bedtime-itself",
+  },
 ];
 
 export default function ArticlesPage() {

@@ -29,6 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/articles/everything-starts-hurting-when-i-dont-sleep',
     '/articles/the-night-every-sleep-medication-stopped-working',
     '/articles/after-82-hours-without-sleep-i-started-seeing-shadow-figures',
+    '/articles/my-brain-turns-into-a-to-do-list',
+    '/articles/im-afraid-of-bedtime-itself',
     '/tools/calculator',
     '/tools/pmr',
     '/tools/recharge',
