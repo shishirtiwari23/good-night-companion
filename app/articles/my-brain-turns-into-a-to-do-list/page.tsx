@@ -32,20 +32,31 @@ export default function ToDoListBrainArticle() {
   ];
 
   return (
-    <article className="min-h-screen bg-[var(--background)] py-12 md:py-24 px-6 relative selection:bg-[var(--primary)] selection:text-white">
-      <div className="max-w-3xl mx-auto">
+    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+      {/* Navigation */}
+      <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest mb-12"
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-            <path d="m15 18-6-6 6-6"/>
-          </svg>
-          Back to Library
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
+          Back to Articles
         </Link>
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
+        </Link>
+      </div>
 
-        <header className="mb-12 space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[var(--text-primary)] leading-tight">
+      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+        <header className="mb-12">
+          <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-[#8da399] mb-4">
+            Sleep Science
+          </p>
+          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
             My Brain Turns Into a To-Do List the Second I Close My Eyes — Why Nighttime Overthinking Gets Louder the Harder You Fight It
           </h1>
           <div className="h-[1px] w-full bg-[#8da399]/20" />
@@ -151,26 +162,26 @@ export default function ToDoListBrainArticle() {
             </Link>
           </div>
 
-          <div className="border-t border-[#8da399]/20 pt-8 mt-12 pb-8">
-            <h4 className="text-sm font-bold tracking-widest text-[#8da399] uppercase mb-4">Scientific References & Further Reading</h4>
-            <ul className="text-sm space-y-3 text-[var(--text-secondary)]">
-              <li>
-                <strong>Writing To-Do Lists and Sleep Onset:</strong> Scullin, M. K., et al. (2018). The effects of bedtime writing on difficulty falling asleep: A polysomnographic study comparing to-do lists and completed activity lists. <em>Journal of Experimental Psychology: General</em>, 147(1), 139-146. (The clinical study proving that taking 5 minutes to write down uncompleted tasks significantly speeds up the time it takes to fall asleep).
-              </li>
-              <li>
-                <strong>The Zeigarnik Effect:</strong> Sywulak, A. E. (2010). The effect of the Zeigarnik phenomenon on state anxiety. <em>Journal of Clinical Psychology</em>. (Explains how uncompleted tasks directly drive physiological anxiety and hyperarousal).
-              </li>
-              <li>
-                <strong>Cognitive Arousal in Insomnia:</strong> Harvey, A. G. (2002). A cognitive model of insomnia. <em>Behaviour Research and Therapy</em>, 40(8), 869-893.
-              </li>
-            </ul>
-          </div>
-          
-          <div className="pt-8">
-            <FaqAccordion faqs={faqs} title="FAQs: People Also Ask About Nighttime Overthinking" />
-          </div>
+          <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+          <ul className="list-disc pl-6 space-y-3 mb-12 text-sm text-[var(--text-secondary)]">
+            <li>
+              <strong>Writing To-Do Lists and Sleep Onset:</strong> Scullin, M. K., et al. (2018). The effects of bedtime writing on difficulty falling asleep: A polysomnographic study comparing to-do lists and completed activity lists. <em>Journal of Experimental Psychology: General</em>, 147(1), 139-146.
+            </li>
+            <li>
+              <strong>The Zeigarnik Effect:</strong> Sywulak, A. E. (2010). The effect of the Zeigarnik phenomenon on state anxiety. <em>Journal of Clinical Psychology</em>.
+            </li>
+            <li>
+              <strong>Cognitive Arousal in Insomnia:</strong> Harvey, A. G. (2002). A cognitive model of insomnia. <em>Behaviour Research and Therapy</em>, 40(8), 869-893.
+            </li>
+          </ul>
+
+          <FaqAccordion faqs={faqs} title="FAQs: People Also Ask About Nighttime Overthinking" />
+
+          <p className="text-xs opacity-60 mt-12 leading-relaxed">
+            <strong>Disclaimer:</strong> This article is an educational resource and does not constitute medical advice. Please consult a healthcare professional if you are navigating severe mental health challenges.
+          </p>
         </div>
-      </div>
-    </article>
+      </article>
+    </main>
   );
 }

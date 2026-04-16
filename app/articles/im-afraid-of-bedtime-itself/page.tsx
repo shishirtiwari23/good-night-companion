@@ -32,20 +32,31 @@ export default function BedtimeDreadArticle() {
   ];
 
   return (
-    <article className="min-h-screen bg-[var(--background)] py-12 md:py-24 px-6 relative selection:bg-[var(--primary)] selection:text-white">
-      <div className="max-w-3xl mx-auto">
+    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+      {/* Navigation */}
+      <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest mb-12"
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
         >
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2">
-            <path d="m15 18-6-6 6-6"/>
-          </svg>
-          Back to Library
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
+          Back to Articles
         </Link>
+        <Link 
+          href="/" 
+          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
+        </Link>
+      </div>
 
-        <header className="mb-12 space-y-6">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif text-[var(--text-primary)] leading-tight">
+      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+        <header className="mb-12">
+          <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-[#8da399] mb-4">
+            Sleep Science
+          </p>
+          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
             I&apos;m Not Afraid of Not Sleeping Anymore — I&apos;m Afraid of Bedtime Itself. How My Bedroom Became a Place of Pure Dread
           </h1>
           <div className="h-[1px] w-full bg-[#8da399]/20" />
@@ -148,26 +159,26 @@ export default function BedtimeDreadArticle() {
             </Link>
           </div>
 
-          <div className="border-t border-[#8da399]/20 pt-8 mt-12 pb-8">
-            <h4 className="text-sm font-bold tracking-widest text-[#8da399] uppercase mb-4">Scientific References & Further Reading</h4>
-            <ul className="text-sm space-y-3 text-[var(--text-secondary)]">
-              <li>
-                <strong>Pavlovian Conditioning in Insomnia:</strong> Bootzin, R. R. (1972). Stimulus control treatment for insomnia. <em>Proceedings of the American Psychological Association</em>. (The foundational text proving that the bed becomes a conditioned cue for arousal, and the necessity of breaking that spatial association).
-              </li>
-              <li>
-                <strong>Anticipatory Anxiety:</strong> Espie, C. A. (2002). Insomnia: conceptual issues in the development, persistence, and treatment of sleep disorder in adults. <em>Annual Review of Psychology</em>, 53, 215-243. (Explains how the anticipation of the sleep environment directly fuels the hyperarousal loop).
-              </li>
-              <li>
-                <strong>Environmental Context & Sleep:</strong> Perlis, M. L., et al. (1997). Cognitive and behavioral efficacy in insomnia. <em>American Journal of Psychiatry</em>. (Details why changing the sleep environment can provide rapid relief from conditioned insomnia).
-              </li>
-            </ul>
-          </div>
-          
-          <div className="pt-8">
-            <FaqAccordion faqs={faqs} title="FAQs: People Also Ask About Bedtime Dread" />
-          </div>
+          <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+          <ul className="list-disc pl-6 space-y-3 mb-12 text-sm text-[var(--text-secondary)]">
+            <li>
+              <strong>Pavlovian Conditioning in Insomnia:</strong> Bootzin, R. R. (1972). Stimulus control treatment for insomnia. <em>Proceedings of the American Psychological Association</em>.
+            </li>
+            <li>
+              <strong>Anticipatory Anxiety:</strong> Espie, C. A. (2002). Insomnia: conceptual issues in the development, persistence, and treatment of sleep disorder in adults. <em>Annual Review of Psychology</em>, 53, 215-243.
+            </li>
+            <li>
+              <strong>Environmental Context & Sleep:</strong> Perlis, M. L., et al. (1997). Cognitive and behavioral efficacy in insomnia. <em>American Journal of Psychiatry</em>.
+            </li>
+          </ul>
+
+          <FaqAccordion faqs={faqs} title="FAQs: People Also Ask About Bedtime Dread" />
+
+          <p className="text-xs opacity-60 mt-12 leading-relaxed">
+            <strong>Disclaimer:</strong> This article is an educational resource and does not constitute medical advice. Please consult a healthcare professional if you are navigating severe mental health challenges.
+          </p>
         </div>
-      </div>
-    </article>
+      </article>
+    </main>
   );
 }
