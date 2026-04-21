@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Good Night Companion</title>
+    <!-- Premium Editorial Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-body: #efece5; 
+            --primary: #8da399; /* Sage Green */
+            --primary-dark: #7a8f86;
+            --text-heading: #27302a;
+            --text-body: #5c6660;
+            --text-label: #9ba6a0;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: var(--bg-body);
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            font-family: 'DM Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+        }
+
+        /* --- THE SPECIFIED 970x600 ENV --- */
+        .scale-envelope {
+            width: 970px;
+            height: 600px;
+            position: relative;
+            transform-origin: top center;
+            margin: 40px auto; 
+        }
+
+        .main-card {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(245, 248, 246, 0.7) 100%);
+            border-radius: 2rem;
+            box-sizing: border-box;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.03), inset 0 0 0 1px rgba(255, 255, 255, 1);
+            backdrop-filter: blur(25px);
+            opacity: 0;
+            animation: driftUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+            
+            /* Center elements natively */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* --- THE HEADINGS --- */
+        .program-heading {
+            position: relative; /* Stops the title from collapsing into the Venn diagram's z-space */
+            width: 100%;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.3rem; /* Emphatic presence */
+            color: var(--primary-dark);
+            margin: 0;
+            text-align: center;
+            opacity: 0;
+            animation: fadeDown 1s ease-out 0.2s forwards;
+            z-index: 30;
+        }
+
+        /* --- VENN DIAGRAM WRAPPER --- */
+        .venn-wrapper {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            margin-top: 15px; /* Breathes organically below the title */
+        }
+
+        /* --- SAGE GREEN LIQUID INTERSECTION GLOW --- */
+        .intersection-glow {
+            position: absolute;
+            left: 400px;
+            top: 250px;
+            width: 280px;
+            height: 520px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            background: radial-gradient(ellipse at center, rgba(141, 163, 153, 0.8) 0%, rgba(141, 163, 153, 0.2) 60%, transparent 80%);
+            pointer-events: none;
+            z-index: 3;
+            opacity: 0;
+            animation: liquidReaction 2.5s ease-in-out 1.2s forwards;
+        }
+
+        /* --- CIRCLES COMPOSITION --- */
+        .slide-container {
+            position: absolute;
+            top: 0;
+            width: 500px;
+            height: 500px;
+        }
+        
+        .slide-left {
+            left: 0; z-index: 1;
+            animation: slideInLeft 2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards;
+            transform: translateX(-200px);
+            opacity: 0;
+        }
+        
+        .slide-right {
+            right: 0; z-index: 2;
+            animation: slideInRight 2s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards;
+            transform: translateX(200px);
+            opacity: 0;
+        }
+
+        .circle-wrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .cbt-bg, .act-bg {
+            width: 100%; height: 100%; border-radius: 50%;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.2) 100%);
+            border: 1px solid rgba(141, 163, 153, 0.35);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03), inset 2px 2px 10px rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        /* LIQUID HOVER EFFECT (Liquid Wobble) */
+        .circle-wrapper:hover {
+            transform: scale(1.03);
+            z-index: 10;
+        }
+        .circle-wrapper:hover .cbt-bg, .circle-wrapper:hover .act-bg {
+            animation: liquidWobble 4s ease-in-out infinite;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05), inset 2px 2px 15px rgba(255, 255, 255, 1);
+        }
+
+        /* --- NARRATIVE CONTENT BOXES --- */
+        .content-box {
+            position: absolute;
+            top: 0; 
+            height: 100%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Forces absolute horizontal axis alignment */
+            padding-top: 110px; /* Lock to upper center universally */
+            align-items: center;
+            text-align: center;
+            z-index: 10;
+            pointer-events: none; 
+            box-sizing: border-box;
+        }
+
+        .cbt-content { left: 20px; width: 260px; }
+        .act-content { right: 20px; width: 260px; }
+        
+        /* Centered completely globally within the 800px wrapper */
+        .shared-content { 
+            left: 300px; 
+            width: 200px; 
+            padding-top: 210px; /* Locks text directly over the horizontal equator */
+        }
+
+        .venn-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.6rem;
+            color: var(--text-heading);
+            margin: 0 0 0.5rem 0;
+            opacity: 0;
+        }
+
+        .venn-subtitle {
+            font-size: 0.80rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--text-label);
+            margin-bottom: 1.25rem;
+            opacity: 0;
+        }
+
+        .venn-desc {
+            font-size: 0.85rem;
+            color: var(--text-body);
+            line-height: 1.45;
+            margin: 0 0 1.5rem 0;
+            padding: 0 1.5rem;
+            opacity: 0;
+        }
+
+        .shared-content .venn-title {
+            font-size: 1.8rem;
+            line-height: 1.15;
+            margin-bottom: 0.8rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.9), 0 0 20px rgba(255, 255, 255, 0.6);
+        }
+
+        .venn-tagline {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #4a544e; /* Visible against sage glow */
+            font-weight: 500;
+            opacity: 0;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        /* --- BULLET POINT LISTING --- */
+        .content-box ul {
+            list-style: none;
+            padding: 0; 
+            margin: 0 auto; /* Safely centers the text list unit */
+            width: max-content; /* Sits naturally without sprawling to margins */
+            max-width: 90%; 
+            display: flex;
+            flex-direction: column;
+            text-align: left; /* Pure vertical alignment of text */
+        }
+
+        .content-box ul li {
+            font-size: 0.95rem; 
+            font-weight: 700; 
+            color: var(--text-heading);
+            position: relative;
+            padding-left: 1.2rem;
+            margin-bottom: 1rem; /* Better than flex gap for wrapped items */
+            line-height: 1.35;
+            opacity: 0;
+            animation: slideInUp 0.8s ease-out forwards;
+            white-space: normal;
+        }
+
+        .content-box ul li:last-child {
+            margin-bottom: 0;
+        }
+
+        .content-box ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.45rem; 
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: var(--primary); /* Sage connection dots */
+        }
+
+        /* --- CASCADE REVEALS --- */
+        .reveal-1 { animation: slideInUp 1s ease-out 1.2s forwards; }
+        .reveal-2 { animation: slideInUp 1s ease-out 1.4s forwards; }
+        .reveal-3 { animation: slideInUp 1s ease-out 1.6s forwards; }
+
+        .cbt-content ul li:nth-child(1) { animation-delay: 1.8s; }
+        .cbt-content ul li:nth-child(2) { animation-delay: 1.9s; }
+        .cbt-content ul li:nth-child(3) { animation-delay: 2.0s; }
+        .cbt-content ul li:nth-child(4) { animation-delay: 2.1s; }
+        .cbt-content ul li:nth-child(5) { animation-delay: 2.2s; }
+
+        .act-content ul li:nth-child(1) { animation-delay: 2.0s; }
+        .act-content ul li:nth-child(2) { animation-delay: 2.1s; }
+        .act-content ul li:nth-child(3) { animation-delay: 2.2s; }
+        .act-content ul li:nth-child(4) { animation-delay: 2.3s; }
+        .act-content ul li:nth-child(5) { animation-delay: 2.4s; }
+
+        /* --- KEYFRAMES --- */
+        @keyframes slideInLeft {
+            0% { transform: translateX(-200px); opacity: 0; }
+            5% { opacity: 1; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            0% { transform: translateX(200px); opacity: 0; }
+            5% { opacity: 1; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes liquidReaction {
+            0% { opacity: 0; filter: blur(10px); transform: translate(-50%, -50%) scale(0.6); }
+            50% { opacity: 1; filter: blur(35px); transform: translate(-50%, -50%) scale(1.1); }
+            100% { opacity: 0.85; filter: blur(35px); transform: translate(-50%, -50%) scale(1); }
+        }
+
+        @keyframes liquidWobble {
+            0%, 100% { border-radius: 50%; }
+            33% { border-radius: 48% 52% 47% 53%; }
+            66% { border-radius: 52% 48% 53% 47%; }
+        }
+
+        @keyframes driftUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideInUp {
+            0% { transform: translateY(12px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="scale-envelope" id="scaleEnvelope">
+        <!-- Strictly bound 970x600 Card -->
+        <div class="main-card">
+            
+            <h1 class="program-heading">The Good Night Companion</h1>
+
+            <div class="venn-wrapper">
+                
+                <!-- Central liquid sage glow reacting exactly as circles meet -->
+                <div class="intersection-glow"></div>
+
+                <div class="slide-container slide-left">
+                    <div class="circle-wrapper cbt-circle">
+                        <div class="cbt-bg"></div>
+                        
+                        <div class="content-box cbt-content">
+                            <!-- Massive CBT heading, diminished 'The Mechanics' subtitle -->
+                            <h2 class="venn-title reveal-1">CBT-I</h2>
+                            <div class="venn-subtitle reveal-2">The Mechanics</div>
+                            
+                            <!-- Pure list, strictly centered in large geometric space -->
+                            <ul>
+                                <li>Circadian Rhythm</li>
+                                <li>Sleep Pressure</li>
+                                <li>Stimulus Control</li>
+                                <li>Cognitive Restructuring</li>
+                                <li>Somatic Tools</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-container slide-right">
+                    <div class="circle-wrapper act-circle">
+                        <div class="act-bg"></div>
+
+                        <div class="content-box act-content">
+                            <!-- Massive ACT heading, diminished 'The Mindset' subtitle -->
+                            <h2 class="venn-title reveal-1">ACT-I</h2>
+                            <div class="venn-subtitle reveal-2">The Mindset</div>
+                            
+                            <!-- Pure list, strictly centered in large geometric space -->
+                            <ul>
+                                <li>Calling a Truce</li>
+                                <li>Cognitive Defusion</li>
+                                <li>Non-Striving</li>
+                                <li>Values &amp; Committed Action</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- True overlap content -->
+                <div class="content-box shared-content">
+                    <h2 class="venn-title reveal-1">The Alchemy<br>of Recovery</h2>
+                    <div class="venn-tagline reveal-2">Where Mechanics<br>Meet Mindset</div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scalable Envelope ensures perfect bounding box matches on all desktop/mobile sizes -->
+    <script>
+        function resizeVenn() {
+            const envelope = document.getElementById('scaleEnvelope');
+            const vw = window.innerWidth;
+            const baseWidth = 1010; 
+            
+            if (vw < baseWidth) {
+                const scale = vw / baseWidth;
+                envelope.style.transform = `scale(${scale})`;
+                
+                const originH = 600;
+                const newH = originH * scale;
+                envelope.style.marginBottom = `-${originH - newH - 40}px`;
+            } else {
+                envelope.style.transform = 'scale(1)';
+                envelope.style.marginBottom = '40px';
+            }
+        }
+        
+        window.addEventListener('resize', resizeVenn);
+        window.addEventListener('DOMContentLoaded', resizeVenn);
+    </script>
+</body>
+</html>
