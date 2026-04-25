@@ -271,10 +271,7 @@ export default function Article2Page() {
             </Link>
           </div>
 
-          <div className="mt-16">
-            <h2 className="text-2xl font-serif text-[var(--text-primary)] mb-6">People Also Ask</h2>
-            <FaqAccordion faqs={faqs} />
-          </div>
+          <FaqAccordion faqs={faqs} title="People Also Ask" />
 
           <div className="mt-16 pt-8 border-t border-[#8da399]/20">
             <h2 className="text-xl font-serif text-[var(--text-primary)] mb-6">Scientific References &amp; Further Reading</h2>
