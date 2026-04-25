@@ -148,7 +148,7 @@ export default function Article3Page() {
               Tired of feeling held hostage by your midnight thoughts? Cognitive Defusion is just the foundation. The Goodnight Companion provides a structured, clinical roadmap to recovery.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion
             </Link>

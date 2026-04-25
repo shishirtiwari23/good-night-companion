@@ -165,7 +165,7 @@ export default function Article1Page() {
               The Goodnight Companion is a 90-day guided journal built on the clinical mechanics of CBT-I and the mindful flexibility of ACT-I.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion
             </Link>

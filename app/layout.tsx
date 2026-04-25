@@ -11,11 +11,11 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thegoodnightcompanion.com"),
-  title: "The Good Night Companion",
-  description: "A 90-Day CBT-I Program & Toolkit",
+  title: "The Good Night Companion | The 90-Day Clinical Sleep System",
+  description: "Discover The Good Night Companion: a 90-day clinical guided journal. We combine the gold-standard science of CBT-I and ACT-I to end chronic insomnia.",
   openGraph: {
-    title: "The Good Night Companion",
-    description: "A 90-Day CBT-I Program & Toolkit",
+    title: "The Good Night Companion | The 90-Day Clinical Sleep System",
+    description: "Discover The Good Night Companion: a 90-day clinical guided journal. We combine the gold-standard science of CBT-I and ACT-I to end chronic insomnia.",
     url: "https://www.thegoodnightcompanion.com",
     siteName: "The Good Night Companion",
     locale: "en_US",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Good Night Companion",
-    description: "A 90-Day CBT-I Program & Toolkit",
+    title: "The Good Night Companion | The 90-Day Clinical Sleep System",
+    description: "Discover The Good Night Companion: a 90-day clinical guided journal. We combine the gold-standard science of CBT-I and ACT-I to end chronic insomnia.",
   },
 };
 

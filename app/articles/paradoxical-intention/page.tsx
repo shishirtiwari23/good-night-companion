@@ -165,7 +165,7 @@ export default function Article11Page() {
               Need a complete system to dismantle your sleep anxiety? Paradoxical Intention is just one of the cognitive tools used in clinical sleep therapy.<br/><br/>The Goodnight Companion gives you the exact cognitive tools to neutralize your midnight panic and retrain your brain to trust your bed again.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion
             </Link>

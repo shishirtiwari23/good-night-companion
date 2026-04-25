@@ -490,7 +490,7 @@ export default function UnderstandPage() {
           </div>
           
           <div className="pt-12 text-center pb-8">
-            <Link href="/journey" className="btn-primary" style={{ display: 'inline-flex', padding: '16px 40px', fontSize: '1.2rem', fontWeight: 600, letterSpacing: '0.05em' }}>
+            <Link href="/join-the-program" className="btn-primary" style={{ display: 'inline-flex', padding: '16px 40px', fontSize: '1.2rem', fontWeight: 600, letterSpacing: '0.05em' }}>
               Call a Truce With Your Sleep Today
             </Link>
           </div>

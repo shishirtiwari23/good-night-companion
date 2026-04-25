@@ -112,7 +112,7 @@ export default function ArticlePage() {
               The Good Night Companion is a 90-day guided journal that doesn't just hand you generic sleep hygiene tips; it gives you the exact clinical, behavioral framework to dismantle the hyperarousal keeping you awake, allowing your body to finally heal the damage.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Good Night Companion
             </Link>

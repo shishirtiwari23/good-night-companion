@@ -62,7 +62,7 @@ export default function Home() {
         </Link>
 
         {/* Card 2: Join */}
-        <Link href="/journey" className="block h-full group">
+        <Link href="/join-the-program" className="block h-full group">
           <div className="card-container flex flex-col items-center text-center space-y-4 justify-center min-h-[180px] md:min-h-[200px] hover:-translate-y-2 hover:shadow-md transition-all duration-500 cursor-pointer h-full">
             <div className="text-[#8da399]">
               <svg

@@ -177,7 +177,7 @@ export default function Article2Page() {
               The Goodnight Companion is a 90-day guided journal that walks you through the exact, step-by-step science of fixing your broken sleep architecture.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion
             </Link>

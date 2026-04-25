@@ -121,7 +121,7 @@ export default function Article13Page() {
               <br/><br/>The Good Night Companion is a 90-day clinical journal that helps you call a truce with your sleep with the principles of CBT-I and ACT-I. Stop fighting your nights. Start repairing the system.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Good Night Companion
             </Link>

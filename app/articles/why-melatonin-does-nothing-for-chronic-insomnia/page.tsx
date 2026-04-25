@@ -147,7 +147,7 @@ export default function Article15Page() {
               The Goodnight Companion is a 90-day guided journal that replaces supplement-chasing with actual sleep science. By combining the data-driven mechanics of CBT-I with the psychological flexibility of ACT-I, it provides a roadmap to calm your nervous system and help your body remember how to sleep on its own.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Explore The Goodnight Companion
             </Link>

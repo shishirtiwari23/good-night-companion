@@ -157,7 +157,7 @@ export default function Article10Page() {
               Need to rebuild your sleep pressure from scratch? If your sleep architecture is broken, you need more than just nap rules. You need a complete mathematical framework to fix it.<br/><br/>The Goodnight Companion helps you calculate your exact sleep window, stabilize your master clock, and stop fighting your nights.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion
             </Link>

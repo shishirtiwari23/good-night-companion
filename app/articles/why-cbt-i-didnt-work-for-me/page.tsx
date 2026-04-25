@@ -151,7 +151,7 @@ export default function Article18Page() {
               The Good Night Companion is a 90-day guided journal that fixes the CBT-I failure rate. It seamlessly blends the mechanical, biological power of CBT-I with the deep psychological relief of ACT-I, walking you through the process day by day, so you never feel like you are failing again.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Good Night Companion
             </Link>

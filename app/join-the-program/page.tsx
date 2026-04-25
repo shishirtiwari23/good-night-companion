@@ -6,8 +6,8 @@ import Image from "next/image";
 import VennDiagram from "../components/VennDiagram";
 
 const AMAZON_LINKS: Record<string, string> = {
-  US: "https://www.amazon.com/dp/B0GQTGFSG7",
-  UK: "https://www.amazon.co.uk/dp/B0GQTGFSG7",
+  US: "https://amzn.to/4tE57rs",
+  UK: "https://amzn.to/4vSc9Kr",
   DE: "https://www.amazon.de/dp/B0GQTGFSG7",
   FR: "https://www.amazon.fr/dp/B0GQTGFSG7",
   ES: "https://www.amazon.es/dp/B0GQTGFSG7",
@@ -372,6 +372,7 @@ export default function JourneyPage() {
           </div>
 
           <footer className="text-center text-[var(--text-secondary)] opacity-60 text-xs mt-8 py-4 font-sans">
+            <p className="mb-2">As an Amazon Associate I earn from qualifying purchases.</p>
             <p>© 2025 The Good Night Companion. Reclaiming rest, one night at a time.</p>
           </footer>
         </div>

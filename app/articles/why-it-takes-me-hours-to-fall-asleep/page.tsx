@@ -149,7 +149,7 @@ export default function Article17Page() {
               The Good Night Companion is a 90-day guided journal that gives you the exact blueprint to calculate your compressed sleep window safely, build your sleep pressure, and use cognitive tools to stop the nightly 3-hour ceiling stare.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Good Night Companion
             </Link>

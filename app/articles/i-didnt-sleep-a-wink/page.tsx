@@ -142,7 +142,7 @@ export default function Article9Page() {
               Ready to turn off the hyperarousal? To stop &quot;local sleep&quot; and allow your entire brain to power down, you have to convince your nervous system that your bed is safe.<br/><br/>The Goodnight Companion gives you the exact behavioral formulas to dismantle your hyperarousal, so your brain finally feels safe enough to turn off the lights completely.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion
             </Link>

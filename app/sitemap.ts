@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const routes = [
     '',
-    '/journey',
+    '/join-the-program',
     '/understand',
     '/articles',
     '/articles/do-i-have-chronic-insomnia',

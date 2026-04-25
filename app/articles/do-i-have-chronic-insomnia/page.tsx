@@ -140,7 +140,7 @@ export default function Article8Page() {
               Ready to break the pattern? The Goodnight Companion is a 90-day guided journal that uses the gold-standard science of CBT-I to dismantle Conditioned Hyperarousal. It gives you the exact biological formulas and cognitive tools to prove to your nervous system that the bed is safe again.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Goodnight Companion
             </Link>

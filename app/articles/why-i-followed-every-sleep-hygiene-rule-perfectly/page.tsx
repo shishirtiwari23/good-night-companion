@@ -148,7 +148,7 @@ export default function Article16Page() {
               The Good Night Companion is a 90-day guided journal that ignores the generic sleep hygiene advice you hate, and instead walks you through the clinical, data-driven mechanics of CBT-I and ACT-I to retrain your brain to actually sleep again.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Good Night Companion
             </Link>

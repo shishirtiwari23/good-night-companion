@@ -154,7 +154,7 @@ export default function Article15Page() {
               The Good Night Companion is a 90-day guided journal that walks you through the exact, step-by-step process of breaking the fight-or-flight cycle. By utilizing the proven techniques of CBT-I and the compassionate reframing of ACT-I, it teaches you how to stop fighting your brain and start trusting your bed again.
             </p>
             <Link 
-              href="/journey" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
             >
               Get The Good Night Companion
             </Link>
