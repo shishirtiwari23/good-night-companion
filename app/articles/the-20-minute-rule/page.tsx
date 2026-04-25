@@ -61,46 +61,39 @@ export default function Article2Page() {
         
         <header className="mb-12">
           {/* Authority Badge */}
-          <div className="inline-flex flex-wrap items-center gap-2 bg-[#e8f0f8] border border-[#c0d8ee] text-[#2c5f8a] text-xs font-medium px-3 py-1.5 rounded-full mb-6 tracking-wide">
-            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 1L1 3.5V7C1 10.0376 3.41 12.8776 6.5 13.5C9.59 12.8776 12 10.0376 12 7V3.5L6.5 1Z" stroke="#2c5f8a" strokeWidth="1.3" fill="none"/></svg>
+          <div className="inline-flex flex-wrap items-center gap-2 bg-[#8da399]/10 border border-[#8da399]/20 text-[#8da399] text-[10px] md:text-xs font-bold px-4 py-2 rounded-full mb-6 tracking-widest uppercase">
+            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 1L1 3.5V7C1 10.0376 3.41 12.8776 6.5 13.5C9.59 12.8776 12 10.0376 12 7V3.5L6.5 1Z" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg>
             NHS-endorsed · CBT-I evidence-based · AASM clinical guideline
           </div>
           
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-6">
+          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
             The 20-Minute Rule for Insomnia: The NHS &amp; CBT-I Guideline Explained
           </h1>
 
-          <div className="flex flex-wrap gap-4 text-xs text-[var(--text-secondary)] mb-8">
-            <span className="flex items-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              8 min read
-            </span>
-            <span className="flex items-center gap-1.5">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-              Evidence-based · CBT-I
-            </span>
-          </div>
-
-          {/* QUICK ANSWER */}
-          <div className="bg-[#1a1814] text-white p-8 rounded-2xl relative overflow-hidden">
-            <div className="absolute -top-8 -right-8 w-32 h-32 bg-white/5 rounded-full"></div>
-            <p className="text-[10px] md:text-xs font-bold tracking-[0.1em] uppercase text-white/50 mb-3">Quick Answer</p>
-            <h2 className="text-xl font-serif font-semibold text-white mb-3">
-              If you can&apos;t sleep after 20 minutes, get out of bed — it&apos;s the official NHS recommendation.
-            </h2>
-            <p className="text-sm md:text-base text-white/80 leading-relaxed mb-4">
-              Lying awake and frustrated trains your brain to associate your mattress with stress through a mechanism called Conditioned Hyperarousal. The longer you stay in bed fighting wakefulness, the stronger that association becomes.
-            </p>
-            <p className="text-sm text-white/65 italic border-t border-white/15 pt-4">
-              But knowing why to leave is only the start. Below: the neuroscience, three options for every living situation, and exactly what to do until you feel sleepy again.
-            </p>
-          </div>
+          <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
         <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
 
-          <p>
+          {/* QUICK ANSWER */}
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
+            <p className="text-[10px] font-bold tracking-widest uppercase text-[#8da399] mb-2">Quick Answer</p>
+            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">
+              If you can&apos;t sleep after 20 minutes, get out of bed.
+            </h3>
+            <p className="font-sans text-[var(--text-secondary)] text-lg mb-4">
+              Lying awake and frustrated trains your brain to associate your mattress with stress through a mechanism called Conditioned Hyperarousal. The longer you stay in bed fighting wakefulness, the stronger that association becomes.
+            </p>
+            <p className="text-sm text-[var(--text-secondary)] italic border-t border-[#8da399]/20 pt-4">
+              But knowing why to leave is only the start. Below: the neuroscience, three options for every living situation, and exactly what to do until you feel sleepy again.
+            </p>
+          </div>
+
+          <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
             It is 2:00 AM. You are wide awake, staring at the ceiling, and your mind is racing.
+          </p>
+
+          <p>
             You calculate the hours left until your alarm: <em>&quot;If I fall asleep right now, I can still get four hours.&quot;</em>
             You squeeze your eyes shut and try with everything you have to force sleep. But the harder you fight, the more awake, anxious, and wired you feel.
           </p>
@@ -110,19 +103,19 @@ export default function Article2Page() {
           </p>
 
           {/* AUTHORITY PANEL */}
-          <div className="bg-[#e8f0f8] border border-[#c0d8ee] p-6 rounded-[1rem] my-8">
-            <h3 className="font-serif text-[#2c5f8a] text-xl font-semibold mb-3">What the official guidelines say</h3>
-            <p className="text-sm md:text-base text-[#4a4540] leading-relaxed mb-3">
+          <div className="bg-[#8da399]/10 border-l-4 border-[var(--primary)] p-6 rounded-r-lg my-8">
+            <h3 className="font-serif text-[var(--text-primary)] text-xl font-semibold mb-3">What the official guidelines say</h3>
+            <p className="text-base text-[var(--text-secondary)] leading-relaxed mb-3">
               The <strong>NHS</strong> explicitly recommends that if you cannot sleep, you should get up and go to another room — doing something quiet and non-stimulating until you feel sleepy again.
               This is also a foundational component of <strong>CBT-I (Cognitive Behavioural Therapy for Insomnia)</strong>, the treatment endorsed as the first-line intervention for chronic insomnia by the <strong>American Academy of Sleep Medicine (AASM)</strong> and the <strong>National Sleep Foundation</strong>.
             </p>
-            <p className="text-sm md:text-base text-[#4a4540] leading-relaxed">
+            <p className="text-base text-[var(--text-secondary)] leading-relaxed">
               The specific instruction — leave the bed after roughly 20 minutes of wakefulness — comes from <strong>Stimulus Control Therapy</strong>, first formalised by sleep researcher Dr. Richard Bootzin in 1972.
               It remains one of the most clinically validated techniques in sleep medicine.
             </p>
           </div>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4 pt-4 border-t border-[#8da399]/20">
+          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
             The Psychology: Why Your Bed Can Start Feeling Like a Trap
           </h2>
 
@@ -146,7 +139,7 @@ export default function Article2Page() {
             Our goal is to break that association. <strong>The bed is for sleeping — not for fighting.</strong>
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4 pt-4 border-t border-[#8da399]/20">
+          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
             The 20-Minute Contingency Plan
           </h2>
 
@@ -158,46 +151,46 @@ export default function Article2Page() {
             <strong>The rule:</strong> When you find yourself in bed, awake, tossing, turning, and feeling frustrated for what feels like around 20 minutes — reset the scene.
           </p>
 
-          <div className="bg-[#fdf3e8] border-l-4 border-[#b8621a] p-5 rounded-r-lg my-6 text-sm text-[#4a4540]">
-            <strong className="text-[#b8621a]">Important:</strong> Do not stare at the clock to track the 20 minutes. Clock-watching triggers an adrenaline spike that makes sleep harder. Simply estimate. Once you feel that clear wave of frustration and restlessness arrive, it is time to move.
-          </div>
+          <p className="text-sm bg-[#f2f0e9] p-4 rounded-xl mt-6">
+            <strong>Important:</strong> Do not stare at the clock to track the 20 minutes. Clock-watching triggers an adrenaline spike that makes sleep harder. Simply estimate. Once you feel that clear wave of frustration and restlessness arrive, it is time to move.
+          </p>
 
-          <p>
+          <p className="mt-6">
             The logic is direct: <strong>if you stay in bed fighting, your brain learns to fight. If you leave, your brain learns the bed is only for sleep.</strong>
           </p>
 
-          <h3 className="text-xl font-serif text-[var(--text-primary)] mt-10 mb-6">Choose Your Path — Three Options for Every Living Situation</h3>
+          <h3 className="font-serif text-[var(--text-primary)] text-xl mt-12 mb-6">Choose Your Path — Three Options for Every Living Situation</h3>
 
-          <div className="space-y-4 my-8">
-            <div className="bg-white border border-[#8da399]/20 p-6 rounded-xl flex gap-5 items-start">
-              <div className="flex-shrink-0 w-9 h-9 bg-[#1a1814] text-white rounded-full flex items-center justify-center font-serif font-bold text-base">A</div>
+          <div className="space-y-6 my-8">
+            <div className="bg-[#f9f8f6] border border-[#8da399]/20 p-6 rounded-[1rem] flex gap-5 items-start">
+              <div className="flex-shrink-0 w-8 h-8 bg-[var(--primary)] text-white rounded-full flex items-center justify-center font-sans font-bold text-sm">A</div>
               <div>
-                <span className="inline-block text-[10px] font-medium tracking-wide bg-[#f0ece4] text-[#7a736b] px-2 py-1 rounded-full mb-2 uppercase">Best for most people</span>
-                <h4 className="font-serif text-[var(--text-primary)] text-lg mb-2">Leave the Room</h4>
-                <p className="text-sm m-0">Get up and walk to a designated &quot;Rest Spot&quot; in another room — a comfortable sofa or a specific chair. The simple physical act of leaving the bedroom breaks the battlefield association immediately. Keep the lighting dim and the activity dull.</p>
+                <span className="inline-block text-[10px] font-bold tracking-widest bg-[#8da399]/10 text-[#8da399] px-2 py-1 rounded-full mb-2 uppercase">Best for most people</span>
+                <h4 className="font-serif text-[var(--text-primary)] text-xl mb-2">Leave the Room</h4>
+                <p className="text-sm m-0">Get up and walk to a designated &quot;Rest Spot&quot; in another room, like a comfortable couch or a specific chair. The simple physical act of leaving the bedroom breaks the battlefield association immediately. Keep the lighting dim and the activity dull.</p>
               </div>
             </div>
             
-            <div className="bg-white border border-[#8da399]/20 p-6 rounded-xl flex gap-5 items-start">
-              <div className="flex-shrink-0 w-9 h-9 bg-[#1a1814] text-white rounded-full flex items-center justify-center font-serif font-bold text-base">B</div>
+            <div className="bg-[#f9f8f6] border border-[#8da399]/20 p-6 rounded-[1rem] flex gap-5 items-start">
+              <div className="flex-shrink-0 w-8 h-8 bg-[var(--primary)] text-white rounded-full flex items-center justify-center font-sans font-bold text-sm">B</div>
               <div>
-                <span className="inline-block text-[10px] font-medium tracking-wide bg-[#f0ece4] text-[#7a736b] px-2 py-1 rounded-full mb-2 uppercase">Best for parents &amp; caregivers</span>
-                <h4 className="font-serif text-[var(--text-primary)] text-lg mb-2">Switch Spots Within the Room</h4>
-                <p className="text-sm m-0">If you cannot leave the room because you need to remain near a child or someone in your care, move to a specific chair or cushion inside the bedroom. The goal is simply to physically remove yourself from the mattress and break the conditioned association.</p>
+                <span className="inline-block text-[10px] font-bold tracking-widest bg-[#8da399]/10 text-[#8da399] px-2 py-1 rounded-full mb-2 uppercase">Best for parents &amp; caregivers</span>
+                <h4 className="font-serif text-[var(--text-primary)] text-xl mb-2">Switch Spots Within the Room</h4>
+                <p className="text-sm m-0">If you cannot leave the room because you need to stay near a child or someone you are caring for, move to a specific chair or cushion inside the bedroom. Keep it dim and boring. The goal is simply to physically remove yourself from the mattress.</p>
               </div>
             </div>
 
-            <div className="bg-white border border-[#8da399]/20 p-6 rounded-xl flex gap-5 items-start">
-              <div className="flex-shrink-0 w-9 h-9 bg-[#1a1814] text-white rounded-full flex items-center justify-center font-serif font-bold text-base">C</div>
+            <div className="bg-[#f9f8f6] border border-[#8da399]/20 p-6 rounded-[1rem] flex gap-5 items-start">
+              <div className="flex-shrink-0 w-8 h-8 bg-[var(--primary)] text-white rounded-full flex items-center justify-center font-sans font-bold text-sm">C</div>
               <div>
-                <span className="inline-block text-[10px] font-medium tracking-wide bg-[#f0ece4] text-[#7a736b] px-2 py-1 rounded-full mb-2 uppercase">Best for limited space or mobility</span>
-                <h4 className="font-serif text-[var(--text-primary)] text-lg mb-2">Change Your Posture in Bed</h4>
-                <p className="text-sm m-0">If you cannot leave the bed due to physical limitations or severe space constraints, remain but sit completely upright. Prop yourself with pillows and turn on a small reading light. You are changing your biological posture to signal to your brain that the &quot;trying to sleep&quot; phase has been paused.</p>
+                <span className="inline-block text-[10px] font-bold tracking-widest bg-[#8da399]/10 text-[#8da399] px-2 py-1 rounded-full mb-2 uppercase">Best for limited space</span>
+                <h4 className="font-serif text-[var(--text-primary)] text-xl mb-2">Change Your Posture in Bed</h4>
+                <p className="text-sm m-0">If you cannot leave the bed due to physical limitations or severe space constraints, remain in bed but sit completely upright. Prop yourself up with pillows and turn on a small reading light. You are changing your biological posture to signal to your brain that the &quot;trying to sleep&quot; phase has been paused.</p>
               </div>
             </div>
           </div>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4 pt-4 border-t border-[#8da399]/20">
+          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
             What to Do While You Are Awake
           </h2>
 
@@ -206,33 +199,33 @@ export default function Article2Page() {
           </p>
 
           <p>
-            The instinctive urge is to reach for your phone — not just to scroll, but to feel less alone in the dark. Resist this. The blue light emitted by phones and tablets is a powerful biological signal for &quot;daytime.&quot; A 2015 Harvard study published in the <em>Proceedings of the National Academy of Sciences</em> demonstrated that evening exposure to light-emitting screens suppresses melatonin, delays your circadian clock, and significantly reduces next-morning alertness. Reaching for a screen at 2 AM is the single most effective way to make your insomnia worse.
+            The instinctive urge is to reach for your phone — not just to scroll, but to feel a little less alone with your anxious thoughts in the middle of the night. <strong>Do not look at screens.</strong> The blue light from a phone or tablet is a powerful biological signal for &quot;daytime,&quot; which spikes your alertness and pushes sleep even further away.
           </p>
 
           <p className="mt-6 mb-3">Good alternatives:</p>
-          <ul className="space-y-2 mb-8">
-            <li className="flex gap-3 text-sm md:text-base"><span className="text-[var(--primary)] font-bold">—</span> Listen to a pre-selected calm audiobook (something you have heard before works well — it reduces novelty-driven alertness)</li>
-            <li className="flex gap-3 text-sm md:text-base"><span className="text-[var(--primary)] font-bold">—</span> Play a gentle, low-stakes podcast at low volume</li>
-            <li className="flex gap-3 text-sm md:text-base"><span className="text-[var(--primary)] font-bold">—</span> Listen to quiet, ambient music or nature sounds</li>
-            <li className="flex gap-3 text-sm md:text-base"><span className="text-[var(--primary)] font-bold">—</span> Read a physical book under a dim, warm lamp</li>
+          <ul className="list-disc pl-6 space-y-2 mb-6">
+            <li>Listen to a pre-selected calm audiobook.</li>
+            <li>Play a gentle, low-stakes podcast.</li>
+            <li>Listen to quiet, ambient music.</li>
+            <li>Read a physical book under a dim, warm lamp.</li>
           </ul>
 
-          <div className="bg-[#fdf3e8] border-l-4 border-[#b8621a] p-5 rounded-r-lg my-6 text-sm text-[#4a4540]">
-            <strong className="text-[#b8621a]">A note on NSDR &amp; PMR:</strong> Somatic techniques like Non-Sleep Deep Rest (NSDR) and Progressive Muscle Relaxation (PMR) are excellent for managing <em>daytime</em> fatigue from poor sleep. Do not use them in the middle of the night as a way to force sleep. Trying to force sleep creates performance anxiety — which makes you more awake, not less.
-          </div>
+          <p className="text-sm bg-[#f2f0e9] p-4 rounded-xl mt-6">
+            <strong>Important Note:</strong> While we highly recommend somatic tools like NSDR or PMR to manage daytime fatigue, <em>do not</em> use them in the middle of the night to try and force sleep. Trying to force sleep creates performance anxiety, which will only wake you up more.
+          </p>
 
           {/* MID-PAGE CTA */}
-          <div className="bg-[#e8f5ef] border border-[#b0d9c2] p-8 rounded-[1rem] text-center my-10">
-            <h3 className="font-serif text-[#2a6b4a] text-xl font-bold mb-3">If tonight is one of many bad nights…</h3>
-            <p className="text-sm md:text-base text-[#4a4540] max-w-lg mx-auto mb-6">
+          <div className="bg-[#f9f8f6] border border-[#8da399]/20 p-8 rounded-[1.5rem] text-center my-12 shadow-sm">
+            <h3 className="font-serif text-[var(--text-primary)] text-2xl mb-4">If tonight is one of many bad nights…</h3>
+            <p className="text-[var(--text-secondary)] max-w-lg mx-auto mb-6">
               The 20-minute rule is one piece of a larger system. The Goodnight Companion is a 90-day guided journal that walks you through the complete CBT-I protocol — the same framework sleep clinicians use — without needing a therapist.
             </p>
-            <Link href="/join-the-program" className="inline-block bg-[#2a6b4a] text-white font-sans font-medium px-6 py-3 rounded-md hover:opacity-90 transition-opacity">
-              See how it works →
+            <Link href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]">
+              See how it works
             </Link>
           </div>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4 pt-4 border-t border-[#8da399]/20">
+          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
             The Return: Wait for Sleepiness, Not Just Tiredness
           </h2>
 
@@ -245,14 +238,14 @@ export default function Article2Page() {
           </p>
 
           <p className="text-sm my-4 italic">
-            (For a deeper understanding of how biological sleep pressure works, see our guide: <Link href="/articles/why-going-to-bed-early-is-making-your-insomnia-worse" className="text-[var(--primary)] underline underline-offset-2">Why Going to Bed Early Is Making Your Insomnia Worse</Link>.)
+            (For a deeper understanding of how biological sleep pressure works, see our guide: <Link href="/articles/why-going-to-bed-early-is-making-your-insomnia-worse" className="text-[var(--primary)] font-bold hover:underline">Why Going to Bed Early Is Making Your Insomnia Worse</Link>.)
           </p>
 
-          <div className="bg-[#fdf3e8] border-l-4 border-[#b8621a] p-5 rounded-r-lg my-6 text-sm text-[#4a4540]">
-            <strong className="text-[#b8621a]">Safety note:</strong> Even while using the 20-Minute Contingency Plan, you must protect your core biological needs. Never restrict your total Time in Bed to less than 5.5 hours.
-          </div>
+          <p className="bg-[#8da399]/10 p-5 rounded-xl border-l-4 border-[var(--primary)] mt-8 text-sm">
+            <strong>Safety Note:</strong> Even if you are utilizing the 20-Minute Contingency Plan, you must protect your core biological needs. Never restrict your total Time in Bed to less than 5.5 hours.
+          </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4 pt-4 border-t border-[#8da399]/20">
+          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
             Why This Works: A Summary of the Mechanism
           </h2>
 
@@ -265,43 +258,46 @@ export default function Article2Page() {
           </p>
 
           {/* FINAL CTA */}
-          <div className="bg-[#1a1814] p-10 rounded-2xl text-center text-white my-12 shadow-lg">
-            <h2 className="font-serif text-2xl font-bold mb-4 tracking-tight">Stop piecing it together. Start healing.</h2>
-            <p className="text-white/75 text-sm md:text-base max-w-lg mx-auto mb-8 leading-relaxed">
-              The 20-minute rule is one tool in a complete system. The Goodnight Companion is a 90-day guided journal built on the full CBT-I protocol — designed to walk you through fixing your sleep architecture, step by step.
+          <div className="bg-[#f9f8f6] p-8 md:p-12 rounded-[1.5rem] mt-16 text-center shadow-sm border border-[#8da399]/20">
+            <h3 className="text-3xl font-serif text-[var(--text-primary)] mb-4">Stop Fighting. Start Healing.</h3>
+            <p className="mb-8 mx-auto max-w-lg text-[var(--text-secondary)]">
+              Piecing together blog articles is a great start, but true recovery requires a system.
+              The Goodnight Companion is a 90-day guided journal that walks you through the exact, step-by-step science of fixing your broken sleep architecture.
             </p>
-            <Link href="/join-the-program" className="inline-block bg-white text-[#1a1814] font-medium px-8 py-3 rounded-md hover:bg-white/90 transition-colors">
+            <Link 
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-10 hover:!bg-[var(--primary-dark)]"
+            >
               Get The Goodnight Companion
             </Link>
           </div>
 
           <div className="mt-16">
-            <h2 className="text-2xl font-serif text-[var(--text-primary)] mb-6 pt-4 border-t border-[#8da399]/20">People Also Ask</h2>
+            <h2 className="text-2xl font-serif text-[var(--text-primary)] mb-6">People Also Ask</h2>
             <FaqAccordion faqs={faqs} />
           </div>
 
-          <div className="mt-16 pt-8 border-t-2 border-[#8da399]/20">
+          <div className="mt-16 pt-8 border-t border-[#8da399]/20">
             <h2 className="text-xl font-serif text-[var(--text-primary)] mb-6">Scientific References &amp; Further Reading</h2>
-            <ul className="space-y-4 text-sm text-[var(--text-secondary)]">
-              <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2.5 before:w-2 before:h-px before:bg-[var(--text-secondary)]">
+            <ul className="list-disc pl-6 space-y-3 mb-12 text-sm text-[var(--text-secondary)]">
+              <li>
                 <strong>Stimulus Control Therapy:</strong> Bootzin, R. R. (1972). Stimulus control treatment for insomnia. <em>Proceedings of the American Psychological Association.</em> The foundational clinical paper establishing the get-out-of-bed rule to rebuild the bed–sleep association.
               </li>
-              <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2.5 before:w-2 before:h-px before:bg-[var(--text-secondary)]">
+              <li>
                 <strong>The 3P Model of Insomnia:</strong> Spielman, A. J., Caruso, L. S., &amp; Glovinsky, P. B. (1987). A clinical perspective on the nature and management of insomnia. <em>Psychiatric Clinics of North America, 10</em>(4), 541–553. Explains how acute stress becomes chronic insomnia through perpetuating habits such as staying in bed while awake.
               </li>
-              <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2.5 before:w-2 before:h-px before:bg-[var(--text-secondary)]">
-                <strong>Screen Light &amp; Sleep Disruption:</strong> Chang, A.-M., Aeschbach, D., Duffy, J. F., &amp; Czeisler, C. A. (2015). Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness. <em>Proceedings of the National Academy of Sciences.</em> Demonstrates that screen light suppresses melatonin and extends wakefulness — the Harvard study behind the no-screens guidance.
+              <li>
+                <strong>Screen Light &amp; Sleep Disruption:</strong> Chang, A.-M., Aeschbach, D., Duffy, J. F., &amp; Czeisler, C. A. (2015). Evening use of light-emitting eReaders negatively affects sleep, circadian timing, and next-morning alertness. <em>Proceedings of the National Academy of Sciences.</em> Demonstrates that screen light suppresses melatonin and extends wakefulness.
               </li>
-              <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2.5 before:w-2 before:h-px before:bg-[var(--text-secondary)]">
-                <strong>NHS Sleep Guidance:</strong> <a href="https://www.nhs.uk/every-mind-matters/mental-health-issues/sleep/" target="_blank" rel="noreferrer" className="text-[var(--primary)] underline underline-offset-2">nhs.uk — Sleep and insomnia</a>. Official NHS guidance on sleep hygiene and recommended behaviours for insomnia.
+              <li>
+                <strong>NHS Sleep Guidance:</strong> <a href="https://www.nhs.uk/every-mind-matters/mental-health-issues/sleep/" target="_blank" rel="noreferrer" className="text-[var(--primary)] font-bold hover:underline">nhs.uk — Sleep and insomnia</a>. Official NHS guidance on sleep hygiene and recommended behaviours for insomnia.
               </li>
-              <li className="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2.5 before:w-2 before:h-px before:bg-[var(--text-secondary)]">
+              <li>
                 <strong>CBT-I Overview:</strong> Qaseem, A., et al. (2016). Management of Chronic Insomnia Disorder in Adults. <em>Annals of Internal Medicine.</em> American College of Physicians clinical guideline recommending CBT-I as the first-line treatment for chronic insomnia disorder.
               </li>
             </ul>
           </div>
 
-          <div className="mt-10 p-5 bg-[#f0ece4] rounded-lg text-xs text-[var(--text-secondary)] leading-relaxed">
+          <div className="mt-10 p-5 bg-[#f2f0e9] rounded-lg text-xs text-[var(--text-secondary)] leading-relaxed">
             <strong>Disclaimer:</strong> The content in this article is for educational and informational purposes only and does not constitute medical advice, diagnosis, or clinical therapy. If you have a history of bipolar disorder, seizure disorders, untreated sleep apnoea, or operate heavy machinery, please consult a qualified healthcare provider before making changes to your sleep schedule or restricting your time in bed.
           </div>
 
