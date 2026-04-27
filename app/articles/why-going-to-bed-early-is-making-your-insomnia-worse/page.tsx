@@ -13,12 +13,22 @@ export const metadata: Metadata = {
     title: "Why Going to Bed Early Makes Insomnia Worse: Sleep Restriction & the CBT-I Fix",
     description: "Going to bed early when you have insomnia dilutes your sleep pressure and wires your brain for anxiety. Here's the CBT-I science — including Sleep Restriction Therapy — that actually fixes it.",
     url: "https://www.thegoodnightcompanion.com/articles/why-going-to-bed-early-is-making-your-insomnia-worse",
+    siteName: "The Good Night Companion",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
     title: "Why Going to Bed Early Makes Insomnia Worse: Sleep Restriction & the CBT-I Fix",
     description: "Going to bed early when you have insomnia dilutes your sleep pressure and wires your brain for anxiety. Here's the CBT-I science — including Sleep Restriction Therapy — that actually fixes it.",
+    images: ["/twitter-image.jpg"],
   },
 };
 

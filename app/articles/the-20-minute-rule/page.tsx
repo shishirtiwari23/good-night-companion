@@ -13,12 +13,22 @@ export const metadata: Metadata = {
     title: "The 20-Minute Rule for Insomnia | CBT-I Stimulus Control Guide",
     description: "Discover why the NHS and sleep clinics recommend the 20-Minute Rule. Learn how to use CBT-I Stimulus Control to stop fighting sleep and fix your insomnia.",
     url: "https://www.thegoodnightcompanion.com/articles/the-20-minute-rule",
+    siteName: "The Good Night Companion",
+    images: [
+      {
+        url: "/opengraph-image.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
     type: "article",
   },
   twitter: {
     card: "summary_large_image",
     title: "The 20-Minute Rule for Insomnia | CBT-I Stimulus Control Guide",
     description: "Discover why the NHS and sleep clinics recommend the 20-Minute Rule. Learn how to use CBT-I Stimulus Control to stop fighting sleep and fix your insomnia.",
+    images: ["/twitter-image.jpg"],
   },
 };
 
