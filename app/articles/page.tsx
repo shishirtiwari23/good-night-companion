@@ -13,6 +13,11 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: "The 3P Model of Insomnia Explained: Predisposing, Precipitating & Perpetuating Factors",
+    description: "Spielman's 3P Model shows exactly how a bad week of sleep becomes chronic insomnia — and why \"chronic\" doesn't mean permanent. Here's the clinical framework and what it means for your recovery.",
+    slug: "the-3p-model-of-insomnia",
+  },
+  {
     title: "Why Going to Bed Early is Making Your Insomnia Worse",
     description: "Going to bed early feels logical — but for chronic insomnia, it dilutes your sleep pressure and wires your brain for wakefulness. Here is the science and the fix.",
     slug: "why-going-to-bed-early-is-making-your-insomnia-worse",

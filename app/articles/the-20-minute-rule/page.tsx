@@ -82,9 +82,9 @@ export default function Article2Page() {
         
         <header className="mb-12">
           {/* Authority Badge */}
-          <div className="inline-flex flex-wrap items-center gap-2 bg-[#8da399]/10 border border-[#8da399]/20 text-[#8da399] text-[10px] md:text-xs font-bold px-4 py-2 rounded-full mb-6 tracking-widest uppercase">
-            <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 1L1 3.5V7C1 10.0376 3.41 12.8776 6.5 13.5C9.59 12.8776 12 10.0376 12 7V3.5L6.5 1Z" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg>
-            NHS-endorsed · CBT-I evidence-based · AASM clinical guideline
+          <div className="inline-flex items-start md:items-center gap-2 bg-[#8da399]/10 border border-[#8da399]/20 text-[#8da399] text-[10px] md:text-xs font-bold px-4 py-2 rounded-xl md:rounded-full mb-6 tracking-widest uppercase text-left">
+            <svg className="flex-shrink-0 mt-[1px] md:mt-0" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 1L1 3.5V7C1 10.0376 3.41 12.8776 6.5 13.5C9.59 12.8776 12 10.0376 12 7V3.5L6.5 1Z" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg>
+            <span>NHS-endorsed · CBT-I evidence-based · AASM clinical guideline</span>
           </div>
           
           <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
