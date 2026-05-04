@@ -4,8 +4,8 @@ import { Metadata } from "next";
 import ArticlesList from "./ArticlesList";
 
 export const metadata: Metadata = {
-  title: "Articles | The Good Night Companion",
-  description: "Science-backed insights and strategies for fixing insomnia.",
+  title: "Sleep Science Articles — CBT-I Guides for Chronic Insomnia | Goodnight Companion",
+  description: "Clinically-grounded articles on sleep pressure, stimulus control, sleep restriction, and the neuroscience of insomnia recovery. Written for exhausted people, not researchers.",
   alternates: {
     canonical: '/articles',
   },
@@ -137,13 +137,13 @@ const articles = [
 
 export default function ArticlesPage() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative overflow-hidden bg-[var(--background)]">
+    <main className="min-h-screen flex flex-col items-center p-4 md:p-12 relative overflow-hidden bg-cream text-ink">
       
       {/* Navigation */}
       <div className="w-full max-w-4xl z-10 mb-12">
         <Link 
           href="/" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -164,10 +164,10 @@ export default function ArticlesPage() {
       </div>
 
       <div className="w-full max-w-4xl z-10 text-center mb-16 space-y-4">
-        <h1 className="text-4xl md:text-5xl font-serif text-[var(--text-primary)]">
+        <h1 className="text-4xl md:text-5xl font-cormorant font-light text-ink">
           Articles
         </h1>
-        <p className="text-[var(--text-secondary)] text-base md:text-lg max-w-2xl mx-auto font-sans">
+        <p className="text-ink-2 text-base md:text-lg max-w-2xl mx-auto font-sans">
           Insights, science, and practical strategies to help you rebuild your sleep architecture and trust your bed again.
         </p>
       </div>

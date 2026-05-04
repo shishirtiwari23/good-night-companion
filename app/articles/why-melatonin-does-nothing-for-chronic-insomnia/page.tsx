@@ -22,44 +22,44 @@ const faqs = [
 
 export default function Article15Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+    <main className="min-h-screen flex flex-col items-center p-4 md:p-12 relative bg-cream text-ink">
       <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
         </Link>
         <Link 
           href="/" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Home
         </Link>
       </div>
 
-      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+      <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         <header className="mb-12">
-          <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-[#8da399] mb-4">
+          <p className="text-[10px] md:text-xs font-bold tracking-[0.16em] uppercase text-sage mb-4">
             Sleep Science
           </p>
-          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
+          <h1 className="text-3xl md:text-5xl font-cormorant font-light text-ink leading-tight mb-8">
             Why Melatonin Does Absolutely Nothing for My Chronic Insomnia — and Sometimes Makes It Worse
           </h1>
           <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
-        <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
-           <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+        <div className="text-ink-2 font-sans leading-relaxed space-y-6 text-lg">
+           <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">The Short Answer:</h3>
             <p>
               Why doesn&apos;t melatonin work for chronic insomnia? Melatonin is a hormone that regulates your sleep schedule (like for jet lag); it is not a sedative that initiates sleep. If your nervous system is trapped in a fight-or-flight state, taking massive doses of over-the-counter melatonin will not overpower your adrenaline. Instead, the chemical overload disrupts your REM cycle, causing vivid nightmares, hypnic jerks, and severe next-day brain fog.
             </p>
           </div>
 
-          <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
+          <p className="text-xl md:text-2xl font-serif font-medium text-ink leading-snug">
             It is 11:30 PM. You did everything right. You took the &quot;extra-strength&quot; 10mg melatonin gummy two hours ago, turned off the lights, and waited.
           </p>
           <p>
@@ -72,7 +72,7 @@ export default function Article15Page() {
             If you feel like a failure because the &quot;natural cure&quot; everyone swears by isn&apos;t working for you, take a deep breath. Your sleep system isn&apos;t broken. You are simply trying to turn off a fire alarm by changing the time on the clock.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Biology: Melatonin is a Time Keeper, Not a Sedative</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Biology: Melatonin is a Time Keeper, Not a Sedative</h2>
           <p>
             The biggest myth sold by the supplement industry is that melatonin is a powerful sedative. It is not.
           </p>
@@ -86,7 +86,7 @@ export default function Article15Page() {
             (Not sure if your nighttime wakefulness is a temporary glitch or a learned pattern of hyperarousal? Read our clinical guide: <Link href="/articles/do-i-have-chronic-insomnia" className="text-[var(--primary)] font-bold hover:underline">Do I Have Chronic Insomnia? The Clinical &quot;Rule of 3s&quot; Explained</Link> to evaluate your symptoms).
           </p>
           
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Backfire: The Overdose and the Nightmares</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Backfire: The Overdose and the Nightmares</h2>
            <p>
             Because we are desperate for unconsciousness, we assume more is better. We buy the 5mg, 10mg, or even 20mg bottles, assuming we need &quot;extra strength&quot; to finally knock ourselves out.
           </p>
@@ -98,11 +98,11 @@ export default function Article15Page() {
           </p>
 
           <div className="my-8 border-l-4 border-[var(--primary)] pl-6 py-4 bg-[#f9f8f6] rounded-r-xl shadow-sm">
-            <p className="text-xs font-bold tracking-widest uppercase text-[#8da399] mb-3 flex items-center">
+            <p className="text-xs font-bold tracking-[0.16em] uppercase text-sage mb-3 flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" className="mr-2 text-[var(--primary)]"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.758.79 1.758 1.759 0 .312-.08.6-.22.846.015.152.023.308.023.465 0 3.255-3.535 5.892-7.896 5.892-4.362 0-7.897-2.637-7.897-5.892 0-.157.009-.313.024-.465a1.765 1.765 0 0 1-.22-.846c0-.969.79-1.759 1.759-1.759.458 0 .866.168 1.168.448 1.18-1.01 2.92-1.662 4.88-1.724l.875-4.111c.046-.222.261-.368.484-.325l3.153.665a1.252 1.252 0 0 1 1.124-.908zm-9.351 9.943c-.888 0-1.608.72-1.608 1.608 0 .889.72 1.609 1.608 1.609.889 0 1.609-.72 1.609-1.609 0-.888-.72-1.608-1.609-1.608zm7.555 0c-.889 0-1.609.72-1.609 1.608 0 .889.72 1.609 1.609 1.609.888 0 1.608-.72 1.608-1.609 0-.888-.72-1.608-1.608-1.608zm-3.778 3.902c-1.644 0-3.056-.583-3.094-.601a.342.342 0 1 1 .282-.622c.043.02 1.266.54 2.812.54 1.545 0 2.766-.52 2.81-.54a.342.342 0 1 1 .284.622c-.039.018-1.45.601-3.094.601z"/></svg>
               A Reddit User Shared:
             </p>
-            <p className="italic text-lg text-[var(--text-primary)] m-0">
+            <p className="italic text-lg text-ink m-0">
                &quot;I finally got three hours of sleep, but I feel like I am in a coma.&quot;
             </p>
           </div>
@@ -110,12 +110,12 @@ export default function Article15Page() {
             Worse, your body cannot metabolize 30 times its normal hormone levels overnight. That heavy, groggy, deeply depressed feeling you have the entire next day isn&apos;t just a lack of sleep. It is a literal melatonin hangover. You are still carrying the hormone in your bloodstream at noon.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Fix: Downregulating the Threat</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Fix: Downregulating the Threat</h2>
           <p>
             You cannot drug a hyper-aroused brain into submission with over-the-counter supplements. If you want to sleep, you have to stop trying to force unconsciousness with a pill and start focusing on making your nervous system feel safe.
           </p>
 
-          <h3 className="font-serif text-[var(--text-primary)] text-xl mt-8 mb-4">1. Drop the Struggle with Your Thoughts</h3>
+          <h3 className="font-serif font-medium text-ink text-xl mt-8 mb-4">1. Drop the Struggle with Your Thoughts</h3>
            <p>
             Taking a pill and then lying in bed monitoring yourself—<em>Is it working yet? Do I feel tired?</em>—creates intense performance anxiety. This guarantees you will stay awake. You have to step back from the racing thoughts.
           </p>
@@ -123,7 +123,7 @@ export default function Article15Page() {
             (To learn the core ACT-I tool for neutralizing midnight panic, read our guide: <Link href="/articles/how-to-stop-overthinking-at-night" className="text-[var(--primary)] font-bold hover:underline">How to Stop Overthinking at Night (Without Trying to &quot;Empty Your Mind&quot;)</Link>).
           </p>
           
-          <h3 className="font-serif text-[var(--text-primary)] text-xl mt-8 mb-4">2. Break the Bed-Threat Association</h3>
+          <h3 className="font-serif font-medium text-ink text-xl mt-8 mb-4">2. Break the Bed-Threat Association</h3>
            <p>
             If you took melatonin and you are still awake 20 minutes later feeling furious, staying in bed will only train your brain to associate the mattress with anger. Get up. Move to a dim room.
           </p>
@@ -132,15 +132,15 @@ export default function Article15Page() {
           </p>
 
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">Stop Blaming Yourself for Bad Science</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Stop Blaming Yourself for Bad Science</h2>
           <p>
             Throwing out your expensive sleep supplements feels terrifying. But relying on a gummy that actively makes your nights more chaotic and your days foggier is worse. Stop blaming yourself for failing to respond to a hormone that was never designed to cure anxiety in the first place.
           </p>
           
-          <hr className="my-12 border-[#8da399]/20" />
+          <hr className="my-12 border-rule" />
           
           <div className="bg-[#f9f8f6] p-8 rounded-[1.5rem] mt-12 text-center shadow-sm">
-            <h3 className="text-2xl font-serif text-[var(--text-primary)] mb-4">Ready to Address the Root Cause?</h3>
+            <h3 className="text-2xl font-serif font-medium text-ink mb-4">Ready to Address the Root Cause?</h3>
             <p className="mb-6 mx-auto max-w-lg">
               If you are ready to stop relying on a pill to save you and want to address the actual root cause of your hyperarousal, you need a structured framework.
               <br/><br/>
@@ -153,7 +153,7 @@ export default function Article15Page() {
             </Link>
           </div>
 
-          <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+          <h2 className="text-xl font-serif font-medium text-ink mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">
              <li><strong>Melatonin Dosage and Efficacy:</strong> Zhdanova, I. V., et al. (2001). Sleep-inducing effects of low doses of melatonin ingested in the evening. <em>Clinical Endocrinology</em>, 55(3), 321-327. (Shows that physiological doses of 0.3mg are more effective for sleep regulation than pharmacological high doses).</li>
             <li><strong>Melatonin Side Effects (Nightmares & Next-Day Fatigue):</strong> Foley, H. M., & Steel, A. E. (2019). Adverse events associated with oral administration of melatonin: A critical systematic review of clinical evidence. <em>Complementary Therapies in Medicine</em>, 42, 65-81.</li>
@@ -164,7 +164,7 @@ export default function Article15Page() {
             <strong>Disclaimer:</strong> This article is an educational resource and does not constitute medical advice. Please consult a healthcare professional if you are navigating severe mental health challenges or underlying sleep disorders.
           </p>
           
-          <hr className="my-12 border-[#8da399]/20" />
+          <hr className="my-12 border-rule" />
           
           <FaqAccordion faqs={faqs} />
 

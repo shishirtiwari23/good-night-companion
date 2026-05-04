@@ -21,44 +21,44 @@ const faqs = [
 
 export default function Article10Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+    <main className="min-h-screen flex flex-col items-center p-4 md:p-12 relative bg-cream text-ink">
       <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
         </Link>
         <Link 
           href="/" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Home
         </Link>
       </div>
 
-      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+      <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         <header className="mb-12">
-          <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-[#8da399] mb-4">
+          <p className="text-[10px] md:text-xs font-bold tracking-[0.16em] uppercase text-sage mb-4">
             Sleep Science
           </p>
-          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
+          <h1 className="text-3xl md:text-5xl font-cormorant font-light text-ink leading-tight mb-8">
             Is It OK to Nap in the Afternoon? (The Clinical Rules of Daytime Sleep)
           </h1>
           <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
-        <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+        <div className="text-ink-2 font-sans leading-relaxed space-y-6 text-lg">
 
-          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
-            <p className="font-sans text-[var(--text-secondary)] text-lg">Should you nap if you have chronic insomnia? No. Napping acts as a pressure release valve, burning through the biological "sleep pressure" (adenosine) your brain needs to pull you into a deep sleep at night. To fix your sleep architecture, you must survive the afternoon crash without napping to ensure your sleep drive is massive at bedtime.</p>
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-ink-2 text-lg">Should you nap if you have chronic insomnia? No. Napping acts as a pressure release valve, burning through the biological "sleep pressure" (adenosine) your brain needs to pull you into a deep sleep at night. To fix your sleep architecture, you must survive the afternoon crash without napping to ensure your sleep drive is massive at bedtime.</p>
           </div>
 
 
-          <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
+          <p className="text-xl md:text-2xl font-serif font-medium text-ink leading-snug">
             It is 2:00 PM. You are staring at your computer screen, but your brain is completely offline. The afternoon crash has hit, your eyelids are heavy, and the couch is calling your name.
           </p>
           <p>
@@ -71,7 +71,7 @@ export default function Article10Page() {
             Who is right? Biologically, they both are. Whether a nap is a performance enhancer or a biological disaster depends entirely on the current state of your sleep architecture. Here is the clinical science of daytime napping, exactly how long you should sleep, and the neurobiological alternative you need if napping is ruining your nights.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Biology of the Afternoon Crash</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Biology of the Afternoon Crash</h2>
           <p>
             First, you need to understand that feeling tired at 2:00 PM is not a sign of weakness or necessarily a sign of bad sleep. It is a biological guarantee.
           </p>
@@ -82,7 +82,7 @@ export default function Article10Page() {
             If you decide to surrender to this dip and take a nap, you have to follow strict biological limits, or you will wake up feeling worse than before.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The &quot;Perfect&quot; Nap: The 20-Minute Cap</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The &quot;Perfect&quot; Nap: The 20-Minute Cap</h2>
           <p>
             If you are a generally healthy sleeper who just had a short night, a nap can be a massive cognitive booster. But it must be timed perfectly to avoid Sleep Inertia.
           </p>
@@ -95,11 +95,11 @@ export default function Article10Page() {
             <li><strong>30+ Minutes:</strong> You cross the threshold into Deep Sleep. If your alarm goes off while your brainwaves are in this slow, deep state, you will experience Sleep Inertia—that groggy, disoriented, &quot;hit-by-a-truck&quot; feeling that takes hours to shake off.</li>
           </ul>
           
-          <blockquote className="border-l-4 border-[var(--primary)] pl-6 italic text-xl text-[var(--text-primary)] my-8">
+          <blockquote className="border-l-4 border-[var(--primary)] pl-6 italic text-xl text-ink my-8">
             <strong>The Parameter:</strong> If you are a healthy sleeper, put a strict 20-Minute Cap on your daytime sleep. Set your alarm for 25 minutes (giving yourself 5 minutes to drift off and 20 minutes to sleep).
           </blockquote>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Insomnia Trap: Why Napping Sabotages Your Night</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Insomnia Trap: Why Napping Sabotages Your Night</h2>
           <p>
             What if you aren&apos;t a healthy sleeper? What if you are battling chronic insomnia?
           </p>
@@ -119,7 +119,7 @@ export default function Article10Page() {
             Taking a 2-hour nap at 2:00 PM acts like a pressure release valve. It flushes the adenosine out of your brain. It is the biological equivalent of eating a massive slice of chocolate cake an hour before dinner—when bedtime finally arrives, you simply aren&apos;t &quot;hungry&quot; enough for sleep. You will lie awake, frustrated, reinforcing the cycle of Conditioned Hyperarousal.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Solution for Exhaustion: NSDR (Non-Sleep Deep Rest)</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Solution for Exhaustion: NSDR (Non-Sleep Deep Rest)</h2>
           <p>
             If you are exhausted but you are forbidden from napping to protect your nighttime sleep pressure, how do you survive the afternoon crash?
           </p>
@@ -130,8 +130,8 @@ export default function Article10Page() {
             Unlike a nap, where you lose consciousness and flush away your adenosine, NSDR is a state of self-directed relaxation. It involves lying completely still for 10 to 15 minutes and using specific breathing and mental focus protocols to intentionally shift your autonomic nervous system from &quot;fight or flight&quot; to &quot;rest and digest.&quot;
           </p>
           
-          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">Why NSDR is the ultimate biological hack:</h3>
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">Why NSDR is the ultimate biological hack:</h3>
             <ul className="list-disc pl-4 space-y-3 text-sm">
               <li><strong>It lowers cortisol:</strong> It actively flushes stress hormones from your system, reducing the &quot;wired and tired&quot; feeling.</li>
               <li><strong>It replenishes dopamine:</strong> Clinical studies show that deep relaxation protocols restore dopamine reserves in the brain, giving you your daytime focus back.</li>
@@ -139,7 +139,7 @@ export default function Article10Page() {
             </ul>
           </div>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Decision Matrix</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Decision Matrix</h2>
           <p>
             Still not sure what to do right now? Here is your analytical decision matrix:
           </p>
@@ -149,10 +149,10 @@ export default function Article10Page() {
             <li><strong>Are you struggling with chronic insomnia or nighttime awakenings?</strong> Do not nap. Do a 10-minute NSDR protocol to lower your stress, and save your sleep hunger for tonight.</li>
           </ul>
 
-          <hr className="my-12 border-[#8da399]/20" />
+          <hr className="my-12 border-rule" />
           
           <div className="bg-[#f9f8f6] p-8 rounded-[1.5rem] mt-12 text-center shadow-sm">
-            <h3 className="text-2xl font-serif text-[var(--text-primary)] mb-4">Stop Fighting. Start Healing.</h3>
+            <h3 className="text-2xl font-serif font-medium text-ink mb-4">Stop Fighting. Start Healing.</h3>
             <p className="mb-6 mx-auto max-w-lg">
               Need to rebuild your sleep pressure from scratch? If your sleep architecture is broken, you need more than just nap rules. You need a complete mathematical framework to fix it.<br/><br/>The Goodnight Companion helps you calculate your exact sleep window, stabilize your master clock, and stop fighting your nights.
             </p>
@@ -165,7 +165,7 @@ export default function Article10Page() {
 
           <FaqAccordion faqs={faqs} />
 
-          <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+          <h2 className="text-xl font-serif font-medium text-ink mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">
             <li><strong>The NASA Nap Study:</strong> Rosekind, M. R., et al. (1995). Crew Factors in Flight Operations IX: Effects of Planned Cockpit Rest on Crew Performance and Alertness in Long-Haul Operations. <em>NASA Technical Memorandum.</em></li>
             <li><strong>Sleep Inertia & Deep Sleep:</strong> Tassi, P., & Muzet, A. (2000). Sleep inertia. <em>Sleep Medicine Reviews</em>, 4(4), 341-353.</li>

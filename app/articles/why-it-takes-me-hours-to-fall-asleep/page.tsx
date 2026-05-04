@@ -37,40 +37,40 @@ export default function Article17Page() {
 ];
 
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+    <main className="min-h-screen flex flex-col items-center p-4 md:p-12 relative bg-cream text-ink">
       <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
         </Link>
         <Link 
           href="/" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Home
         </Link>
       </div>
 
-      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+      <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         <header className="mb-12">
-          <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-[#8da399] mb-4">
+          <p className="text-[10px] md:text-xs font-bold tracking-[0.16em] uppercase text-sage mb-4">
             Sleep Science
           </p>
-          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
+          <h1 className="text-3xl md:text-5xl font-cormorant font-light text-ink leading-tight mb-8">
             Why it takes me three to five hours to fall asleep every single night — what's actually happening in my brain during those hours.
           </h1>
           <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
-        <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+        <div className="text-ink-2 font-sans leading-relaxed space-y-6 text-lg">
 
-          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
-            <p className="font-sans text-[var(--text-secondary)] text-lg">Why does it take hours to fall asleep? This is called Sleep Onset Insomnia. It happens when your biological "sleep pressure" (the body's physical hunger for sleep) is too weak to overpower your psychological "sleep effort" (the anxiety of trying to force yourself to sleep). To fall asleep quickly, you have to use a clinical tool called Sleep Scheduling: strictly calculating a delayed bedtime based on your actual sleep capability, forcing an undeniable wave of biological sleep pressure.</p>
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-ink-2 text-lg">Why does it take hours to fall asleep? This is called Sleep Onset Insomnia. It happens when your biological "sleep pressure" (the body's physical hunger for sleep) is too weak to overpower your psychological "sleep effort" (the anxiety of trying to force yourself to sleep). To fall asleep quickly, you have to use a clinical tool called Sleep Scheduling: strictly calculating a delayed bedtime based on your actual sleep capability, forcing an undeniable wave of biological sleep pressure.</p>
           </div>
           <p>
             You get into bed at 10:30 PM. Your partner is lying next to you, and within three minutes, they are breathing heavily, fast asleep.
@@ -85,7 +85,7 @@ export default function Article17Page() {
             If taking three to five hours to fall asleep is your nightly reality, you are suffering from Sleep Onset Insomnia. Here is the biological reason your brain refuses to shut down when your head hits the pillow, and the exact mathematical formula to fix it.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Biology: Sleep Pressure vs. Sleep Effort</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Biology: Sleep Pressure vs. Sleep Effort</h2>
           <p>
             To understand why you are lying awake for hours, you have to look at the mechanics of your nervous system.
           </p>
@@ -99,11 +99,11 @@ export default function Article17Page() {
             When your sleep pressure is weak, your mind has room to wander. And when your mind wanders, the panic sets in: <em>Why am I not asleep yet? I need to sleep right now.</em>
           </p>
           <div className="my-8 border-l-4 border-[var(--primary)] pl-6 py-4 bg-[#f9f8f6] rounded-r-xl shadow-sm">
-            <p className="text-xs font-bold tracking-widest uppercase text-[#8da399] mb-3 flex items-center">
+            <p className="text-xs font-bold tracking-[0.16em] uppercase text-sage mb-3 flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" className="mr-2 text-[var(--primary)]"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.758.79 1.758 1.759 0 .312-.08.6-.22.846.015.152.023.308.023.465 0 3.255-3.535 5.892-7.896 5.892-4.362 0-7.897-2.637-7.897-5.892 0-.157.009-.313.024-.465a1.765 1.765 0 0 1-.22-.846c0-.969.79-1.759 1.759-1.759.458 0 .866.168 1.168.448 1.18-1.01 2.92-1.662 4.88-1.724l.875-4.111c.046-.222.261-.368.484-.325l3.153.665a1.252 1.252 0 0 1 1.124-.908zm-9.351 9.943c-.888 0-1.608.72-1.608 1.608 0 .889.72 1.609 1.608 1.609.889 0 1.609-.72 1.609-1.609 0-.888-.72-1.608-1.609-1.608zm7.555 0c-.889 0-1.609.72-1.609 1.608 0 .889.72 1.609 1.609 1.609.888 0 1.608-.72 1.608-1.609 0-.888-.72-1.608-1.608-1.608zm-3.778 3.902c-1.644 0-3.056-.583-3.094-.601a.342.342 0 1 1 .282-.622c.043.02 1.266.54 2.812.54 1.545 0 2.766-.52 2.81-.54a.342.342 0 1 1 .284.622c-.039.018-1.45.601-3.094.601z"/></svg>
               A Reddit User Shared:
             </p>
-            <p className="italic text-lg text-[var(--text-primary)] m-0">
+            <p className="italic text-lg text-ink m-0">
               "I close my eyes and practically command my brain to shut off, but the harder I try, the more wired I feel."
             </p>
           </div>
@@ -111,7 +111,7 @@ export default function Article17Page() {
             This is called Sleep Effort. Sleep is an autonomic process—you cannot consciously command it to happen. The harder you "try" to sleep, the more your brain treats sleep like a high-stakes test. It triggers performance anxiety, dumps adrenaline into your bloodstream, and completely overrides whatever small amount of sleep pressure you had.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Fix: The Math of Sleep Scheduling</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Fix: The Math of Sleep Scheduling</h2>
           <p>
             You cannot wrestle your brain into unconsciousness. To fall asleep quickly, you have to starve the anxiety by building a biological wave of sleep pressure so massive that your body has no choice but to shut down. To do this, you must use a clinical tool called Sleep Scheduling.
           </p>
@@ -128,7 +128,7 @@ export default function Article17Page() {
             By staying up late, you compress your sleep window. The first few days will be exhausting, but by 12:30 AM, your biological sleep pressure will be so aggressively high that the performance anxiety won't stand a chance. Your head will hit the pillow, and you will drop.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">Deactivate the Effort</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Deactivate the Effort</h2>
           <p>
             Once you fix the math, you have to fix the mind. When you finally do get into bed at your delayed time, drop the rope. Use a clinical tool called Paradoxical Intention: keep your eyes open in the dark and gently tell yourself, "I am not going to sleep right now. I am just going to rest my body and try to stay awake." By voluntarily removing the demand to sleep, the adrenaline evaporates.
           </p>
@@ -136,15 +136,15 @@ export default function Article17Page() {
             (Read the exact protocol here: <Link href="/articles/paradoxical-intention" className="text-[var(--primary)] font-bold hover:underline">Paradoxical Intention: Why Trying to Stay Awake Can Cure Your Insomnia</Link>).
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">Stop Fighting in the Dark</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Stop Fighting in the Dark</h2>
           <p>
             You don't need to try harder to sleep; you need to change the math.
           </p>
 
-          <hr className="my-12 border-[#8da399]/20" />
+          <hr className="my-12 border-rule" />
           
           <div className="bg-[#f9f8f6] p-8 rounded-[1.5rem] mt-12 text-center shadow-sm">
-            <h3 className="text-2xl font-serif text-[var(--text-primary)] mb-4">Tired of fighting through sleepless nights?</h3>
+            <h3 className="text-2xl font-serif font-medium text-ink mb-4">Tired of fighting through sleepless nights?</h3>
             <p className="mb-6 mx-auto max-w-lg">
               The Good Night Companion is a 90-day guided journal that gives you the exact blueprint to calculate your compressed sleep window safely, build your sleep pressure, and use cognitive tools to stop the nightly 3-hour ceiling stare.
             </p>
@@ -155,7 +155,7 @@ export default function Article17Page() {
             </Link>
           </div>
 
-           <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+           <h2 className="text-xl font-serif font-medium text-ink mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">
             <li><strong>Sleep Restriction Therapy:</strong> Spielman, A. J., Saskin, P., & Thorpy, M. J. (1987). Treatment of chronic insomnia by restriction of time in bed. <em>Sleep</em>, 10(1), 45-56.</li>
             <li><strong>Sleep Effort and Hyperarousal:</strong> Espie, C. A., et al. (2006). The attention-intention-effort pathway in the development of psychophysiologic insomnia: a theoretical review. <em>Sleep Medicine Reviews</em>, 10(4), 215-245.</li>

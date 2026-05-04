@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Playfair_Display } from "next/font/google";
+import { DM_Sans, Playfair_Display, Cormorant_Garamond } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
@@ -8,11 +8,16 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
 });
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600"],
+  variable: "--font-cormorant",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.thegoodnightcompanion.com"),
-  title: "The Good Night Companion | The 90-Day Clinical Sleep System",
-  description: "Discover The Good Night Companion: a 90-day clinical guided journal. We combine the gold-standard science of CBT-I and ACT-I to end chronic insomnia.",
+  title: "The Goodnight Companion — A 90-Day CBT-I Program for Chronic Insomnia",
+  description: "Stop fighting your sleep. The Goodnight Companion is a structured, science-based journal built on CBT-I — the NHS-endorsed treatment that actually fixes chronic insomnia. Free tools inside.",
   openGraph: {
     title: "The Good Night Companion | The 90-Day Clinical Sleep System",
     description: "Discover The Good Night Companion: a 90-day clinical guided journal. We combine the gold-standard science of CBT-I and ACT-I to end chronic insomnia.",
@@ -35,7 +40,7 @@ export default function RootLayout({
     // ADDED: scroll-smooth
     <html
       lang="en"
-      className={`${dmSans.variable} ${playfair.variable} scroll-smooth`}
+      className={`${dmSans.variable} ${playfair.variable} ${cormorant.variable} scroll-smooth`}
     >
       <body className="font-sans antialiased pb-safe">
         {children}

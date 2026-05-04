@@ -42,13 +42,13 @@ const faqs = [
 
 export default function Article4Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+    <main className="min-h-screen flex flex-col items-center p-4 md:p-12 relative bg-cream text-ink">
       
       {/* Navigation */}
       <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -68,46 +68,46 @@ export default function Article4Page() {
         </Link>
         <Link 
           href="/" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Home
         </Link>
       </div>
 
-      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+      <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         
         <header className="mb-12">
           {/* Authority Badge */}
-          <div className="inline-flex items-start md:items-center gap-2 bg-[#8da399]/10 border border-[#8da399]/20 text-[#8da399] text-[10px] md:text-xs font-bold px-4 py-2 rounded-xl md:rounded-full mb-6 tracking-widest uppercase text-left">
+          <div className="inline-flex items-start md:items-center gap-2 bg-[#8da399]/10 border border-rule text-sage text-[10px] md:text-xs font-bold px-4 py-2 rounded-xl md:rounded-full mb-6 tracking-[0.16em] uppercase text-left">
             <svg className="flex-shrink-0 mt-[1px] md:mt-0" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 1L1 3.5V7C1 10.0376 3.41 12.8776 6.5 13.5C9.59 12.8776 12 10.0376 12 7V3.5L6.5 1Z" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg>
             <span>CBT-I evidence-based · NHS-endorsed method · Clinically validated by the AASM</span>
           </div>
           
-          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
+          <h1 className="text-3xl md:text-5xl font-cormorant font-light text-ink leading-tight mb-8">
             Sleep Efficiency: The Clinical Formula, the 85% Target, and the CBT-I Protocol to Fix It
           </h1>
 
           <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
-        <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+        <div className="text-ink-2 font-sans leading-relaxed space-y-6 text-lg">
 
           {/* QUICK ANSWER */}
-          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
-            <p className="text-[10px] font-bold tracking-widest uppercase text-[#8da399] mb-2">Quick Answer</p>
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <p className="text-[10px] font-bold tracking-[0.16em] uppercase text-sage mb-2">Quick Answer</p>
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">
               Sleep Efficiency (SE) is calculated by dividing your Total Sleep Time by your Time in Bed, then multiplying by 100. The clinical target in CBT-I is 85%.
             </h3>
-            <p className="font-sans text-[var(--text-secondary)] text-lg mb-4">
+            <p className="font-sans text-ink-2 text-lg mb-4">
               But the formula is only useful if you know how to act on the number safely — and most people don&apos;t.
             </p>
-            <p className="text-sm text-[var(--text-secondary)] italic border-t border-[#8da399]/20 pt-4">
+            <p className="text-sm text-ink-2 italic border-t border-rule pt-4">
               Below is the exact week-by-week titration protocol, the 5.5-hour safety floor you must never cross, and the reason a single night&apos;s data will lead you badly astray.
             </p>
           </div>
 
-          <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
+          <p className="text-xl md:text-2xl font-serif font-medium text-ink leading-snug">
             If you have an analytical mind, insomnia is uniquely maddening because it feels unmeasurable.
           </p>
           
@@ -125,11 +125,11 @@ export default function Article4Page() {
 
           {/* AUTHORITY PANEL */}
           <div className="bg-[#8da399]/10 border-l-4 border-[var(--primary)] p-6 rounded-r-lg my-8">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl font-semibold mb-3">What the Clinical Guidelines Say About Sleep Efficiency</h3>
-            <p className="text-base text-[var(--text-secondary)] leading-relaxed mb-3">
+            <h3 className="font-serif font-medium text-ink text-xl font-semibold mb-3">What the Clinical Guidelines Say About Sleep Efficiency</h3>
+            <p className="text-base text-ink-2 leading-relaxed mb-3">
               Sleep Efficiency is not a wellness concept — it is a formal clinical metric used in <strong>CBT-I (Cognitive Behavioural Therapy for Insomnia)</strong>, the treatment endorsed as the first-line intervention for chronic insomnia by the <strong>NHS</strong>, the <strong>American Academy of Sleep Medicine (AASM)</strong>, and the <strong>National Sleep Foundation</strong>.
             </p>
-            <p className="text-base text-[var(--text-secondary)] leading-relaxed">
+            <p className="text-base text-ink-2 leading-relaxed">
               The 85% threshold was established through the foundational clinical work of Spielman, Saskin, and Thorpy (1987) — the same researchers behind Sleep Restriction Therapy — and has been the standard benchmark in sleep medicine for nearly four decades. When a sleep clinician or CBT-I therapist says your sleep is &quot;improving,&quot; they are measuring it against this number.
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function Article4Page() {
             Understanding your Sleep Efficiency gives you the same lens your clinician would use — and the same protocol for acting on it safely.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">
             The Problem: Why Spending 10 Hours in Bed for 6 Hours of Sleep Destroys Recovery
           </h2>
 
@@ -150,7 +150,7 @@ export default function Article4Page() {
             Biologically, this is one of the most damaging things you can do to your sleep architecture.
           </p>
 
-          <blockquote className="border-l-4 border-[var(--primary)] pl-6 italic text-xl text-[var(--text-primary)] my-8">
+          <blockquote className="border-l-4 border-[var(--primary)] pl-6 italic text-xl text-ink my-8">
             By stretching your time in bed, you dilute your Homeostatic Sleep Drive — the biological pressure that makes deep, consolidated sleep possible. Your 6 hours of actual sleep doesn&apos;t become 8. It becomes 6 hours spread thin across a 10-hour window, fragmented, shallow, and peppered with long periods of frustrated wakefulness.
           </blockquote>
 
@@ -158,7 +158,7 @@ export default function Article4Page() {
             Sleep Efficiency measures this density problem directly. It is not about how long you sleep — it is about what proportion of your time in bed is actually spent sleeping.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">
             The Sleep Efficiency Formula
           </h2>
 
@@ -166,8 +166,8 @@ export default function Article4Page() {
             The calculation used in CBT-I clinical practice is:
           </p>
 
-          <div className="bg-[#f9f8f6] p-6 rounded-xl border border-[#8da399]/20 my-6 text-center">
-            <h3 className="font-serif text-[var(--primary)] text-2xl">
+          <div className="bg-[#f9f8f6] p-6 rounded-xl border border-rule my-6 text-center">
+            <h3 className="font-serif font-medium text-[var(--primary)] text-2xl">
               Sleep Efficiency (%) = (Total Sleep Time ÷ Time in Bed) × 100
             </h3>
           </div>
@@ -193,7 +193,7 @@ export default function Article4Page() {
             The clinical target is to bring this number to <strong>85% or above</strong>.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">
             The Safety Net: Always Use a Weekly Average
           </h2>
 
@@ -205,28 +205,28 @@ export default function Article4Page() {
             In clinical sleep medicine, <strong>a single night&apos;s data is meaningless</strong>. Human sleep naturally fluctuates night to night due to stress, hormones, environment, and dozens of other factors entirely unrelated to your recovery progress.
           </p>
 
-          <p className="mt-6 mb-3 font-serif text-xl text-[var(--text-primary)]">How to calculate your baseline correctly:</p>
+          <p className="mt-6 mb-3 font-serif font-medium text-xl text-ink">How to calculate your baseline correctly:</p>
           <div className="space-y-6 my-8">
-            <div className="bg-[#f9f8f6] border border-[#8da399]/20 p-6 rounded-[1rem] flex gap-5 items-start">
-              <div className="flex-shrink-0 w-8 h-8 bg-[var(--primary)] text-white rounded-full flex items-center justify-center font-sans font-bold text-sm">1</div>
+            <div className="bg-[#f9f8f6] border border-rule p-6 rounded-[1rem] flex gap-5 items-start">
+              <div className="flex-shrink-0 w-8 h-8 bg-sage-dark text-white text-white rounded-full flex items-center justify-center font-sans font-bold text-sm">1</div>
               <div>
-                <h4 className="font-serif text-[var(--text-primary)] text-xl mb-2">Track for 7 days first</h4>
+                <h4 className="font-serif font-medium text-ink text-xl mb-2">Track for 7 days first</h4>
                 <p className="text-sm m-0">Using a simple sleep diary, record your Time in Bed and estimated Total Sleep Time each morning. Do not change your habits yet. Just observe.</p>
               </div>
             </div>
             
-            <div className="bg-[#f9f8f6] border border-[#8da399]/20 p-6 rounded-[1rem] flex gap-5 items-start">
-              <div className="flex-shrink-0 w-8 h-8 bg-[var(--primary)] text-white rounded-full flex items-center justify-center font-sans font-bold text-sm">2</div>
+            <div className="bg-[#f9f8f6] border border-rule p-6 rounded-[1rem] flex gap-5 items-start">
+              <div className="flex-shrink-0 w-8 h-8 bg-sage-dark text-white text-white rounded-full flex items-center justify-center font-sans font-bold text-sm">2</div>
               <div>
-                <h4 className="font-serif text-[var(--text-primary)] text-xl mb-2">Find your weekly averages</h4>
+                <h4 className="font-serif font-medium text-ink text-xl mb-2">Find your weekly averages</h4>
                 <p className="text-sm m-0">Add up your seven Total Sleep Times and divide by 7. Do the same for your seven Time in Bed figures.</p>
               </div>
             </div>
 
-            <div className="bg-[#f9f8f6] border border-[#8da399]/20 p-6 rounded-[1rem] flex gap-5 items-start">
-              <div className="flex-shrink-0 w-8 h-8 bg-[var(--primary)] text-white rounded-full flex items-center justify-center font-sans font-bold text-sm">3</div>
+            <div className="bg-[#f9f8f6] border border-rule p-6 rounded-[1rem] flex gap-5 items-start">
+              <div className="flex-shrink-0 w-8 h-8 bg-sage-dark text-white text-white rounded-full flex items-center justify-center font-sans font-bold text-sm">3</div>
               <div>
-                <h4 className="font-serif text-[var(--text-primary)] text-xl mb-2">Do the calculation</h4>
+                <h4 className="font-serif font-medium text-ink text-xl mb-2">Do the calculation</h4>
                 <p className="text-sm m-0">Divide your Average Total Sleep Time by your Average Time in Bed and multiply by 100.</p>
               </div>
             </div>
@@ -236,7 +236,7 @@ export default function Article4Page() {
             Using a weekly average smooths out the emotional spike of a single bad night and gives you a grounded, realistic picture of where your sleep actually is. This is the number you act on — never a single night&apos;s data.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">
             The Week-by-Week Titration Protocol
           </h2>
 
@@ -249,20 +249,20 @@ export default function Article4Page() {
           </p>
 
           <ul className="space-y-6 my-8 list-none p-0">
-            <li className="bg-[#f2f0e9] p-5 rounded-xl text-[var(--text-secondary)]">
-              <strong className="text-[var(--text-primary)] text-lg block mb-1">Above 90% — Expand your window.</strong>
+            <li className="bg-[#f2f0e9] p-5 rounded-xl text-ink-2">
+              <strong className="text-ink text-lg block mb-1">Above 90% — Expand your window.</strong>
               Your sleep is highly efficient and well-consolidated. Move your bedtime 15 minutes earlier. You have earned a slightly larger opportunity to rest.
             </li>
-            <li className="bg-[#8da399]/10 border-l-4 border-[var(--primary)] p-5 rounded-r-xl text-[var(--text-secondary)]">
-              <strong className="text-[var(--text-primary)] text-lg block mb-1">85%–90% — Hold steady.</strong>
+            <li className="bg-[#8da399]/10 border-l-4 border-[var(--primary)] p-5 rounded-r-xl text-ink-2">
+              <strong className="text-ink text-lg block mb-1">85%–90% — Hold steady.</strong>
               This is the clinical sweet spot and the goal. Keep your sleep window exactly as it is. This is not stagnation — it is the target state. Maintain it.
             </li>
-            <li className="bg-[#f2f0e9] p-5 rounded-xl text-[var(--text-secondary)]">
-              <strong className="text-[var(--text-primary)] text-lg block mb-1">Below 85% for the first time — Hold and observe.</strong>
+            <li className="bg-[#f2f0e9] p-5 rounded-xl text-ink-2">
+              <strong className="text-ink text-lg block mb-1">Below 85% for the first time — Hold and observe.</strong>
               A single below-threshold week is not a trend. Do not panic, and do not shrink your window yet. Hold your current window and collect another 7 days of data before making any decision.
             </li>
-            <li className="bg-[#f9f8f6] border border-[#8da399]/20 p-5 rounded-xl text-[var(--text-secondary)]">
-              <strong className="text-[var(--text-primary)] text-lg block mb-1">Below 85% for two consecutive weeks — Consolidate.</strong>
+            <li className="bg-[#f9f8f6] border border-rule p-5 rounded-xl text-ink-2">
+              <strong className="text-ink text-lg block mb-1">Below 85% for two consecutive weeks — Consolidate.</strong>
               Your sleep is genuinely fragmented. Move your bedtime 15 minutes later, shrinking your window slightly. This consolidates the sleep you are getting into a denser, higher-quality block.
             </li>
           </ul>
@@ -271,7 +271,7 @@ export default function Article4Page() {
             This is the complete clinical titration loop. Run it weekly. One adjustment at a time. Always protect your Anchor Time.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">
             The 5.5-Hour Safety Floor
           </h2>
 
@@ -291,7 +291,7 @@ export default function Article4Page() {
             (For the full contingency plan for midnight wakefulness, see: <Link href="/articles/the-20-minute-rule" className="text-[var(--primary)] font-bold hover:underline">The 20-Minute Rule — The NHS &amp; CBT-I Guideline Explained</Link>.)
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">
             Use the Maths as a Compass, Not a Verdict
           </h2>
 
@@ -312,12 +312,12 @@ export default function Article4Page() {
           </p>
 
           {/* FINAL CTA */}
-          <div className="bg-[#f9f8f6] p-8 md:p-12 rounded-[1.5rem] mt-16 text-center shadow-sm border border-[#8da399]/20">
-            <h3 className="text-3xl font-serif text-[var(--text-primary)] mb-4">If You Are Ready to Start Tracking</h3>
-            <p className="mb-8 mx-auto max-w-lg text-[var(--text-secondary)]">
+          <div className="bg-[#f9f8f6] p-8 md:p-12 rounded-[1.5rem] mt-16 text-center shadow-sm border border-rule">
+            <h3 className="text-3xl font-cormorant font-light text-ink mb-4">If You Are Ready to Start Tracking</h3>
+            <p className="mb-8 mx-auto max-w-lg text-ink-2">
               Understanding Sleep Efficiency is the foundation of the entire CBT-I recovery protocol — but calculating it manually every week, knowing when to adjust, and navigating the protocol correctly over 90 days requires a system, not just a formula.
             </p>
-            <p className="mb-8 mx-auto max-w-lg text-[var(--text-secondary)]">
+            <p className="mb-8 mx-auto max-w-lg text-ink-2">
               The Goodnight Companion is a 90-day guided journal that walks you through the complete CBT-I arc — including daily sleep logs formatted for this exact calculation, the titration protocol built into the weekly review structure, and the safety guidelines at every step.
             </p>
             <Link 
@@ -329,9 +329,9 @@ export default function Article4Page() {
 
           <FaqAccordion faqs={faqs} title="People Also Ask" />
 
-          <div className="mt-16 pt-8 border-t border-[#8da399]/20">
-            <h2 className="text-xl font-serif text-[var(--text-primary)] mb-6">Scientific References &amp; Further Reading</h2>
-            <ul className="list-disc pl-6 space-y-3 mb-12 text-sm text-[var(--text-secondary)]">
+          <div className="mt-16 pt-8 border-t border-rule">
+            <h2 className="text-xl font-serif font-medium text-ink mb-6">Scientific References &amp; Further Reading</h2>
+            <ul className="list-disc pl-6 space-y-3 mb-12 text-sm text-ink-2">
               <li>
                 <strong>Sleep Efficiency as a Clinical Marker:</strong> Reed, D. L., &amp; Sacco, W. P. (2016). Measuring Sleep Efficiency: What Should the Denominator Be? <em>Journal of Clinical Sleep Medicine, 12(2)</em>, 263–266. Examines the precise clinical definition of Sleep Efficiency and its role as a recovery metric.
               </li>
@@ -347,7 +347,7 @@ export default function Article4Page() {
             </ul>
           </div>
 
-          <div className="mt-10 p-5 bg-[#f2f0e9] rounded-lg text-xs text-[var(--text-secondary)] leading-relaxed">
+          <div className="mt-10 p-5 bg-[#f2f0e9] rounded-lg text-xs text-ink-2 leading-relaxed">
             <strong>Disclaimer:</strong> This article is an educational resource and does not constitute medical advice, diagnosis, or clinical therapy. This content describes Sleep Restriction Therapy (SRT), which is NOT recommended for individuals with Bipolar Disorder, Seizure Disorders or Epilepsy, untreated Sleep Apnoea, or those in safety-sensitive occupations. SRT causes temporary daytime sleepiness — use extreme caution when driving or operating machinery. If you are navigating severe mental health challenges or suspect an underlying sleep disorder, please consult a qualified healthcare provider before altering your sleep schedule.
           </div>
 

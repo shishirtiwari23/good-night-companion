@@ -21,44 +21,44 @@ const faqs = [
 
 export default function Article9Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+    <main className="min-h-screen flex flex-col items-center p-4 md:p-12 relative bg-cream text-ink">
       <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
         </Link>
         <Link 
           href="/" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Home
         </Link>
       </div>
 
-      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+      <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         <header className="mb-12">
-          <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-[#8da399] mb-4">
+          <p className="text-[10px] md:text-xs font-bold tracking-[0.16em] uppercase text-sage mb-4">
             Sleep Science
           </p>
-          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
+          <h1 className="text-3xl md:text-5xl font-cormorant font-light text-ink leading-tight mb-8">
             &quot;I Didn&apos;t Sleep a Wink&quot;: The Clinical Science of Sleep State Misperception
           </h1>
           <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
-        <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+        <div className="text-ink-2 font-sans leading-relaxed space-y-6 text-lg">
 
-          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
-            <p className="font-sans text-[var(--text-secondary)] text-lg">Why do you feel completely awake even when you slept? This is called Sleep State Misperception (Paradoxical Insomnia). During lighter sleep stages, your brain's sensory processing remains partially active. Because you can still hear sounds or think, your mind incorrectly logs the night as "zero sleep," even though your body was biologically resting and recovering.</p>
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-ink-2 text-lg">Why do you feel completely awake even when you slept? This is called Sleep State Misperception (Paradoxical Insomnia). During lighter sleep stages, your brain's sensory processing remains partially active. Because you can still hear sounds or think, your mind incorrectly logs the night as "zero sleep," even though your body was biologically resting and recovering.</p>
           </div>
 
 
-          <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
+          <p className="text-xl md:text-2xl font-serif font-medium text-ink leading-snug">
             It is a uniquely maddening experience. You get out of bed exhausted, utterly convinced that you did not sleep for a single second. You remember hearing the clock chime at 1:00 AM, 2:00 AM, and 3:00 AM. You remember thinking about your to-do list the entire night.
           </p>
           <p>
@@ -77,7 +77,7 @@ export default function Article9Page() {
             Here is the fascinating clinical science behind why your brain tricks you into thinking you are awake, why it happens to perfectly healthy sleepers, and how to know if it has become a chronic issue.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Illusion of &quot;Zero Sleep&quot;</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Illusion of &quot;Zero Sleep&quot;</h2>
           <p>
             When we think of sleep, we imagine a light switch: you are either 100% awake or 100% unconscious. But neurology shows us that sleep is not a switch; it is a dimmer dial.
           </p>
@@ -91,7 +91,7 @@ export default function Article9Page() {
             Because you are conscious of your surroundings, your analytical mind assumes you are awake. But if we hooked you up to an EEG machine in a sleep lab, the data would show that your brain is actively asleep. In fact, if researchers wake up a perfectly healthy sleeper during Stage 1 sleep, about 50% of the time, that person will swear they were never asleep at all.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The &quot;First-Night Effect&quot;: Why This Happens to Normal Sleepers</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The &quot;First-Night Effect&quot;: Why This Happens to Normal Sleepers</h2>
           <p>
             If this just happened to you for the first time, do not panic. Sleep State Misperception happens to completely healthy, normal sleepers all the time.
           </p>
@@ -105,7 +105,7 @@ export default function Article9Page() {
             This also happens the night before an early flight or a massive presentation at work. The acute stress acts as a trigger, keeping one eye biologically open.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">Is This Just a Glitch, or is it Chronic Insomnia?</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Is This Just a Glitch, or is it Chronic Insomnia?</h2>
           <p>
             If you experience this illusion in a hotel room or before a stressful event, it is just a temporary biological quirk. Your sleep architecture is perfectly fine.
           </p>
@@ -116,7 +116,7 @@ export default function Article9Page() {
             Not sure if you are dealing with a temporary glitch or a chronic pattern? Read our clinical guide: <Link href="/articles/do-i-have-chronic-insomnia" className="text-[var(--primary)] font-bold hover:underline">Do I Have Chronic Insomnia? The Clinical &quot;Rule of 3s&quot; Explained</Link> to evaluate your symptoms.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Relief: You Are Not Going to Collapse</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Relief: You Are Not Going to Collapse</h2>
           <p>
             Understanding Paradoxical Insomnia is one of the most powerful anxiety-reducers in sleep recovery.
           </p>
@@ -127,17 +127,17 @@ export default function Article9Page() {
             The biological reality is much more forgiving. Even if your sleep feels incredibly unrefreshing, &quot;thin,&quot; and frustrating, your body is still extracting the core rest it needs to survive. You are getting more sleep than you think you are. You will not collapse. You have enough energy in your tank to get through the day.
           </p>
           
-          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-8">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-2 flex items-center">
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-8">
+            <h3 className="font-serif font-medium text-ink text-xl mb-2 flex items-center">
               Stop Grading Your Unconsciousness
             </h3>
             <p className="text-sm m-0">The ultimate trap of Paradoxical Insomnia is the aggressive desire to prove to yourself that you are asleep. But remember: sleep is an autonomic process. The harder you try to monitor your own unconsciousness, the more you force your brain to stay awake.<br/><br/>Drop the struggle. Stop trying to figure out if you are &quot;truly&quot; asleep or just resting. If you are in bed, resting quietly, and your body is relaxed, you are successfully repairing your system.</p>
           </div>
 
-          <hr className="my-12 border-[#8da399]/20" />
+          <hr className="my-12 border-rule" />
           
           <div className="bg-[#f9f8f6] p-8 rounded-[1.5rem] mt-12 text-center shadow-sm">
-            <h3 className="text-2xl font-serif text-[var(--text-primary)] mb-4">Stop Fighting. Start Healing.</h3>
+            <h3 className="text-2xl font-serif font-medium text-ink mb-4">Stop Fighting. Start Healing.</h3>
             <p className="mb-6 mx-auto max-w-lg">
               Ready to turn off the hyperarousal? To stop &quot;local sleep&quot; and allow your entire brain to power down, you have to convince your nervous system that your bed is safe.<br/><br/>The Goodnight Companion gives you the exact behavioral formulas to dismantle your hyperarousal, so your brain finally feels safe enough to turn off the lights completely.
             </p>
@@ -150,7 +150,7 @@ export default function Article9Page() {
 
           <FaqAccordion faqs={faqs} />
 
-          <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+          <h2 className="text-xl font-serif font-medium text-ink mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">
             <li><strong>Sleep State Misperception:</strong> Harvey, A. G., & Tang, N. K. (2012). (Mis)perception of sleep in insomnia: A puzzle and a resolution. <em>Psychological Bulletin</em>, 138(1), 77-101.</li>
             <li><strong>The First-Night Effect:</strong> Tamaki, M., Bang, J. W., Watanabe, T., & Sasaki, Y. (2016). Night watch in one brain hemisphere during sleep associated with the first-night effect in humans. <em>Current Biology</em>, 26(9), 1190-1194. (This fascinating study proves that in unfamiliar environments, one hemisphere of the human brain remains more awake than the other to monitor for threats).</li>

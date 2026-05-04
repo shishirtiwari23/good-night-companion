@@ -22,49 +22,49 @@ const faqs = [
 
 export default function Article14Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+    <main className="min-h-screen flex flex-col items-center p-4 md:p-12 relative bg-cream text-ink">
       <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
         </Link>
         <Link 
           href="/" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Home
         </Link>
       </div>
 
-      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+      <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         <header className="mb-12">
-          <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-[#8da399] mb-4">
+          <p className="text-[10px] md:text-xs font-bold tracking-[0.16em] uppercase text-sage mb-4">
             Sleep Science
           </p>
-          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
+          <h1 className="text-3xl md:text-5xl font-cormorant font-light text-ink leading-tight mb-8">
             Why I wake up at exactly 3am every night and lie there until morning — what sleep maintenance insomnia actually feels like from inside.
           </h1>
           <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
-        <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
-           <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
+        <div className="text-ink-2 font-sans leading-relaxed space-y-6 text-lg">
+           <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">The Short Answer:</h3>
             <p>
               Why do you wake up at 3 AM every night? By 3 AM, your heavy deep sleep has ended, and your body releases a natural, slight pulse of cortisol to prepare for the morning. If you have sleep anxiety, your hyper-vigilant nervous system misinterprets this normal biological shift as a life-threatening danger. It dumps adrenaline into your bloodstream, locking you in a state of &quot;fight-or-flight&quot; and making it impossible to fall back asleep.
             </p>
           </div>
 
           <div className="my-8 border-l-4 border-[var(--primary)] pl-6 py-4 bg-[#f9f8f6] rounded-r-xl shadow-sm">
-            <p className="text-xs font-bold tracking-widest uppercase text-[#8da399] mb-3 flex items-center">
+            <p className="text-xs font-bold tracking-[0.16em] uppercase text-sage mb-3 flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none" className="mr-2 text-[var(--primary)]"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.758.79 1.758 1.759 0 .312-.08.6-.22.846.015.152.023.308.023.465 0 3.255-3.535 5.892-7.896 5.892-4.362 0-7.897-2.637-7.897-5.892 0-.157.009-.313.024-.465a1.765 1.765 0 0 1-.22-.846c0-.969.79-1.759 1.759-1.759.458 0 .866.168 1.168.448 1.18-1.01 2.92-1.662 4.88-1.724l.875-4.111c.046-.222.261-.368.484-.325l3.153.665a1.252 1.252 0 0 1 1.124-.908zm-9.351 9.943c-.888 0-1.608.72-1.608 1.608 0 .889.72 1.609 1.608 1.609.889 0 1.609-.72 1.609-1.609 0-.888-.72-1.608-1.609-1.608zm7.555 0c-.889 0-1.609.72-1.609 1.608 0 .889.72 1.609 1.609 1.609.888 0 1.608-.72 1.608-1.609 0-.888-.72-1.608-1.608-1.608zm-3.778 3.902c-1.644 0-3.056-.583-3.094-.601a.342.342 0 1 1 .282-.622c.043.02 1.266.54 2.812.54 1.545 0 2.766-.52 2.81-.54a.342.342 0 1 1 .284.622c-.039.018-1.45.601-3.094.601z"/></svg>
               A Reddit User Shared:
             </p>
-            <p className="italic text-lg text-[var(--text-primary)] m-0">
+            <p className="italic text-lg text-ink m-0">
               &quot;There is a very specific kind of torture in waking up, looking at the clock, seeing 3:14 AM, and knowing instantly that your night is over. You didn&apos;t hear a loud noise. You don&apos;t necessarily have to use the bathroom. Your eyes just snap open, and your brain immediately shifts into high gear. The panic sets in, and you start doing the mental &apos;Sleep Math&apos;&quot;
             </p>
           </div>
@@ -72,7 +72,7 @@ export default function Article14Page() {
             If this cycle sounds familiar, you might even feel furious at the people who cheerfully tell you that waking up in the middle of the night is &quot;completely normal.&quot; You know what you are experiencing does not feel normal. And you are right — what is happening to you is not a simple micro-awakening. Here is the biological reality of Sleep Maintenance Insomnia, why your nervous system is specifically vulnerable at 3 AM, and the counterintuitive steps that actually fix it.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Biology: Why 3 AM Is the Crack in the Wall</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Biology: Why 3 AM Is the Crack in the Wall</h2>
           <p>
             We are conditioned to think of sleep as a solid block of unconsciousness — you power down at 11:00 PM and reboot at 7:00 AM. But human sleep is actually structured in a series of waves called Sleep Cycles.
           </p>
@@ -90,7 +90,7 @@ export default function Article14Page() {
             (If you use a sleep tracker and your app is flagging these awakenings as alarming red bars — that data is making your insomnia significantly worse. Read our guide on <Link href="/articles/the-orthosomnia-trap" className="text-[var(--primary)] font-bold hover:underline">Why Your Sleep Tracker is Making Your Insomnia Worse</Link> to understand why.)
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Psychology: The Sleep Math Trap</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Psychology: The Sleep Math Trap</h2>
            <p>
             The biological jolt at 3 AM is only half the problem. The real damage happens the moment you look at the clock.
           </p>
@@ -107,15 +107,15 @@ export default function Article14Page() {
             (This is the engine that keeps chronic insomnia running. To understand whether your 3 AM awakenings have crossed from a temporary pattern into a chronic one, read our clinical guide: <Link href="/articles/do-i-have-chronic-insomnia" className="text-[var(--primary)] font-bold hover:underline">Do I Have Chronic Insomnia? The Clinical Rule of 3s Explained</Link>.)
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Fix: Three Steps to Bridge the Gap</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Fix: Three Steps to Bridge the Gap</h2>
           <p>To stop these normal awakenings from turning into hours of ceiling-staring, you have to break the threat response at three points — biological, cognitive, and physical.</p>
 
-          <h3 className="font-serif text-[var(--text-primary)] text-xl mt-8 mb-4">1. Blindfold the Clock (Kill the Sleep Math)</h3>
+          <h3 className="font-serif font-medium text-ink text-xl mt-8 mb-4">1. Blindfold the Clock (Kill the Sleep Math)</h3>
           <p>
             Clock-watching is the primary trigger for the 3 AM adrenaline dump. The moment you calculate how much sleep you are losing, the battle is already lost. Turn your digital clock to face the wall. Put your phone in a drawer before you go to bed and commit to not checking the time until your Anchor Time alarm goes off in the morning. You cannot audit your way back to sleep.
           </p>
 
-          <h3 className="font-serif text-[var(--text-primary)] text-xl mt-8 mb-4">2. Downgrade the Notification (Drop the Struggle with Your Thoughts)</h3>
+          <h3 className="font-serif font-medium text-ink text-xl mt-8 mb-4">2. Downgrade the Notification (Drop the Struggle with Your Thoughts)</h3>
            <p>
             When the panicked thought arrives — <em>I am going to be completely useless tomorrow</em> — do not fight it. Fighting a thought signals to your nervous system that the thought is dangerous, which keeps you awake. Instead, try this: notice the thought exactly as it arrived. Then add a simple prefix. <em>&quot;I am having the thought that tomorrow will be ruined.&quot;</em> That one small shift creates distance. You are no longer inside the thought, being commanded by it. You are watching it pass through, like a notification you can acknowledge without opening. You do not need to resolve it, argue with it, or delete it. Just let it sit there while your body stays heavy and still.
           </p>
@@ -123,7 +123,7 @@ export default function Article14Page() {
             (This is Cognitive Defusion — the core ACT-I tool for neutralising midnight panic. The full three-step process, and what to do when thoughts feel too sticky to step back from, is in our guide: <Link href="/articles/how-to-stop-overthinking-at-night" className="text-[var(--primary)] font-bold hover:underline">How to Stop Overthinking at Night (Without Trying to Empty Your Mind)</Link>.)
           </p>
 
-          <h3 className="font-serif text-[var(--text-primary)] text-xl mt-8 mb-4">3. Break the Bed-Threat Association (The 20-Minute Rule)</h3>
+          <h3 className="font-serif font-medium text-ink text-xl mt-8 mb-4">3. Break the Bed-Threat Association (The 20-Minute Rule)</h3>
           <p>
             If you have been awake for what feels like 20 minutes and the frustration is building, staying in bed will only deepen the damage. Every minute you lie there, tense and furious, is another minute your nervous system files under &quot;bed = danger.&quot; You must get up. Move to a dim, boring room and read a book or listen to a quiet podcast until you feel physically heavy and sleepy again. You are not getting up to make yourself tired. You are getting up to prove to your brain that the bed is a place for rest, not for fighting.
           </p>
@@ -132,7 +132,7 @@ export default function Article14Page() {
           </p>
 
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">Normalise the Night</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Normalise the Night</h2>
           <p>
             You are going to wake up tonight. Probably more than once. When it happens, remind yourself: your brain is just doing its job. The sleep cycle has ended, and a new one is ready to begin. The cortisol is rising on its biological schedule. None of this is a disaster. Drop the Sleep Math, leave the clock alone, and allow the next wave to carry you when it arrives.
           </p>
@@ -140,10 +140,10 @@ export default function Article14Page() {
             The 3 AM awakening is not a sign that your sleep is permanently broken. It is a sign that your nervous system has become too sensitive at a predictable biological crossroads. And sensitivity, unlike damage, can be retrained.
           </p>
           
-          <hr className="my-12 border-[#8da399]/20" />
+          <hr className="my-12 border-rule" />
           
           <div className="bg-[#f9f8f6] p-8 rounded-[1.5rem] mt-12 text-center shadow-sm">
-            <h3 className="text-2xl font-serif text-[var(--text-primary)] mb-4">Still waking up at 3 AM and lying there counting the hours?</h3>
+            <h3 className="text-2xl font-serif font-medium text-ink mb-4">Still waking up at 3 AM and lying there counting the hours?</h3>
             <p className="mb-6 mx-auto max-w-lg">
               Understanding why it happens is the first step. Stopping it for good requires retraining your nervous system night by night, with a structure that meets you where you actually are in your recovery.
               <br/><br/>
@@ -156,7 +156,7 @@ export default function Article14Page() {
             </Link>
           </div>
 
-          <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+          <h2 className="text-xl font-serif font-medium text-ink mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">
             <li><strong>Normal Human Sleep Architecture:</strong> Carskadon, M. A., & Dement, W. C. (2011). Normal Human Sleep: An Overview. <em>Principles and Practice of Sleep Medicine</em>, 5th Edition.</li>
             <li><strong>The Cognitive Model of Insomnia:</strong> Harvey, A. G. (2002). A cognitive model of insomnia. <em>Behaviour Research and Therapy</em>, 40(8), 869–893.</li>
@@ -169,7 +169,7 @@ export default function Article14Page() {
             <strong>Disclaimer:</strong> This article is an educational resource and does not constitute medical advice. Please consult a healthcare professional if you are navigating severe mental health challenges or underlying sleep disorders.
           </p>
           
-          <hr className="my-12 border-[#8da399]/20" />
+          <hr className="my-12 border-rule" />
           
           <FaqAccordion faqs={faqs} />
 

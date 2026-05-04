@@ -88,7 +88,7 @@ export default function PMRPage() {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-6 bg-[var(--background)]">
+    <main className="min-h-screen flex items-center justify-center p-6 bg-cream text-ink">
       <audio
         ref={audioRef}
         src="/audio/pmr-session.mp3"
@@ -106,7 +106,7 @@ export default function PMRPage() {
           <Link
             href="/"
             aria-label="Return to Home"
-            className="text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors p-2 -mr-2"
+            className="text-ink-2 hover:text-[var(--primary)] transition-colors p-2 -mr-2"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -128,14 +128,14 @@ export default function PMRPage() {
         {/* Content - Reduced Spacing (mb-6) */}
         <div className="space-y-4 mb-6 flex-grow flex flex-col justify-center">
           <p className="overline-text opacity-60">The Good Night Companion</p>
-          <h1 className="text-3xl md:text-4xl font-serif text-[var(--text-primary)]">
+          <h1 className="text-3xl md:text-4xl font-cormorant font-light text-ink">
             Unwind Your Body
           </h1>
-          <p className="text-xs md:text-sm font-bold tracking-[0.15em] uppercase text-[var(--text-secondary)] mt-4">
+          <p className="text-xs md:text-sm font-bold tracking-[0.15em] uppercase text-ink-2 mt-4">
             Progressive Muscle Relaxation
           </p>
 
-          <div className="py-6 text-[#8da399] flex justify-center opacity-80">
+          <div className="py-6 text-sage flex justify-center opacity-80">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="64"
@@ -155,7 +155,7 @@ export default function PMRPage() {
         </div>
 
         {/* Player Controls */}
-        <div className="bg-[#F8F6F2] rounded-2xl p-6 border border-[#8da399]/10">
+        <div className="bg-[#F8F6F2] rounded-2xl p-6 border border-rule">
           {/* Progress Bar */}
           <div className="mb-4">
             <input
@@ -168,7 +168,7 @@ export default function PMRPage() {
               className="w-full h-1.5 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[var(--primary)] disabled:opacity-50"
               aria-label="Audio Progress"
             />
-            <div className="flex justify-between text-[10px] font-bold text-[var(--text-secondary)] mt-2 tracking-wider">
+            <div className="flex justify-between text-[10px] font-bold text-ink-2 mt-2 tracking-wider">
               <span>{formatTime(currentTime)}</span>
               <span>{formatTime(duration)}</span>
             </div>
@@ -180,7 +180,7 @@ export default function PMRPage() {
             <button
               onClick={() => jump(-10)}
               disabled={duration === 0}
-              className="p-3 text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors disabled:opacity-30"
+              className="p-3 text-ink-2 hover:text-[var(--primary)] transition-colors disabled:opacity-30"
               aria-label="Rewind 10 seconds"
             >
               <svg
@@ -204,7 +204,7 @@ export default function PMRPage() {
             {/* Play/Pause */}
             <button
               onClick={togglePlay}
-              className="w-16 h-16 md:w-20 md:h-20 bg-[var(--primary)] rounded-full flex items-center justify-center text-white shadow-lg hover:bg-[#7a8f86] hover:scale-105 active:scale-95 transition-all"
+              className="w-16 h-16 md:w-20 md:h-20 bg-sage-dark text-white rounded-full flex items-center justify-center text-white shadow-lg hover:bg-[#7a8f86] hover:scale-105 active:scale-95 transition-all"
               aria-label={isPlaying ? "Pause" : "Play"}
             >
               {isPlaying ? (
@@ -237,7 +237,7 @@ export default function PMRPage() {
             <button
               onClick={restart}
               disabled={duration === 0}
-              className="p-3 text-[var(--text-secondary)] hover:text-[var(--primary)] transition-colors disabled:opacity-30"
+              className="p-3 text-ink-2 hover:text-[var(--primary)] transition-colors disabled:opacity-30"
               aria-label="Restart Session"
             >
               <svg

@@ -13,44 +13,44 @@ export const metadata: Metadata = {
 
 export default function Article13Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+    <main className="min-h-screen flex flex-col items-center p-4 md:p-12 relative bg-cream text-ink">
       <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
         </Link>
         <Link 
           href="/" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Home
         </Link>
       </div>
 
-      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+      <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         <header className="mb-12">
-          <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-[#8da399] mb-4">
+          <p className="text-[10px] md:text-xs font-bold tracking-[0.16em] uppercase text-sage mb-4">
             Sleep Science
           </p>
-          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
+          <h1 className="text-3xl md:text-5xl font-cormorant font-light text-ink leading-tight mb-8">
             What is NSDR (Non-Sleep Deep Rest)? And Why is it Better Than Napping?
           </h1>
           <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
-        <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+        <div className="text-ink-2 font-sans leading-relaxed space-y-6 text-lg">
 
-          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
-            <p className="font-sans text-[var(--text-secondary)] text-lg">What is NSDR and why is it better than napping? Non-Sleep Deep Rest (NSDR) is a guided relaxation protocol that keeps you consciously awake while shifting your brain into profound rest. It actively lowers cortisol and replenishes dopamine to cure midday fatigue without burning through the biological sleep pressure you need for the upcoming night.</p>
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-ink-2 text-lg">What is NSDR and why is it better than napping? Non-Sleep Deep Rest (NSDR) is a guided relaxation protocol that keeps you consciously awake while shifting your brain into profound rest. It actively lowers cortisol and replenishes dopamine to cure midday fatigue without burning through the biological sleep pressure you need for the upcoming night.</p>
           </div>
 
 
-          <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
+          <p className="text-xl md:text-2xl font-serif font-medium text-ink leading-snug">
             We all know the feeling. It’s 2:30 PM, your energy has crashed, and your brain feels like it’s moving through molasses. You are faced with a choice: brew another cup of coffee that will leave you jittery, or take a quick nap.
           </p>
           <p>
@@ -60,7 +60,7 @@ export default function Article13Page() {
             Fortunately, science offers a better way to recharge. It’s called Non-Sleep Deep Rest (NSDR).
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">What exactly is NSDR?</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">What exactly is NSDR?</h2>
           <p>
             Coined by Stanford neurobiologist Dr. Andrew Huberman, Non-Sleep Deep Rest (NSDR) is exactly what it sounds like: a state of profound, restorative rest where you remain entirely awake.
           </p>
@@ -71,7 +71,7 @@ export default function Article13Page() {
             You don&apos;t fall asleep. Instead, you hover in a deeply relaxed state just on the edge of sleep. Your brain waves slow down, your heart rate drops, and your body enters a state of deep recovery.
           </p>
 
-           <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Complicated Truth About Napping</h2>
+           <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Complicated Truth About Napping</h2>
           <p>
             Let’s clear the air: napping is not inherently bad. In fact, for a healthy sleeper, a perfectly timed 20-minute power nap can be a highly productive way to boost alertness, mood, and cognitive performance.
           </p>
@@ -88,7 +88,7 @@ export default function Article13Page() {
             (Wondering if your body can handle a daytime snooze? Check out our full guide: <Link href="/articles/is-it-ok-to-nap-in-the-afternoon" className="text-[var(--primary)] font-bold hover:underline">Is It Okay to Nap?</Link> to learn the clinical rules of napping).
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">Why NSDR is Better Than a Nap</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Why NSDR is Better Than a Nap</h2>
            <p>
             For the exhausted, anxious brain, NSDR is far superior to both napping and caffeine because it actively repairs your neurochemistry:
           </p>
@@ -98,7 +98,7 @@ export default function Article13Page() {
              <li><strong>It Protects Your Sleep Pressure:</strong> You get the mental refresh of a nap without metabolizing your adenosine. Your sleep pressure stays fully intact for the night ahead.</li>
           </ul>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">How to Try NSDR Today</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">How to Try NSDR Today</h2>
           <p>You don&apos;t need any special skills or equipment to do this.</p>
           <ol className="list-decimal pl-6 space-y-4 my-6">
             <li>Find 10–15 minutes in your day when you feel that wave of fatigue.</li>
@@ -107,15 +107,15 @@ export default function Article13Page() {
             <li>Listen and relax. Follow the instructor&apos;s voice. If your mind wanders to your to-do list, simply bring your attention back to the audio.</li>
           </ol>
 
-           <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Bottom Line</h2>
+           <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Bottom Line</h2>
            <p>
             If you want to optimize your daily energy without destroying your nighttime sleep, it is time to trade your afternoon nap for a 15-minute NSDR session.
           </p>
 
-          <hr className="my-12 border-[#8da399]/20" />
+          <hr className="my-12 border-rule" />
           
           <div className="bg-[#f9f8f6] p-8 rounded-[1.5rem] mt-12 text-center shadow-sm">
-            <h3 className="text-2xl font-serif text-[var(--text-primary)] mb-4">Tired of fighting through sleepless nights?</h3>
+            <h3 className="text-2xl font-serif font-medium text-ink mb-4">Tired of fighting through sleepless nights?</h3>
             <p className="mb-6 mx-auto max-w-lg">
               Surviving the afternoon crash is only half the battle. If your sleep architecture is fundamentally broken, you need more than just nap rules and daytime resets—you need a comprehensive framework to fix it.
               <br/><br/>The Good Night Companion is a 90-day clinical journal that helps you call a truce with your sleep with the principles of CBT-I and ACT-I. Stop fighting your nights. Start repairing the system.
@@ -127,7 +127,7 @@ export default function Article13Page() {
             </Link>
           </div>
 
-          <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+          <h2 className="text-xl font-serif font-medium text-ink mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">
             <li><strong>Sleep Inertia:</strong> Tassi, P., & Muzet, A. (2000). Sleep inertia. <em>Sleep Medicine Reviews</em>, 4(4), 341-353.</li>
             <li><strong>Sleep Pressure & Adenosine:</strong> Porkka-Heiskanen, T., et al. (1997). Adenosine: a mediator of the sleep-inducing effects of prolonged wakefulness. <em>Science</em>, 276(5316), 1265-1268.</li>

@@ -21,44 +21,44 @@ const faqs = [
 
 export default function Article8Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+    <main className="min-h-screen flex flex-col items-center p-4 md:p-12 relative bg-cream text-ink">
       <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
         </Link>
         <Link 
           href="/" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Home
         </Link>
       </div>
 
-      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+      <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         <header className="mb-12">
-          <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-[#8da399] mb-4">
+          <p className="text-[10px] md:text-xs font-bold tracking-[0.16em] uppercase text-sage mb-4">
             Sleep Science
           </p>
-          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
+          <h1 className="text-3xl md:text-5xl font-cormorant font-light text-ink leading-tight mb-8">
             Do I Have Chronic Insomnia? (The Clinical &quot;Rule of 3s&quot; Explained)
           </h1>
           <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
-        <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+        <div className="text-ink-2 font-sans leading-relaxed space-y-6 text-lg">
 
-          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
-            <p className="font-sans text-[var(--text-secondary)] text-lg">How do you know if you have chronic insomnia? Sleep medicine uses the "Rule of 3s": taking more than 30 minutes to fall or stay asleep, at least three nights a week, for more than three months. Chronic insomnia means your sleeplessness is no longer just a reaction to stress, but a learned, biological habit of hyperarousal.</p>
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-ink-2 text-lg">How do you know if you have chronic insomnia? Sleep medicine uses the "Rule of 3s": taking more than 30 minutes to fall or stay asleep, at least three nights a week, for more than three months. Chronic insomnia means your sleeplessness is no longer just a reaction to stress, but a learned, biological habit of hyperarousal.</p>
           </div>
 
 
-          <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
+          <p className="text-xl md:text-2xl font-serif font-medium text-ink leading-snug">
             When you string together a few terrible nights of sleep, it is incredibly easy to panic. You wake up exhausted, open Google, and suddenly you are reading articles about the long-term health effects of &quot;Chronic Insomnia.&quot;
           </p>
           <p>
@@ -68,7 +68,7 @@ export default function Article8Page() {
             In sleep medicine, a bad week of sleep is not chronic insomnia. Here is the exact medical criteria doctors use to diagnose sleep struggles, the biological difference between a &quot;rough patch&quot; and a &quot;pattern,&quot; and why the word &quot;chronic&quot; does not mean what you think it means.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Clinical Definition: The &quot;Rule of 3s&quot;</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Clinical Definition: The &quot;Rule of 3s&quot;</h2>
           <p>
             To prevent patients from panicking over normal fluctuations in human sleep, sleep specialists use specific diagnostic criteria (outlined in the DSM-5 and ICSD-3).
           </p>
@@ -81,42 +81,42 @@ export default function Article8Page() {
             <li><strong>The Duration:</strong> This pattern has been happening consistently for at least 3 months.</li>
             <li><strong>The Impact:</strong> It is causing clinically significant distress or impairment in your daytime functioning (fatigue, mood, cognitive focus).</li>
           </ul>
-          <blockquote className="border-l-4 border-[var(--primary)] pl-6 italic text-xl text-[var(--text-primary)] my-8">
+          <blockquote className="border-l-4 border-[var(--primary)] pl-6 italic text-xl text-ink my-8">
             If you have been sleeping poorly for two weeks because of a stressful project at work, you do not have Chronic Insomnia. You are experiencing Acute Insomnia.
           </blockquote>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">Acute vs. Chronic: The 3P Model</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Acute vs. Chronic: The 3P Model</h2>
           <p>
             Why does Acute Insomnia (a short-term struggle) sometimes turn into Chronic Insomnia? To explain this, sleep doctors use the 3P Model of Insomnia, developed by Dr. Arthur Spielman.
           </p>
           
           <div className="space-y-6 my-8">
-            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20">
-              <h3 className="font-serif text-[var(--text-primary)] text-xl mb-2 flex items-center">
-                <span className="bg-[var(--primary)] text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">1</span>
+            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule">
+              <h3 className="font-serif font-medium text-ink text-xl mb-2 flex items-center">
+                <span className="bg-sage-dark text-white text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">1</span>
                 Predisposing Factors (The Baseline)
               </h3>
               <p className="text-sm m-0">Some people are simply biologically or psychologically wired to be more alert than others. If you are a naturally analytical person (a &quot;Systemizer&quot;), a light sleeper, or someone who is naturally prone to anxiety, you have a higher baseline of arousal. You aren&apos;t doing anything wrong; your nervous system is just naturally vigilant. This doesn&apos;t cause insomnia on its own, but it makes the soil fertile for it.</p>
             </div>
             
-            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20">
-              <h3 className="font-serif text-[var(--text-primary)] text-xl mb-2 flex items-center">
-                <span className="bg-[var(--primary)] text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">2</span>
+            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule">
+              <h3 className="font-serif font-medium text-ink text-xl mb-2 flex items-center">
+                <span className="bg-sage-dark text-white text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">2</span>
                 Precipitating Factors (The Trigger)
               </h3>
               <p className="text-sm m-0">Acute insomnia always has a trigger. You get sick, you go through a breakup, you have a baby, or you face financial stress. Your body reacts to this stress by keeping you awake. This is biologically normal. Your naturally vigilant nervous system reacts to the temporary threat to keep you safe.</p>
             </div>
 
-            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20">
-              <h3 className="font-serif text-[var(--text-primary)] text-xl mb-2 flex items-center">
-                <span className="bg-[var(--primary)] text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">3</span>
+            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule">
+              <h3 className="font-serif font-medium text-ink text-xl mb-2 flex items-center">
+                <span className="bg-sage-dark text-white text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">3</span>
                 Perpetuating Factors (The Trap)
               </h3>
               <p className="text-sm m-0">Here is where the shift to &quot;chronic&quot; happens. Eventually, the original stressful event resolves. But by this point, you have spent weeks tossing, turning, and panicking in bed.<br/><br/>To cope with the initial sleep loss, you started implementing &quot;perpetuating&quot; habits: you started going to bed earlier, staying in bed while awake, or obsessively tracking your sleep data. Because the human brain learns by association, it starts to associate the bed itself with stress, frustration, and wakefulness. Now, the trigger keeping you awake isn&apos;t your job or your finances—it is the fear of insomnia itself. You have accidentally built a habit of wakefulness (Conditioned Hyperarousal).</p>
             </div>
           </div>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">&quot;Chronic&quot; Does Not Mean &quot;Permanent&quot;</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">&quot;Chronic&quot; Does Not Mean &quot;Permanent&quot;</h2>
           <p>
             This is the most important reframe for an analytical mind: In sleep medicine, the word &quot;chronic&quot; does not mean &quot;permanent&quot; or &quot;incurable.&quot; It simply means that your sleep struggle has transitioned from a temporary reaction (stress) into a learned behavioral pattern (hyperarousal).
           </p>
@@ -127,15 +127,15 @@ export default function Article8Page() {
             If you realize your bed has become a trigger for anxiety, you can start unlearning that habit tonight. Read our guide: <Link href="/articles/the-20-minute-rule" className="text-[var(--primary)] font-bold hover:underline">The 20-Minute Rule</Link>.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">Time to Unlearn the Pattern</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Time to Unlearn the Pattern</h2>
           <p>
             Whether you are in week three of Acute Insomnia or year three of Chronic Insomnia, the foundational treatment is exactly the same. You don&apos;t need heavier medication or generic &quot;sleep hygiene.&quot; You need a structured system to unlearn the hyperarousal and retrain your master clock.
           </p>
 
-          <hr className="my-12 border-[#8da399]/20" />
+          <hr className="my-12 border-rule" />
           
           <div className="bg-[#f9f8f6] p-8 rounded-[1.5rem] mt-12 text-center shadow-sm">
-            <h3 className="text-2xl font-serif text-[var(--text-primary)] mb-4">Stop Fighting. Start Healing.</h3>
+            <h3 className="text-2xl font-serif font-medium text-ink mb-4">Stop Fighting. Start Healing.</h3>
             <p className="mb-6 mx-auto max-w-lg">
               Ready to break the pattern? The Goodnight Companion is a 90-day guided journal that uses the gold-standard science of CBT-I to dismantle Conditioned Hyperarousal. It gives you the exact biological formulas and cognitive tools to prove to your nervous system that the bed is safe again.
             </p>
@@ -148,7 +148,7 @@ export default function Article8Page() {
 
           <FaqAccordion faqs={faqs} />
 
-          <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+          <h2 className="text-xl font-serif font-medium text-ink mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">
             <li><strong>The Diagnostic Criteria (Rule of 3s):</strong> American Psychiatric Association. (2013). Diagnostic and statistical manual of mental disorders (5th ed.). (The DSM-5 provides the globally accepted clinical criteria distinguishing acute sleep disruptions from chronic insomnia disorder).</li>
             <li><strong>The 3P Model of Insomnia:</strong> Spielman, A. J., Caruso, L. S., & Glovinsky, P. B. (1987). A clinical perspective on the nature and management of insomnia. <em>Psychiatric Clinics of North America</em>, 10(4), 541-553. (This foundational clinical model perfectly explains how short-term stress evolves into a long-term behavioral pattern through perpetuating habits).</li>

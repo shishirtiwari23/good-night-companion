@@ -21,45 +21,45 @@ const faqs = [
 
 export default function Article7Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+    <main className="min-h-screen flex flex-col items-center p-4 md:p-12 relative bg-cream text-ink">
       {/* Navigation */}
       <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="m15 18-6-6 6-6"/></svg>
           Back to Articles
         </Link>
         <Link 
           href="/" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Home
         </Link>
       </div>
 
-      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+      <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         <header className="mb-12">
-          <p className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-[#8da399] mb-4">
+          <p className="text-[10px] md:text-xs font-bold tracking-[0.16em] uppercase text-sage mb-4">
             Sleep Science
           </p>
-          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
+          <h1 className="text-3xl md:text-5xl font-cormorant font-light text-ink leading-tight mb-8">
             Why Your Sleep Tracker is Making Your Insomnia Worse (The Orthosomnia Trap)
           </h1>
           <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
-        <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+        <div className="text-ink-2 font-sans leading-relaxed space-y-6 text-lg">
 
-          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">The Short Answer:</h3>
-            <p className="font-sans text-[var(--text-secondary)] text-lg">Is your sleep tracker making your insomnia worse? Yes. Obsessing over sleep data causes "Orthosomnia"—a clinical condition where chasing a perfect sleep score triggers intense performance anxiety. Furthermore, consumer trackers cannot accurately read brain waves, often falsely reporting poor deep sleep. This artificially spikes your cortisol and traps you in a cycle of hyperarousal.</p>
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">The Short Answer:</h3>
+            <p className="font-sans text-ink-2 text-lg">Is your sleep tracker making your insomnia worse? Yes. Obsessing over sleep data causes "Orthosomnia"—a clinical condition where chasing a perfect sleep score triggers intense performance anxiety. Furthermore, consumer trackers cannot accurately read brain waves, often falsely reporting poor deep sleep. This artificially spikes your cortisol and traps you in a cycle of hyperarousal.</p>
           </div>
 
 
-          <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
+          <p className="text-xl md:text-2xl font-serif font-medium text-ink leading-snug">
             You wake up on a Tuesday morning and actually feel... okay. You stretch, sit up, and reach for your phone to check your Oura Ring, Whoop strap, or Apple Watch.
           </p>
           <p>
@@ -72,18 +72,18 @@ export default function Article7Page() {
             If you are an analytical person, using data to solve a problem makes perfect sense. You track your budget to save money; you track your calories to lose weight. But sleep is a fundamentally different biological process. Here is the clinical science behind why your smartwatch is fueling your insomnia, and why you need to take it off to heal.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Condition: What is Orthosomnia?</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Condition: What is Orthosomnia?</h2>
           <p>
             In 2017, sleep researchers noticed a troubling new trend in sleep clinics. Patients were coming in exhausted, presenting with severe insomnia symptoms, but their obsession wasn&apos;t just with sleep—it was with the data on their wearable devices.
           </p>
           <p>
             Researchers coined the term <strong>Orthosomnia</strong> (from &quot;ortho&quot; meaning correct, and &quot;somnia&quot; meaning sleep). It is the perfectionistic quest to achieve perfect sleep data, driven by fitness trackers.
           </p>
-          <blockquote className="border-l-4 border-[var(--primary)] pl-6 italic text-xl text-[var(--text-primary)] my-8">
+          <blockquote className="border-l-4 border-[var(--primary)] pl-6 italic text-xl text-ink my-8">
             For someone battling chronic insomnia, a sleep tracker isn&apos;t a helpful tool; it is a daily performance review that you are constantly failing.
           </blockquote>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Biology of Performance Anxiety</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Biology of Performance Anxiety</h2>
           <p>
             Why does tracking your sleep make it worse? It comes down to how your nervous system operates.
           </p>
@@ -97,7 +97,7 @@ export default function Article7Page() {
             Struggling with a racing mind when your head hits the pillow? Read our guide: <Link href="/articles/how-to-stop-overthinking-at-night" className="text-[var(--primary)] font-bold hover:underline">How to Stop Overthinking at Night (Without Trying to &quot;Empty Your Mind&quot;)</Link>
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Flaw in the Tech: Trackers Cannot Read Your Brain</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Flaw in the Tech: Trackers Cannot Read Your Brain</h2>
           <p>
             Beyond the psychological damage, there is a mechanical flaw: consumer sleep trackers are notoriously inaccurate at staging sleep.
           </p>
@@ -110,46 +110,46 @@ export default function Article7Page() {
             <li><strong>The Normal Awakening Trap:</strong> As we covered in our guide on <Link href="/articles/why-i-wake-up-at-3-am-every-night" className="text-[var(--primary)] font-bold hover:underline">Waking Up at 3 AM</Link>, brief awakenings between sleep cycles are biologically normal. But when your app flags them with alarming red bars, it pathologizes a perfectly healthy human function.</li>
           </ul>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">The Solution: The 30-Day Data Detox</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Solution: The 30-Day Data Detox</h2>
           <p>
             To fix your broken sleep architecture, you must transition your focus from objective data to subjective feeling. Your watch does not know how you feel. Only you do. If you want to break the cycle of Orthosomnia, you need to implement a 30-Day Data Detox.
           </p>
 
           <div className="space-y-4 my-6">
-            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20">
-              <h3 className="font-serif text-[var(--text-primary)] text-xl mb-2 flex items-center">
-                <span className="bg-[var(--primary)] text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">1</span>
+            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule">
+              <h3 className="font-serif font-medium text-ink text-xl mb-2 flex items-center">
+                <span className="bg-sage-dark text-white text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">1</span>
                 Take off the wearable at night
               </h3>
               <p className="text-sm m-0">Charge your watch in another room.</p>
             </div>
             
-            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20">
-              <h3 className="font-serif text-[var(--text-primary)] text-xl mb-2 flex items-center">
-                <span className="bg-[var(--primary)] text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">2</span>
+            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule">
+              <h3 className="font-serif font-medium text-ink text-xl mb-2 flex items-center">
+                <span className="bg-sage-dark text-white text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">2</span>
                 Rely on your internal gauge
               </h3>
               <p className="text-sm m-0">In the morning, instead of looking at a screen, ask yourself: <em>&quot;Do I have enough energy to start my day?&quot;</em></p>
             </div>
 
-            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20">
-              <h3 className="font-serif text-[var(--text-primary)] text-xl mb-2 flex items-center">
-                <span className="bg-[var(--primary)] text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">3</span>
+            <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule">
+              <h3 className="font-serif font-medium text-ink text-xl mb-2 flex items-center">
+                <span className="bg-sage-dark text-white text-white w-6 h-6 rounded-full inline-flex items-center justify-center text-sm mr-3">3</span>
                 Accept the &quot;Nocebo&quot; Effect
               </h3>
               <p className="text-sm m-0">Recognize that seeing a bad sleep score actively makes you feel more tired than you actually are. By removing the score, you remove the artificial fatigue.</p>
             </div>
           </div>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">Stop Grading Your Sleep</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Stop Grading Your Sleep</h2>
           <p>
             Your bed is a sanctuary, not an exam room. Stop bringing a grading rubric under the covers with you. Take off the watch, drop the struggle, and allow your body to do what it has evolved to do.
           </p>
 
-          <hr className="my-12 border-[#8da399]/20" />
+          <hr className="my-12 border-rule" />
           
           <div className="bg-[#f9f8f6] p-8 rounded-[1.5rem] mt-12 text-center shadow-sm">
-            <h3 className="text-2xl font-serif text-[var(--text-primary)] mb-4">Stop Fighting. Start Healing.</h3>
+            <h3 className="text-2xl font-serif font-medium text-ink mb-4">Stop Fighting. Start Healing.</h3>
             <p className="mb-6 mx-auto max-w-lg">
               Ready to stop tracking and start sleeping? Throwing away the data is hard for an analytical mind, which is why you need a structured replacement. The Goodnight Companion replaces obsessive tech-tracking with proven clinical mechanics, giving you the formulas to rebuild your sleep without triggering performance anxiety.
             </p>
@@ -162,7 +162,7 @@ export default function Article7Page() {
 
           <FaqAccordion faqs={faqs} />
 
-          <h2 className="text-xl font-serif text-[var(--text-primary)] mt-12 mb-4">Scientific References & Further Reading</h2>
+          <h2 className="text-xl font-serif font-medium text-ink mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-3 mb-12 text-sm">
             <li><strong>The Coining of Orthosomnia:</strong> Baron, K. G., Abbott, S., Jao, N., Manalo, N., & Kelly, R. (2017). Orthosomnia: Are Some Patients Taking the Quantified Self Too Far? <em>Journal of Clinical Sleep Medicine</em>, 13(2), 351–354. (The foundational case study detailing how sleep trackers induce anxiety and worsen perceived insomnia).</li>
             <li><strong>Accuracy of Wearable Trackers:</strong> Zambotti, M., Cellini, N., Goldstone, A., Colrain, I. M., & Baker, F. C. (2019). Wearable Sleep Technology in Clinical and Research Settings. <em>Medicine & Science in Sports & Exercise</em>, 51(7), 1538-1557. (This review highlights the severe limitations of consumer wrist-actigraphy in accurately distinguishing between wakefulness and light sleep stages).</li>

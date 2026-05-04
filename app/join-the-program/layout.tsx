@@ -1,13 +1,10 @@
-import { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Buy The Good Night Companion | Official Hardcover Edition",
-  description: "Buy the official hardcover edition of The Good Night Companion. Stop fighting your sleep and start your 90-day clinical recovery journey today.",
-  alternates: {
-    canonical: '/join-the-program',
-  },
+  title: "Get The Goodnight Companion — The 90-Day CBT-I Journal for Chronic Insomnia",
+  description: "A guided journal built on the gold-standard clinical protocol for insomnia — without the cost of a therapist. Three phases. 90 days. Available on Amazon worldwide.",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return children;
+  return <>{children}</>;
 }

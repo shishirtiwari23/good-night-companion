@@ -42,13 +42,13 @@ const faqs = [
 
 export default function Article3Page() {
   return (
-    <main className="min-h-screen flex flex-col items-center p-6 md:p-24 relative bg-[var(--background)]">
+    <main className="min-h-screen flex flex-col items-center p-4 md:p-12 relative bg-cream text-ink">
       
       {/* Navigation */}
       <div className="w-full max-w-3xl z-10 mb-12 flex justify-between items-center">
         <Link 
           href="/articles" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg 
             xmlns="http://www.w3.org/2000/svg" 
@@ -68,49 +68,49 @@ export default function Article3Page() {
         </Link>
         <Link 
           href="/" 
-          className="inline-flex items-center text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors text-sm font-bold uppercase tracking-widest"
+          className="inline-flex items-center text-ink-2 hover:text-ink transition-colors text-sm font-bold uppercase tracking-[0.16em]"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
           Home
         </Link>
       </div>
 
-      <article className="w-full max-w-3xl z-10 bg-white p-8 md:p-16 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
+      <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         
         <header className="mb-12">
           {/* Authority Badge */}
-          <div className="inline-flex items-start md:items-center gap-2 bg-[#8da399]/10 border border-[#8da399]/20 text-[#8da399] text-[10px] md:text-xs font-bold px-4 py-2 rounded-xl md:rounded-full mb-6 tracking-widest uppercase text-left">
+          <div className="inline-flex items-start md:items-center gap-2 bg-[#8da399]/10 border border-rule text-sage text-[10px] md:text-xs font-bold px-4 py-2 rounded-xl md:rounded-full mb-6 tracking-[0.16em] uppercase text-left">
             <svg className="flex-shrink-0 mt-[1px] md:mt-0" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 1L1 3.5V7C1 10.0376 3.41 12.8776 6.5 13.5C9.59 12.8776 12 10.0376 12 7V3.5L6.5 1Z" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg>
             <span>NHS-endorsed · CBT-I evidence-based · Clinically validated by the AASM</span>
           </div>
           
-          <h1 className="text-3xl md:text-5xl font-serif text-[var(--text-primary)] leading-tight mb-8">
+          <h1 className="text-3xl md:text-5xl font-cormorant font-light text-ink leading-tight mb-8">
             Why Going to Bed Early Is Making Your Insomnia Worse — And the CBT-I Fix That Works
           </h1>
 
           <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
-        <div className="text-[var(--text-secondary)] font-sans leading-relaxed space-y-6 text-lg">
+        <div className="text-ink-2 font-sans leading-relaxed space-y-6 text-lg">
 
           {/* QUICK ANSWER */}
-          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-[#8da399]/20 my-6">
-            <p className="text-[10px] font-bold tracking-widest uppercase text-[#8da399] mb-2">Quick Answer</p>
-            <h3 className="font-serif text-[var(--text-primary)] text-xl mb-4">
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <p className="text-[10px] font-bold tracking-[0.16em] uppercase text-sage mb-2">Quick Answer</p>
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">
               Going to bed early when you have insomnia makes it worse — not better.
             </h3>
-            <p className="font-sans text-[var(--text-secondary)] text-lg mb-4">
+            <p className="font-sans text-ink-2 text-lg mb-4">
               Here&apos;s the one-line reason: you&apos;re diluting your Homeostatic Sleep Drive before it&apos;s strong enough to sustain a full night of sleep.
             </p>
-            <p className="font-sans text-[var(--text-secondary)] text-lg mb-4">
+            <p className="font-sans text-ink-2 text-lg mb-4">
               The counterintuitive fix endorsed by the NHS and CBT-I clinicians is Sleep Restriction Therapy — temporarily compressing your time in bed to match your actual sleep, rebuilding the biological pressure that makes sleep deep, fast, and consolidated.
             </p>
-            <p className="text-sm text-[var(--text-secondary)] italic border-t border-[#8da399]/20 pt-4">
+            <p className="text-sm text-ink-2 italic border-t border-rule pt-4">
               The mechanism behind this is more nuanced than it sounds, and getting it wrong can backfire. Here&apos;s exactly how it works.
             </p>
           </div>
 
-          <p className="text-xl md:text-2xl font-serif text-[var(--text-primary)] leading-snug">
+          <p className="text-xl md:text-2xl font-serif font-medium text-ink leading-snug">
             It is 8:30 PM. You are existentially exhausted. Your eyes are burning, your thoughts are slow, and you land on what feels like the most logical conclusion in the world: &quot;If I just get into bed now, maybe I can finally catch up.&quot;
           </p>
 
@@ -126,7 +126,7 @@ export default function Article3Page() {
             If this is your life, the first thing to understand is: you are not broken, and you are not doing anything wrong intuitively. Going to bed early is the logical response to exhaustion. The problem is that insomnia doesn&apos;t follow intuitive logic. It follows biology — and early bedtimes work directly against the biological system that makes sleep possible.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">
             The Biology: You Are Diluting Your Sleep Pressure
           </h2>
 
@@ -163,7 +163,7 @@ export default function Article3Page() {
             Going to bed early doesn&apos;t give you more sleep. It spreads the same amount of sleep across more hours — and leaves you with hours of anxious wakefulness in between.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">
             The Psychology: How Early Bedtimes Create the Battlefield
           </h2>
 
@@ -175,7 +175,7 @@ export default function Article3Page() {
             When you get into bed at 8:30 PM and lie awake for hours, what actually occurs in your brain? Frustration builds. Anxiety about tomorrow builds. Your mind starts running catastrophic calculations about how terrible you will feel. Your body registers the bedroom environment — the pillow, the darkness, the silence — while your nervous system is in a state of stress and hypervigilance.
           </p>
 
-          <blockquote className="border-l-4 border-[var(--primary)] pl-6 italic text-xl text-[var(--text-primary)] my-8">
+          <blockquote className="border-l-4 border-[var(--primary)] pl-6 italic text-xl text-ink my-8">
             The brain learns by association, relentlessly and efficiently. Every night you spend awake and anxious in bed, it quietly strengthens one neural connection: Bed = Danger. Bed = Stress. Bed = Wakefulness.
           </blockquote>
 
@@ -193,14 +193,14 @@ export default function Article3Page() {
 
           {/* AUTHORITY PANEL */}
           <div className="bg-[#8da399]/10 border-l-4 border-[var(--primary)] p-6 rounded-r-lg my-8">
-            <h3 className="font-serif text-[var(--text-primary)] text-xl font-semibold mb-3">The Counterintuitive Fix: Sleep Restriction Therapy</h3>
-            <p className="text-base text-[var(--text-secondary)] leading-relaxed mb-3">
+            <h3 className="font-serif font-medium text-ink text-xl font-semibold mb-3">The Counterintuitive Fix: Sleep Restriction Therapy</h3>
+            <p className="text-base text-ink-2 leading-relaxed mb-3">
               If going to bed early makes insomnia worse, the clinical solution is the opposite of what every instinct tells you to do.
             </p>
-            <p className="text-base text-[var(--text-secondary)] leading-relaxed mb-3">
+            <p className="text-base text-ink-2 leading-relaxed mb-3">
               <strong>Sleep Restriction Therapy</strong> is one of the most robustly evidenced components of CBT-I (Cognitive Behavioural Therapy for Insomnia) — endorsed as the first-line treatment for chronic insomnia by the NHS, the American Academy of Sleep Medicine (AASM), and the National Sleep Foundation. It was clinically established by Spielman, Saskin, and Thorpy in their landmark 1987 study, which demonstrated that temporarily restricting time in bed dramatically improved sleep efficiency and produced deep, consolidated rest.
             </p>
-            <p className="text-base text-[var(--text-secondary)] leading-relaxed">
+            <p className="text-base text-ink-2 leading-relaxed">
               The principle is direct: if you are only capable of sleeping 5.5 hours, spending 9 hours in bed gives you 3.5 hours to practise lying awake and anxious. Every one of those hours is actively making your insomnia worse.
             </p>
           </div>
@@ -213,7 +213,7 @@ export default function Article3Page() {
             Over weeks, as your sleep efficiency improves, you gradually extend your window. Sleep becomes reliable again — not because you fought for it, but because you stopped fighting and let biology do its work.
           </p>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">
             How to Start Safely
           </h2>
 
@@ -222,23 +222,23 @@ export default function Article3Page() {
           </p>
 
           <div className="space-y-6 my-8">
-            <div className="bg-[#f9f8f6] border border-[#8da399]/20 p-6 rounded-[1rem]">
-              <h4 className="font-serif text-[var(--text-primary)] text-xl mb-2">The 1-Hour Safe Start</h4>
+            <div className="bg-[#f9f8f6] border border-rule p-6 rounded-[1rem]">
+              <h4 className="font-serif font-medium text-ink text-xl mb-2">The 1-Hour Safe Start</h4>
               <p className="text-sm m-0">Rather than making a dramatic cut, begin by reducing your time in bed by one hour. If you currently spend 8.5 hours in bed but genuinely sleep only 5.5 of them, try a 7.5-hour window for the first week. Set a fixed wake time and count backwards. A fixed, non-negotiable wake time is the single most important anchor in this process. It is what prevents the system from drifting and ensures your sleep pressure builds consistently every day.</p>
             </div>
             
-            <div className="bg-[#f9f8f6] border border-[#8da399]/20 p-6 rounded-[1rem]">
-              <h4 className="font-serif text-[var(--text-primary)] text-xl mb-2">The Clinical Safety Floor</h4>
+            <div className="bg-[#f9f8f6] border border-rule p-6 rounded-[1rem]">
+              <h4 className="font-serif font-medium text-ink text-xl mb-2">The Clinical Safety Floor</h4>
               <p className="text-sm m-0">No matter how badly you are sleeping, <strong>never reduce your sleep window below 5.5 hours</strong>. This is the absolute minimum established in the clinical literature to protect core biological and cognitive function. Sleep restriction is a therapeutic tool, not a punishment — it should feel challenging but never dangerous.</p>
             </div>
 
-            <div className="bg-[#f9f8f6] border border-[#8da399]/20 p-6 rounded-[1rem]">
-              <h4 className="font-serif text-[var(--text-primary)] text-xl mb-2">Choose Your Bedtime, Protect Your Wake Time</h4>
+            <div className="bg-[#f9f8f6] border border-rule p-6 rounded-[1rem]">
+              <h4 className="font-serif font-medium text-ink text-xl mb-2">Choose Your Bedtime, Protect Your Wake Time</h4>
               <p className="text-sm m-0">Most people find it easier to shift their bedtime later rather than force an earlier wake time. If your target window is 6.5 hours and your non-negotiable wake time is 6:30 AM, your new bedtime is midnight. Hold that window consistently — including on weekends — for at least one week before making adjustments.</p>
             </div>
           </div>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">
             Managing the Daytime Dip — Honestly
           </h2>
 
@@ -262,14 +262,14 @@ export default function Article3Page() {
             (Try our free <Link href="/articles/what-is-nsdr-and-why-is-it-better-than-napping" className="text-[var(--primary)] font-bold hover:underline">10-Minute NSDR Protocol</Link> to manage the afternoon dip without disrupting your progress.)
           </p>
 
-          <div className="bg-[#f2f0e9] p-5 rounded-xl my-6 text-[var(--text-secondary)]">
-            <h4 className="font-serif text-[var(--text-primary)] text-lg mb-2">A Note on Expectations: This Takes Weeks, Not Nights</h4>
+          <div className="bg-[#f2f0e9] p-5 rounded-xl my-6 text-ink-2">
+            <h4 className="font-serif font-medium text-ink text-lg mb-2">A Note on Expectations: This Takes Weeks, Not Nights</h4>
             <p className="text-sm m-0">
               Sleep Restriction Therapy is not a one-night fix. The research and clinical experience consistently show that meaningful improvement typically begins in the second to third week of consistent application. The first week is often the hardest. You will likely feel worse before you feel better. This is normal, clinically expected, and temporary. The people who push through this initial window are the ones who see their sleep fundamentally transform. Patience here is not passive — it is the active work of recovery.
             </p>
           </div>
 
-          <h2 className="text-2xl font-serif text-[var(--text-primary)] mt-12 mb-4">
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">
             It Is Time to Call a Truce
           </h2>
 
@@ -286,12 +286,12 @@ export default function Article3Page() {
           </p>
 
           {/* FINAL CTA */}
-          <div className="bg-[#f9f8f6] p-8 md:p-12 rounded-[1.5rem] mt-16 text-center shadow-sm border border-[#8da399]/20">
-            <h3 className="text-2xl font-serif text-[var(--text-primary)] mb-4">If Tonight Is One of Many Bad Nights</h3>
-            <p className="mb-8 mx-auto max-w-lg text-[var(--text-secondary)]">
+          <div className="bg-[#f9f8f6] p-8 md:p-12 rounded-[1.5rem] mt-16 text-center shadow-sm border border-rule">
+            <h3 className="text-2xl font-serif font-medium text-ink mb-4">If Tonight Is One of Many Bad Nights</h3>
+            <p className="mb-8 mx-auto max-w-lg text-ink-2">
               The 20-minute rule and Sleep Restriction Therapy are two tools in a complete system. Piecing together articles helps — but true recovery requires applying the full CBT-I protocol in the right order, at the right time, with the right tracking.
             </p>
-            <p className="mb-8 mx-auto max-w-lg text-[var(--text-secondary)]">
+            <p className="mb-8 mx-auto max-w-lg text-ink-2">
               The Goodnight Companion is a 90-day guided journal that walks you through the complete clinical arc of CBT-I — from sleep restriction and stimulus control through to relapse prevention — in a format designed for real people with real lives, not clinical trial participants.
             </p>
             <Link 
@@ -303,9 +303,9 @@ export default function Article3Page() {
 
           <FaqAccordion faqs={faqs} title="People Also Ask" />
 
-          <div className="mt-16 pt-8 border-t border-[#8da399]/20">
-            <h2 className="text-xl font-serif text-[var(--text-primary)] mb-6">Scientific References &amp; Further Reading</h2>
-            <ul className="list-disc pl-6 space-y-3 mb-12 text-sm text-[var(--text-secondary)]">
+          <div className="mt-16 pt-8 border-t border-rule">
+            <h2 className="text-xl font-serif font-medium text-ink mb-6">Scientific References &amp; Further Reading</h2>
+            <ul className="list-disc pl-6 space-y-3 mb-12 text-sm text-ink-2">
               <li>
                 <strong>The Two-Process Model of Sleep (Homeostatic Sleep Drive):</strong> Borbély, A. A. (1982). A two process model of sleep regulation. <em>Human Neurobiology, 1(3)</em>, 195–204. The foundational paper establishing how sleep pressure accumulates during wakefulness and dissipates during sleep — the biological basis for everything in this article.
               </li>
@@ -321,7 +321,7 @@ export default function Article3Page() {
             </ul>
           </div>
 
-          <div className="mt-10 p-5 bg-[#f2f0e9] rounded-lg text-xs text-[var(--text-secondary)] leading-relaxed">
+          <div className="mt-10 p-5 bg-[#f2f0e9] rounded-lg text-xs text-ink-2 leading-relaxed">
             <strong>Disclaimer:</strong> The content in this article is for educational and informational purposes only and does not constitute medical advice, diagnosis, or clinical therapy. If you have a history of bipolar disorder, seizure disorders, untreated sleep apnoea, or operate heavy machinery, please consult a qualified healthcare provider before making changes to your sleep schedule or restricting your time in bed.
           </div>
 
