@@ -36,6 +36,9 @@ export default function VennDiagram() {
       <style jsx>{`
         .venn-container {
           width: 850px;
+          min-width: 850px;
+          max-width: none;
+          flex-shrink: 0;
           height: 500px;
           position: relative;
           transform-origin: top center;
