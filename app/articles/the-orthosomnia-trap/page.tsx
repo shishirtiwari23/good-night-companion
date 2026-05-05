@@ -59,7 +59,7 @@ export default function ArticlePage() {
         </Link>
       </div>
 
-      <article className="w-full max-w-3xl z-10 bg-cream-2 p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 border border-rule">
+      <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         <header className="mb-12">
           <p className="text-[0.68rem] font-medium tracking-[0.16em] uppercase text-sage mb-4">
             Sleep Science
