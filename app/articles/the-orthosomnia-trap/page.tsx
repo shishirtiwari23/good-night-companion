@@ -61,36 +61,39 @@ export default function ArticlePage() {
 
       <article className="w-full max-w-3xl z-10 bg-cream p-6 md:p-12 rounded-[2rem] shadow-sm mb-20 shadow-[rgba(0,0,0,0.03)_0px_10px_30px]">
         <header className="mb-12">
-          <p className="text-[0.68rem] font-medium tracking-[0.16em] uppercase text-sage mb-4">
-            Sleep Science
-          </p>
-          <h1 className="text-[clamp(2rem,5vw,3.2rem)] font-cormorant font-light text-ink leading-[1.1] mb-6">
-            Sleep Trackers and Insomnia: Why Your Oura Ring, Apple Watch or Whoop May Be Making It Worse
-          </h1>
-          
-          <div className="flex flex-wrap gap-2 mb-8">
-            <span className="bg-[#e4e1d3] text-sage-dark text-[0.65rem] font-bold uppercase tracking-[0.12em] py-1.5 px-3 rounded-[2px]">Clinically recognised</span>
-            <span className="bg-[#e4e1d3] text-sage-dark text-[0.65rem] font-bold uppercase tracking-[0.12em] py-1.5 px-3 rounded-[2px]">Orthosomnia research 2017–present</span>
-            <span className="bg-[#e4e1d3] text-sage-dark text-[0.65rem] font-bold uppercase tracking-[0.12em] py-1.5 px-3 rounded-[2px]">CBT-I evidence-based</span>
+          {/* Authority Badge */}
+          <div className="inline-flex items-start md:items-center gap-2 bg-[#8da399]/10 border border-rule text-sage text-[10px] md:text-xs font-bold px-4 py-2 rounded-xl md:rounded-full mb-6 tracking-[0.16em] uppercase text-left">
+            <svg className="flex-shrink-0 mt-[1px] md:mt-0" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 1L1 3.5V7C1 10.0376 3.41 12.8776 6.5 13.5C9.59 12.8776 12 10.0376 12 7V3.5L6.5 1Z" stroke="currentColor" strokeWidth="1.5" fill="none"/></svg>
+            <span>Clinically recognised · Orthosomnia research 2017–present · CBT-I evidence-based</span>
           </div>
 
-          <div className="h-px w-full bg-rule" />
+          <p className="text-[10px] md:text-xs font-bold tracking-[0.16em] uppercase text-sage mb-4">
+            Sleep Science
+          </p>
+          <h1 className="text-3xl md:text-5xl font-cormorant font-light text-ink leading-tight mb-8">
+            Sleep Trackers and Insomnia: Why Your Oura Ring, Apple Watch or Whoop May Be Making It Worse
+          </h1>
+
+          <div className="h-[1px] w-full bg-[#8da399]/20" />
         </header>
 
-        <div className="text-ink-2 font-sans leading-[1.8] space-y-7 text-[0.95rem] font-light">
+        <div className="text-ink-2 font-sans leading-relaxed space-y-6 text-lg">
 
           {/* Quick Answer */}
-          <div className="bg-cream p-7 md:p-8 rounded-sm border border-rule my-8">
-            <h3 className="font-serif font-medium text-ink text-[1.3rem] mb-4">Quick Answer</h3>
-            <p className="font-sans text-ink-2 text-[0.95rem] leading-[1.7] mb-4">
-              Yes — for people with chronic insomnia, sleep trackers frequently make things worse. Obsessing over wearable sleep data causes a clinically recognised condition called Orthosomnia: a perfectionistic pursuit of perfect sleep scores that triggers performance anxiety, spikes cortisol, and deepens the very hyperarousal that sustains insomnia. Compounding this, consumer devices including the Oura Ring, Apple Watch, Whoop, Garmin and Fitbit cannot accurately measure your sleep stages — they estimate them from heart rate and movement data, and they get it wrong frequently enough to matter.
+          <div className="bg-[#f9f8f6] p-6 rounded-[1rem] border border-rule my-6">
+            <p className="text-[10px] font-bold tracking-[0.16em] uppercase text-sage mb-2">Quick Answer</p>
+            <h3 className="font-serif font-medium text-ink text-xl mb-4">
+              Yes — for people with chronic insomnia, sleep trackers frequently make things worse.
+            </h3>
+            <p className="font-sans text-ink-2 text-lg mb-4">
+              Obsessing over wearable sleep data causes a clinically recognised condition called Orthosomnia: a perfectionistic pursuit of perfect sleep scores that triggers performance anxiety, spikes cortisol, and deepens the very hyperarousal that sustains insomnia. Compounding this, consumer devices including the Oura Ring, Apple Watch, Whoop, Garmin and Fitbit cannot accurately measure your sleep stages — they estimate them from heart rate and movement data, and they get it wrong frequently enough to matter.
             </p>
-            <p className="font-sans text-ink-2 text-[0.95rem] leading-[1.7]">
+            <p className="font-sans text-ink-2 text-lg">
               This is not an argument against technology. It is an argument for understanding what these devices actually measure — and what they don't.
             </p>
           </div>
 
-          <p className="text-[1.3rem] font-cormorant font-light text-ink leading-[1.4] italic">
+          <p className="text-xl md:text-2xl font-serif font-medium text-ink leading-snug">
             You wake up on a Tuesday morning and actually feel, for the first time in weeks, almost okay. You stretch, sit up, and reach for your phone.
           </p>
           <p>
@@ -103,7 +106,7 @@ export default function ArticlePage() {
             The device on your wrist just manufactured that dread. And if you have chronic insomnia, it is doing this to you every single morning.
           </p>
 
-          <h2 className="text-[1.8rem] font-cormorant font-light text-ink mt-12 mb-5 leading-[1.2]">The Device Landscape: What People Are Actually Using</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Device Landscape: What People Are Actually Using</h2>
           <p>
             The consumer sleep tracking market has grown enormously over the last decade. The most widely used devices people bring into clinical conversations about insomnia are:
           </p>
@@ -118,7 +121,7 @@ export default function ArticlePage() {
             All of these devices use the same fundamental approach, with minor variations: they measure physiological proxies (movement, heart rate patterns, HRV) and use proprietary algorithms to infer what sleep stage you are likely in. None of them reads your brain. None of them measures what clinical sleep medicine actually uses to stage sleep.
           </p>
 
-          <h2 className="text-[1.8rem] font-cormorant font-light text-ink mt-12 mb-5 leading-[1.2]">What Clinical Sleep Staging Actually Requires</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">What Clinical Sleep Staging Actually Requires</h2>
           <p>
             To definitively determine whether someone is in Light, Deep (slow-wave), or REM sleep, clinical sleep medicine uses polysomnography (PSG) — an overnight sleep study conducted in a lab. PSG simultaneously records:
           </p>
@@ -131,7 +134,7 @@ export default function ArticlePage() {
             Your Oura Ring, Apple Watch, Whoop, Garmin and Fitbit measure none of these directly. They measure your wrist movement and your heartbeat, and they make an educated statistical guess.
           </p>
 
-          <h2 className="text-[1.8rem] font-cormorant font-light text-ink mt-12 mb-5 leading-[1.2]">How Accurate Are They, Actually?</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">How Accurate Are They, Actually?</h2>
           <p>
             The academic literature on this is more critical than device manufacturers tend to highlight in their marketing.
           </p>
@@ -150,7 +153,7 @@ export default function ArticlePage() {
             <li><strong>The Normal Awakening Trap:</strong> Brief awakenings between sleep cycles are biologically normal — every human has four to six of these per night, typically lasting a few minutes. They are a feature of healthy sleep architecture, not a bug. When your app flags these with red bars and deducts points from your score, it pathologises something your body is doing correctly.</li>
           </ul>
 
-          <h2 className="text-[1.8rem] font-cormorant font-light text-ink mt-12 mb-5 leading-[1.2]">The Condition: Orthosomnia</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The Condition: Orthosomnia</h2>
           <p>
             In 2017, sleep researchers Dr. Kelly Baron and colleagues at Rush University Medical Center published a case study in the Journal of Clinical Sleep Medicine that named something clinicians were increasingly observing: patients arriving at sleep clinics with severe insomnia symptoms whose distress was directly tied not to their sleep, but to the data on their wearable devices.
           </p>
@@ -164,7 +167,7 @@ export default function ArticlePage() {
             Since 2017, Orthosomnia has moved from a case study curiosity into a recognised clinical phenomenon, documented in subsequent research and increasingly discussed in CBT-I literature as a specific perpetuating factor in modern chronic insomnia.
           </p>
 
-          <h2 className="text-[1.8rem] font-cormorant font-light text-ink mt-12 mb-5 leading-[1.2]">Why Performance Anxiety Destroys Sleep Specifically</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Why Performance Anxiety Destroys Sleep Specifically</h2>
           <p>
             Understanding why tracking causes such harm requires understanding what kind of biological process sleep actually is.
           </p>
@@ -181,7 +184,7 @@ export default function ArticlePage() {
             There is also a documented <strong>Nocebo Effect</strong> at work. Research on cognitive models of insomnia shows that negative expectations about sleep — including reading a bad sleep score — directly increase daytime fatigue beyond what the actual sleep quality would produce. In other words, being told by your device that you slept poorly makes you feel more tired than you actually are, independent of your objective sleep quality.
           </p>
 
-          <h2 className="text-[1.8rem] font-cormorant font-light text-ink mt-12 mb-5 leading-[1.2]">Should I Use a Sleep Tracker If I Have Insomnia?</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Should I Use a Sleep Tracker If I Have Insomnia?</h2>
           <p>
             This is the most searched question in this space, and it deserves a direct answer rather than a hedge.
           </p>
@@ -197,7 +200,7 @@ export default function ArticlePage() {
             </li>
           </ul>
 
-          <h2 className="text-[1.8rem] font-cormorant font-light text-ink mt-12 mb-5 leading-[1.2]">The 30-Day Data Detox — With a Structured Replacement</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">The 30-Day Data Detox — With a Structured Replacement</h2>
           <p>
             For an analytical mind, "stop tracking" is not a sufficient instruction. You need something to do with the impulse to measure. Here is the full protocol.
           </p>
@@ -224,7 +227,7 @@ export default function ArticlePage() {
             </div>
           </div>
 
-          <h2 className="text-[1.8rem] font-cormorant font-light text-ink mt-12 mb-5 leading-[1.2]">What to Track Instead</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">What to Track Instead</h2>
           <p>
             If the impulse to collect data about your recovery feels important — and for many people it is a genuinely grounding part of managing insomnia — here is what the clinical literature suggests is worth measuring:
           </p>
@@ -238,7 +241,7 @@ export default function ArticlePage() {
             These four data points, tracked in a simple table each morning, give your clinician or your own protocol everything needed to make accurate titration decisions. They generate no performance anxiety. They are what The Goodnight Companion's daily log is built around.
           </p>
 
-          <h2 className="text-[1.8rem] font-cormorant font-light text-ink mt-12 mb-5 leading-[1.2]">Stop Grading Your Sleep</h2>
+          <h2 className="text-2xl font-serif font-medium text-ink mt-12 mb-4">Stop Grading Your Sleep</h2>
           <p>
             Your bed is a sanctuary, not an exam room. The device on your wrist cannot tell you how you feel. It cannot measure the quality of your rest. It can measure your heartbeat and the stillness of your arm, and from those two signals it produces a number that you have been allowing to determine the emotional tone of your entire morning.
           </p>
@@ -247,15 +250,12 @@ export default function ArticlePage() {
           </p>
 
           {/* Call to Action block */}
-          <div className="bg-sage-dark p-8 md:p-10 rounded-sm mt-12 mb-12 text-center text-white shadow-sm">
-            <h3 className="text-[1.6rem] font-cormorant font-light mb-4">If You're Ready to Replace the Tech With a System</h3>
-            <p className="mb-8 mx-auto max-w-xl text-[0.95rem] leading-[1.7] text-white/90">
+          <div className="bg-[#f9f8f6] p-8 rounded-[1.5rem] mt-12 mb-12 text-center shadow-sm">
+            <h3 className="text-2xl font-serif font-medium text-ink mb-4">If You're Ready to Replace the Tech With a System</h3>
+            <p className="mb-6 mx-auto max-w-lg">
               Removing a tracker creates a gap — the analytical mind wants something to fill it. The Goodnight Companion provides a structured daily log, a weekly Sleep Efficiency calculation, and a 90-day guided protocol built on CBT-I mechanics. It gives your data-driven mind the formulas to work with, without the performance anxiety that wearables produce.
             </p>
-            <Link 
-              href="/join-the-program" 
-              className="inline-block bg-white text-sage-dark font-medium font-sans text-[0.8rem] tracking-[0.12em] uppercase px-8 py-3.5 rounded-sm hover:bg-cream-2 transition-colors"
-            >
+            <Link href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]">
               Get The Goodnight Companion →
             </Link>
           </div>
