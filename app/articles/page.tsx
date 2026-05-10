@@ -13,6 +13,21 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: "Why Can't I Sleep Even Though I'm Exhausted? Tired vs Sleepy Explained",
+    description: "Being exhausted and being sleepy are not the same thing biologically. Here's the clinical distinction — and the exact sleep drive protocol to fix the mismatch tonight.",
+    slug: "tired-vs-sleepy",
+  },
+  {
+    title: "Can't Sleep at 2am? Emergency Triage — What to Do Right Now",
+    description: "Stop trying to force it. Here is the exact step-by-step protocol for a 2am waking — from turning the clock away to when it's safe to return to bed, including what to do when it doesn't work the first time.",
+    slug: "emergency-triage-cant-sleep-2am",
+  },
+  {
+    title: "Does Magnesium Help With Sleep? What the Research Actually Says",
+    description: "Magnesium glycinate and threonate support GABA pathways and reduce baseline anxiety — but they can't fix conditioned hyperarousal. Here's the honest, mechanism-first truth about what magnesium can and can't do.",
+    slug: "magnesium-and-insomnia",
+  },
+  {
     title: "The 3P Model of Insomnia Explained: Predisposing, Precipitating & Perpetuating Factors",
     description: "Spielman's 3P Model shows exactly how a bad week of sleep becomes chronic insomnia — and why \"chronic\" doesn't mean permanent. Here's the clinical framework and what it means for your recovery.",
     slug: "the-3p-model-of-insomnia",

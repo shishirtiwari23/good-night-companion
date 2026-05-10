@@ -50,41 +50,30 @@ export default function JourneyPage() {
       {/* ============================================================ */}
       {/* SECTION 1: THE HERO (The Empathy Hook)                      */}
       {/* ============================================================ */}
-      <section className="min-h-screen flex items-center justify-center px-6 pt-24 pb-16 md:pt-0 md:pb-0">
-        <div className="max-w-5xl w-full mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* Left: Copy */}
-          <div className="space-y-8 order-2 md:order-1">
+      <section 
+        className="min-h-[90vh] md:min-h-screen relative flex items-center px-6 pt-28 pb-16 md:pt-0 md:pb-0 bg-cover bg-[position:60%_center] md:bg-right"
+        style={{ backgroundImage: "url('/book-mockup-coffee.jpg')" }}
+      >
+        <div className="absolute inset-0 bg-ink/5"></div>
+        <div className="max-w-7xl w-full mx-auto relative z-10 flex justify-start">
+          <div className="max-w-xl w-full bg-cream/80 backdrop-blur-xl border border-white/50 p-8 md:p-12 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] space-y-8">
             <p className="overline-text opacity-60 tracking-[0.25em]">
               The 90-Day CBT-I Protocol
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-cormorant font-light text-ink leading-[1.15]">
+            <h1 className="text-4xl md:text-5xl lg:text-[3.2rem] font-cormorant font-light text-ink leading-[1.15]">
               You are not broken. <br className="hidden md:block" />
               <span className="opacity-75">You just haven&apos;t been given the right map.</span>
             </h1>
-            <p className="text-ink-2 text-base md:text-lg leading-relaxed font-sans max-w-lg">
+            <p className="text-ink-2 text-base md:text-[1.1rem] leading-relaxed font-sans">
               If you are here, you have likely tried the tea, the melatonin, and the endless lists of &quot;sleep hygiene&quot; tips. You are frustrated because you are working hard to sleep, but it isn&apos;t working. It is time to stop fighting.
             </p>
             <button
               onClick={scrollToCTA}
-              className="btn-primary max-w-xs text-sm px-10 py-5 inline-flex items-center justify-center gap-3 group shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+              className="btn-primary w-full sm:w-auto text-sm px-10 py-4 inline-flex items-center justify-center gap-3 group shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
             >
               <span>Call A Truce With Your Sleep</span>
               <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
             </button>
-          </div>
-
-          {/* Right: Book Mockup */}
-          <div className="order-1 md:order-2 flex justify-center">
-            <div className="relative w-full max-w-md">
-              <Image
-                src="/book-mockup-coffee.jpg"
-                alt="The Good Night Companion — A 90-Day CBT-I Based Program, displayed on a wooden table next to a cup of coffee"
-                width={800}
-                height={533}
-                className="relative rounded-2xl shadow-[rgba(0,0,0,0.08)_0px_20px_60px] w-full h-auto"
-                priority
-              />
-            </div>
           </div>
         </div>
       </section>
