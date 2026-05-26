@@ -13,6 +13,11 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: "How to Fix Your Sleep Schedule in 24 Hours (And Why It Might Not Fix Your Insomnia)",
+    description: "Can you reset your sleep schedule quickly? Yes — if your only problem is circadian misalignment. But if you lie awake for hours despite being exhausted, your problem is hyperarousal.",
+    slug: "how-to-fix-your-sleep-schedule",
+  },
+  {
     title: "Why Can't I Sleep Even Though I'm Exhausted? Tired vs Sleepy Explained",
     description: "Being exhausted and being sleepy are not the same thing biologically. Here's the clinical distinction — and the exact sleep drive protocol to fix the mismatch tonight.",
     slug: "tired-vs-sleepy",
