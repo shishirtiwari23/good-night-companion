@@ -258,15 +258,20 @@ export default function ArticlePage() {
           <p>
             If your circadian rhythm is genuinely misaligned and you're otherwise a healthy sleeper, the 24-hour reset works. If you've been lying awake anxious for months, the reset is a distraction from the real work.
           </p>
-          <p>
-            <strong>Tired of guessing which problem you actually have?</strong>
-          </p>
-          <p>
-            <em>The Goodnight Companion</em> is a 90-day guided journal that doesn't assume you know what's broken. It walks you through the diagnostic process, then builds a personalized recovery plan using the clinical mechanics of CBT-I and ACT-I — whether your problem is your schedule, your system, or both.
-          </p>
-          <p>
-            ➡️ If you're ready to stop experimenting and start recovering, <Link href="/join-the-program" className="text-[var(--primary)] font-bold hover:underline">explore The Goodnight Companion</Link>.
-          </p>
+          {/* Call to Action block (Main Funnel) */}
+          <div className="bg-[#f9f8f6] p-8 rounded-[1.5rem] mt-12 mb-12 text-center shadow-sm">
+            <h3 className="text-2xl font-serif font-medium text-ink mb-4">
+              Tired of guessing which problem you actually have?
+            </h3>
+            <p className="mb-6 mx-auto max-w-lg text-ink-2 font-sans">
+              <em>The Goodnight Companion</em> is a 90-day guided journal that doesn't assume you know what's broken. It walks you through the diagnostic process, then builds a personalized recovery plan using the clinical mechanics of CBT-I and ACT-I — whether your problem is your schedule, your system, or both.
+            </p>
+            <Link 
+              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
+            >
+              Get The Goodnight Companion
+            </Link>
+          </div>
 
           <h2 className="text-xl font-serif font-medium text-ink mt-12 mb-4">Scientific References & Further Reading</h2>
           <ul className="list-disc pl-6 space-y-4 mb-12 text-[0.85rem] text-ink-2">
@@ -276,19 +281,6 @@ export default function ArticlePage() {
             <li><strong>Meal Timing and Circadian Clocks:</strong> Schibler, U., et al. (2015). The mammalian circadian timing system: organization and coordination of central and peripheral clocks. <em>Annual Review of Physiology</em>, 77, 307-339. (Covers how food intake synchronizes peripheral circadian clocks.)</li>
             <li><strong>Conditioned Hyperarousal:</strong> Bonnet, M. H., & Arand, D. L. (2010). Hyperarousal and insomnia: State of the science. <em>Sleep Medicine Reviews</em>, 14(1), 9-15. (Explains why anxiety-driven insomnia cannot be solved with circadian interventions alone.)</li>
           </ul>
-
-          {/* Call to Action block */}
-          <div className="bg-[#f9f8f6] p-8 rounded-[1.5rem] mt-12 mb-12 text-center shadow-sm">
-            <h3 className="text-2xl font-serif font-medium text-ink mb-4">Stop Fighting. Start Healing.</h3>
-            <p className="mb-6 mx-auto max-w-lg">
-              Generic advice assumes you just need to relax. But chronic insomnia isn't a relaxation problem; it's a systemic loop. We treat it with a therapeutic system that marries the gold-standard biology of CBT-I with the gentle psychology of ACT-I.
-            </p>
-            <Link 
-              href="/join-the-program" className="btn-primary inline-block w-auto !px-8 hover:!bg-[var(--primary-dark)]"
-            >
-              Get The Goodnight Companion
-            </Link>
-          </div>
 
           <FaqAccordion faqs={faqs} />
           
