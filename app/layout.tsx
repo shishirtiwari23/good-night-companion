@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.thegoodnightcompanion.com"),
   title: "The Goodnight Companion — A 90-Day CBT-I Program for Chronic Insomnia",
   description: "Stop fighting your sleep. The Goodnight Companion is a structured, science-based journal built on CBT-I — the NHS-endorsed treatment that actually fixes chronic insomnia. Free tools inside.",
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: "The Good Night Companion | The 90-Day Clinical Sleep System",
     description: "Discover The Good Night Companion: a 90-day clinical guided journal. We combine the gold-standard science of CBT-I and ACT-I to end chronic insomnia.",
